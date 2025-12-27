@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.UIElements;
 using UnityEngine.VFX;
 
@@ -8,10 +9,12 @@ public class Enemy : MonoBehaviour, IEnemy
     [Header("Datos")]
     public int currentHp;
     public bool isAlive;
-    [SerializeField] EnemyFlyweight flyweightData;
+    public EnemyFlyweight flyweightData;
     public Vector3 pos;
     public Vector3 dir;
 
+    private Vector3 spawnPosition;
+    private float patrolRadius;
     public Animator animator;
 
     private StateMachine stateMachine;
@@ -22,6 +25,7 @@ public class Enemy : MonoBehaviour, IEnemy
 
         currentHp = flyweightData.maxHP;
         isAlive = true;
+        patrolRadius = flyweightData.patrolRadius;
 
         if (flyweightData.animatorOverride != null && animator != null)
         {
@@ -62,6 +66,11 @@ public class Enemy : MonoBehaviour, IEnemy
 
     }
 
+    public void DamageTarget(int damageDealt)
+    {
+        
+    }
+
     public void MoveTo(Vector3 target)
     {
         float step = flyweightData.speed * Time.deltaTime; 
@@ -73,7 +82,40 @@ public class Enemy : MonoBehaviour, IEnemy
         
     }
 
+    public Vector3 SearchPlayer()
+    {
+        Vector3 playerPos = GameObject.FindWithTag("Player").transform.position;
+        return playerPos;
+    }
 
+    public float DistanceWithPlayer()
+    {
+        Vector3 playerPos = this.SearchPlayer();
 
+        return Vector3.Distance(transform.position, playerPos);
+       
+    }
+
+    public Vector3 GetRandomWayPoint()
+    {
+    
+        Vector3 randomDirection = Random.insideUnitSphere * patrolRadius;
+
+        // 2. Le sumamos el origen para mover esa esfera a la zona de juego
+        // IMPORTANTE: Usar 'spawnPosition' para que siempre patrulle su zona.
+        // Si usaras 'transform.position', la zona se iría moviendo con él (drift).
+        randomDirection += spawnPosition;
+
+        // 3. Encontramos el punto válido más cercano en el NavMesh
+        NavMeshHit hit;
+
+        // Parámetros: (Punto deseado, Resultado, Distancia máx de corrección, Capas)
+        if (NavMesh.SamplePosition(randomDirection, out hit, patrolRadius, NavMesh.AllAreas))
+        {
+            return hit.position;
+        }
+
+        return spawnPosition;
+    }
 
 }

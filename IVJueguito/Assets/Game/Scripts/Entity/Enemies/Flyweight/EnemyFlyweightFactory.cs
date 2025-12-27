@@ -16,7 +16,9 @@ public class EnemyFlyweightFactory : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-      Instance = this;
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
 
         InitializeDictionary();
     }
