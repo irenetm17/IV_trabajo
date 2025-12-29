@@ -2,15 +2,23 @@ using UnityEngine;
 
 public class AchievementSystem : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public void OnEvent(IEvent evento)
+    {
+        if (evento.Tipo == eventType.AchievementUnlocked)
+        {
+            SimpleEvent event2 = (SimpleEvent)evento; //desempaqueta
+            //aqui meter logica de logros uwu
+        }
+    }
     void Start()
     {
-        
+        EventManager.instance.Subscribir(eventType.AchievementUnlocked, this);
     }
-
-    // Update is called once per frame
-    void Update()
+    private void OnDestroy()
     {
-        
+        if (EventManager.instance != null)
+        {
+            EventManager.instance.Desuscribir(eventType.AchievementUnlocked, this);
+        }
     }
 }

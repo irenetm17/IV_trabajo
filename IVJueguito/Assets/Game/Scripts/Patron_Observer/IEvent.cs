@@ -1,14 +1,6 @@
 using UnityEngine;
 
-public class IEvent : MonoBehaviour
+public interface IEvent
 {
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
+    eventType Tipo { get; }
 }

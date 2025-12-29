@@ -1,16 +1,21 @@
 using UnityEngine;
 
-public class PlayerStatsEvent : MonoBehaviour
+public class PlayerStatsEvent : IEvent
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public eventType Tipo
     {
-        
+        get
+        {
+            return eventType.PlayerStatsUpdated;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public int health;
+    public int gems;
+
+    public PlayerStatsEvent(int health, int gems)
     {
-        
+        this.health = health;
+        this.gems = gems;
     }
 }

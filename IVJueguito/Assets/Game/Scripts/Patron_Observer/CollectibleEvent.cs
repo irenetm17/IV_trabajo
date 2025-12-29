@@ -1,16 +1,26 @@
 using UnityEngine;
 
-public class CollectibleEvent : MonoBehaviour
+public enum CollectibleType
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    Corazones,
+    Llaves,
+    Gema
+}
 
-    // Update is called once per frame
-    void Update()
+public class CollectibleEvent : IEvent //evento que indica que se ha recogido un objeto y la cantidad de puntos que da
+{
+    public eventType Tipo { 
+        get { 
+            return eventType.CollectiblePicked; 
+        } 
+    }
+    public int amount;
+
+    public CollectibleType tipo;
+
+    public CollectibleEvent(CollectibleType tipo, int amount)
     {
-        
+        this.tipo = tipo;
+        this.amount = amount;
     }
 }

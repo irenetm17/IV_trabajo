@@ -1,16 +1,17 @@
 using UnityEngine;
 
-public class Collectible : MonoBehaviour
+public class Collectible : MonoBehaviour //se asigna a los objetos para que puedan llamar a collectible event con x propiedades
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private CollectibleType tipo;
+    [SerializeField] private int amount;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.CompareTag("Player"))
+        {
+            CollectibleEvent collectibleEvent = new CollectibleEvent(tipo, amount);
+            EventManager.instance.Publicar(collectibleEvent);
+            Destroy(gameObject);
+        }
     }
 }

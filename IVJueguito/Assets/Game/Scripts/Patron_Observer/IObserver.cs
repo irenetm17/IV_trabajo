@@ -1,16 +1,6 @@
 using UnityEngine;
 
-public class IObserver : MonoBehaviour
+public interface IObserver
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    void OnEvent(IEvent evento);
 }
