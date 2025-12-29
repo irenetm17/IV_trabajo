@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class AchievementSystem : MonoBehaviour
+public class AchievementSystem : IObserver
 {
     public void OnEvent(IEvent evento)
     {
