@@ -15,7 +15,7 @@ public class SlimePool : IObjectPool
 
 
 
-    public void PutToPool()
+    public void PutToPool(IObjectPool obj)
     {
         throw new System.NotImplementedException();
     }

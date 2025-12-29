@@ -15,6 +15,7 @@ public class PlayerMovement : Entity
     protected override void Awake()
     {
         base.Awake();
+        _rb = GetComponent<Rigidbody>();
     }
 
     private void Update()
@@ -39,7 +40,8 @@ public class PlayerMovement : Entity
         Vector3 moveDir = forward * _moveDirection.y + right * _moveDirection.x;
 
         // Aplicamos velocidad
-        _rb.linearVelocity = moveDir * _moveSpeed;
+
+        _rb.linearVelocity = new Vector3(moveDir.x * _moveSpeed,Physics.gravity.y, moveDir.z * _moveSpeed);
     }
 
 

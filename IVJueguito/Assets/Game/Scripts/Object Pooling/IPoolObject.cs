@@ -2,7 +2,7 @@ using UnityEngine;
 
 public interface IPoolObject
 {
-    bool isShowed();
+    bool isActive();
     void  SetActive(bool active);
     void  ResetObject();
 }

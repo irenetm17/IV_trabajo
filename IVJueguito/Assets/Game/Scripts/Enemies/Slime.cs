@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Slime : IPoolObject  // Tambien implementará el Enemy
 {
-    public bool isShowed()
+    public bool isActive()
     {
         throw new System.NotImplementedException();
     }

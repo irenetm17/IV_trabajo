@@ -6,6 +6,6 @@ public interface IObjectPool
 
     IPoolObject TakeFromPool();
 
-    void PutToPool();
+    void PutToPool(IObjectPool obj);
 
 }
