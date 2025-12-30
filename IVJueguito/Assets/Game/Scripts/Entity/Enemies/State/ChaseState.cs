@@ -14,12 +14,12 @@ public class ChaseState : EnemyState
 
         enemy.MoveTo(playerPos);
 
-        if (enemy.DistanceWithPlayer() < 1)
+        if (enemy.DistanceWithPlayer() < 5f)
         {
             enemy.ChangeState(enemy.flyweightData.attackState);
         }
 
-        if (enemy.DistanceWithPlayer() > 5)
+        if (enemy.DistanceWithPlayer() > 30f)
         {
             enemy.ChangeState(enemy.flyweightData.idleState);
         }

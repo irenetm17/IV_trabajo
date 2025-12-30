@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 3050283574688783119}
   - component: {fileID: 6408445120153973650}
   - component: {fileID: -8209001829429112378}
+  - component: {fileID: 3154187771450529499}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -190,6 +191,20 @@ MonoBehaviour:
   currentHp: 0
   isAlive: 0
   flyweightData: {fileID: 11400000, guid: 6e00e3a7f6e6c444c9e8b27de96ebe88, type: 2}
-  pos: {x: 0, y: 0, z: 0}
-  dir: {x: 0, y: 0, z: 0}
+  patrolRadius: 0
   animator: {fileID: 0}
+  tipoParaTest: 0
+  currentWayPoint: {x: 0, y: 0, z: 0}
+  hasWayPoint: 0
+--- !u!114 &3154187771450529499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8335818464000128432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73e742067e7ba5946b9a333e6a08578e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Entity

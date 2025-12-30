@@ -10,30 +10,47 @@ public class Enemy : MonoBehaviour, IEnemy
     public int currentHp;
     public bool isAlive;
     public EnemyFlyweight flyweightData;
-    public Vector3 pos;
-    public Vector3 dir;
 
     private Vector3 spawnPosition;
-    private float patrolRadius;
+    [SerializeField] float patrolRadius;
     public Animator animator;
 
+    private Transform playerTransform;
+
+    [SerializeField] private EnemyType tipoParaTest;
+
     private StateMachine stateMachine;
+
+    [HideInInspector] public Vector3 currentWayPoint;
+    [HideInInspector] public bool hasWayPoint = false;
 
     public void Initialize(EnemyType type)
     {
         flyweightData = EnemyFlyweightFactory.Instance.GetFlyweight(type);
 
+        spawnPosition = transform.position;
         currentHp = flyweightData.maxHP;
         isAlive = true;
         patrolRadius = flyweightData.patrolRadius;
+
+        GameObject playerObj = GameObject.FindWithTag("Player");
+        if (playerObj != null)
+        {
+            playerTransform = playerObj.transform;
+        }
 
         if (flyweightData.animatorOverride != null && animator != null)
         {
             animator.runtimeAnimatorController = flyweightData.animatorOverride;
         }
 
-        stateMachine = new StateMachine(); 
+        stateMachine = new StateMachine();
         stateMachine.Initialize(flyweightData.idleState, this);
+    }
+    void Start()
+    {
+       // Debug.Log("El objeto ha nacido");
+        Initialize(tipoParaTest);
     }
     void Update()
     {
@@ -43,6 +60,7 @@ public class Enemy : MonoBehaviour, IEnemy
     }
     public void ChangeState(EnemyState newState)
     {
+        //Debug.Log($"{name} cambió de estado a: {newState.name}"); 
         stateMachine.ChangeState(newState, this);
     }
     public bool IsAlive()
@@ -68,53 +86,55 @@ public class Enemy : MonoBehaviour, IEnemy
 
     public void DamageTarget(int damageDealt)
     {
-        
+
     }
 
     public void MoveTo(Vector3 target)
     {
-        float step = flyweightData.speed * Time.deltaTime; 
+        float step = flyweightData.speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, target, step);
     }
 
     public void StopMoving()
     {
-        
+
     }
 
     public Vector3 SearchPlayer()
     {
-        Vector3 playerPos = GameObject.FindWithTag("Player").transform.position;
-        return playerPos;
+        if (playerTransform != null)
+        {
+            return playerTransform.position;
+        }
+        return Vector3.zero;
     }
 
     public float DistanceWithPlayer()
     {
-        Vector3 playerPos = this.SearchPlayer();
+        if (playerTransform == null)
+            return 9999f;
 
-        return Vector3.Distance(transform.position, playerPos);
-       
+        return Vector3.Distance(transform.position, playerTransform.position);
+
     }
 
     public Vector3 GetRandomWayPoint()
     {
-    
-        Vector3 randomDirection = Random.insideUnitSphere * patrolRadius;
 
-        // 2. Le sumamos el origen para mover esa esfera a la zona de juego
-        // IMPORTANTE: Usar 'spawnPosition' para que siempre patrulle su zona.
-        // Si usaras 'transform.position', la zona se iría moviendo con él (drift).
-        randomDirection += spawnPosition;
+        Vector2 circlePoint = Random.insideUnitCircle * patrolRadius;
 
-        // 3. Encontramos el punto válido más cercano en el NavMesh
+        Vector3 targetPoint = spawnPosition + new Vector3(circlePoint.x, 0, circlePoint.y);
+
         NavMeshHit hit;
 
-        // Parámetros: (Punto deseado, Resultado, Distancia máx de corrección, Capas)
-        if (NavMesh.SamplePosition(randomDirection, out hit, patrolRadius, NavMesh.AllAreas))
+        float searchHeight = 20f;
+
+        if (NavMesh.SamplePosition(targetPoint, out hit, searchHeight, NavMesh.AllAreas))
         {
             return hit.position;
         }
 
+        Debug.LogWarning("¡Fallo al encontrar suelo en el NavMesh!");
         return spawnPosition;
     }
 

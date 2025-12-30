@@ -11,7 +11,7 @@ public class AttackState : EnemyState
     {
         enemy.DamageTarget(enemy.flyweightData.damage);
 
-        if (enemy.DistanceWithPlayer() < 1)
+        if (enemy.DistanceWithPlayer() < 5f)
         {
             enemy.ChangeState(enemy.flyweightData.chaseState);
         }
