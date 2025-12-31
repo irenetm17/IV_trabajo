@@ -12,5 +12,5 @@ public interface IEnemy
     public void StopMoving();
     public Vector3 SearchPlayer();
     public float DistanceWithPlayer();
-    public Vector3 GetRandomWayPoint();
+    public Vector3 GetRandomWayPoint(); // Devuelve un punto aleatorio para patrullar
 }

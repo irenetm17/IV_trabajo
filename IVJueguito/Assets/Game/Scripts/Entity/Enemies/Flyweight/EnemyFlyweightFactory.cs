@@ -11,7 +11,8 @@ public class EnemyFlyweightFactory : MonoBehaviour
 
     void Awake()
     {
-      if(Instance != null && Instance != this)
+        // Singleton
+        if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
             return;

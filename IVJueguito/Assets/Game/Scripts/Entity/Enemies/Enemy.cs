@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour, IEnemy
     [Header("Datos")]
     public int currentHp;
     public bool isAlive;
-    public EnemyFlyweight flyweightData;
+    public EnemyFlyweight flyweightData; // Datos compartidos por tipo de enemigo (Flyweight)
 
     private Vector3 spawnPosition;
     [SerializeField] float patrolRadius;
@@ -21,29 +21,33 @@ public class Enemy : MonoBehaviour, IEnemy
 
     private StateMachine stateMachine;
 
+    // Variables usadas por estados (Idle)
     [HideInInspector] public Vector3 currentWayPoint;
     [HideInInspector] public bool hasWayPoint = false;
 
     public void Initialize(EnemyType type)
     {
-        flyweightData = EnemyFlyweightFactory.Instance.GetFlyweight(type);
+        flyweightData = EnemyFlyweightFactory.Instance.GetFlyweight(type); // Obtener datos compartidos del tipo de enemigo
 
         spawnPosition = transform.position;
         currentHp = flyweightData.maxHP;
         isAlive = true;
         patrolRadius = flyweightData.patrolRadius;
 
+        // Buscar jugador
         GameObject playerObj = GameObject.FindWithTag("Player");
         if (playerObj != null)
         {
             playerTransform = playerObj.transform;
         }
 
+        // Aplicar animaciones según tipo
         if (flyweightData.animatorOverride != null && animator != null)
         {
             animator.runtimeAnimatorController = flyweightData.animatorOverride;
         }
 
+        // Crear máquina de estados e iniciar en Idle
         stateMachine = new StateMachine();
         stateMachine.Initialize(flyweightData.idleState, this);
     }
@@ -56,6 +60,7 @@ public class Enemy : MonoBehaviour, IEnemy
     {
         if (!isAlive) return;
 
+        // Delegar comportamiento al estado actual
         stateMachine.Update(this, Time.deltaTime);
     }
     public void ChangeState(EnemyState newState)
@@ -86,7 +91,7 @@ public class Enemy : MonoBehaviour, IEnemy
 
     public void DamageTarget(int damageDealt)
     {
-
+        // Aquí irá el daño al jugador
     }
 
     public void MoveTo(Vector3 target)
@@ -118,7 +123,7 @@ public class Enemy : MonoBehaviour, IEnemy
 
     }
 
-    public Vector3 GetRandomWayPoint()
+    public Vector3 GetRandomWayPoint() // Devuelve un punto aleatorio navegable para patrulla
     {
 
         Vector2 circlePoint = Random.insideUnitCircle * patrolRadius;

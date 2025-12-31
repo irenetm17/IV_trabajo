@@ -619,6 +619,10 @@ PrefabInstance:
       propertyPath: tipoParaTest
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3050283574688783119, guid: e83878e31e12b3f4bb90c810ce347430, type: 3}
+      propertyPath: m_Constraints
+      value: 122
+      objectReference: {fileID: 0}
     - target: {fileID: 5081018207574839445, guid: e83878e31e12b3f4bb90c810ce347430, type: 3}
       propertyPath: m_LocalPosition.x
       value: 848.58
@@ -844,6 +848,10 @@ PrefabInstance:
     - target: {fileID: 3882985405396875898, guid: 61e4e4e3ca55ca14694eafc644d98e7c, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7266412577598155383, guid: 61e4e4e3ca55ca14694eafc644d98e7c, type: 3}
+      propertyPath: m_Constraints
+      value: 112
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
