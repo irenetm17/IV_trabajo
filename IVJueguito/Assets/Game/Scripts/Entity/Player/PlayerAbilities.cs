@@ -41,7 +41,7 @@ public class PlayerAbilities : MonoBehaviour
     /* PONER ESTO DE AQUI EN UNA CLASE QUE TENGA EL COLLIDER EN EL OBJETO diam 
     void OnTriggerEnter(Collider other)
     {
-        PlayerMovement enemy = other.GetComponent<PlayerMovement>();//poner clase enemigo y no clase playermovement
+        Enemy enemy = other.GetComponent<Enemy>();
         if (enemy!=null)
         {
             // Bajar vida a enemigos
