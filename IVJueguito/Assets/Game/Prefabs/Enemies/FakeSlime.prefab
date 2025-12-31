@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4576179911547308111}
   - component: {fileID: 4187385037563170065}
   - component: {fileID: 3807384533433640682}
+  - component: {fileID: 477810871720992328}
   m_Layer: 0
   m_Name: FakeSlime
   m_TagString: Untagged
@@ -139,3 +140,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &477810871720992328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9001918597163733273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 060a49de50f74b44bbda95077b6d9b1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Slime
+  parentSlimePool: {fileID: 0}

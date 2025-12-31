@@ -73,7 +73,12 @@ public class SlimeSpawner : MonoBehaviour
 
             Vector3 spawnPosition = spawnPos.position + randomSpreadSpawn;
 
-            Instantiate(_slimeTEMP, spawnPosition, Quaternion.identity);
+            //Instantiate(_slimeTEMP, spawnPosition, Quaternion.identity);
+
+            IPoolObject slimePooled = _slimePool.TakeFromPool();
+            slimePooled.ResetObject();
+            slimePooled.MoveTo(spawnPosition);
+
 
             Debug.Log("Slime spawned at pos: " + spawnPosition);
         }

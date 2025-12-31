@@ -5,47 +5,51 @@ using UnityEngine;
 public class SlimePool : MonoBehaviour, IObjectPool
 {
     [SerializeField]
-    private int initialSize = 40;
-    private Queue<Slime> slimePoolList;
+    private int _initialSize = 40;
+    [SerializeField]
+    private int _actualSize;
+    private Queue<Slime> _slimePoolList;
 
     [SerializeField]
-    private GameObject slimePrefab;
+    private GameObject _slimePrefab;
 
     public void Awake()
     {
-        slimePoolList = new Queue<Slime>(initialSize);
+        _actualSize = _initialSize;
+        _slimePoolList = new Queue<Slime>(_initialSize);
         StartPool();
     }
 
 
     public void StartPool()
     {
-        for (int i = 0; i<initialSize ; i++ )
+        for (int i = 0; i<_initialSize ; i++ )
         {
-            GameObject slimeTempGO = Instantiate(slimePrefab);
+            GameObject slimeTempGO = Instantiate(_slimePrefab);
             Slime slimeTemp = slimeTempGO.GetComponent<Slime>();
             slimeTemp.parentSlimePool = this;
             slimeTemp.ResetObject();
             slimeTemp.SetActive(false);
-            slimePoolList.Enqueue(slimeTemp);
+            _slimePoolList.Enqueue(slimeTemp);
         }
     }
 
 
     public IPoolObject TakeFromPool()
     {
-        if( slimePoolList.Count == 0)
+        if( _slimePoolList.Count == 0)
         {
-            GameObject slimeTempGO = Instantiate(slimePrefab);
+            GameObject slimeTempGO = Instantiate(_slimePrefab);
             Slime slimeTemp = slimeTempGO.GetComponent<Slime>();
             slimeTemp.parentSlimePool = this;
             slimeTemp.ResetObject();
             slimeTemp.SetActive(true);
+            _actualSize++;
             return slimeTemp;
         }
         else
         {
-            Slime slimeTemp = slimePoolList.Dequeue();
+            Slime slimeTemp = _slimePoolList.Dequeue();
             slimeTemp.parentSlimePool = this;
             slimeTemp.ResetObject();
             slimeTemp.SetActive(true);
@@ -58,7 +62,7 @@ public class SlimePool : MonoBehaviour, IObjectPool
     {
         obj.ResetObject();
         obj.SetActive(false);
-        slimePoolList.Enqueue((Slime)obj);
+        _slimePoolList.Enqueue((Slime)obj);
     }
 
 

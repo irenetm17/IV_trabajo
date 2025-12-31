@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Slime : IPoolObject  // Tambien implementará el Enemy
+public class Slime : /*Enemy, */MonoBehaviour, IPoolObject  // Tambien implementará el Enemy
 {
     public SlimePool parentSlimePool;
 
@@ -9,14 +9,33 @@ public class Slime : IPoolObject  // Tambien implementará el Enemy
         throw new System.NotImplementedException();
     }
 
+    public void MoveTo(Vector3 position)
+    {
+        this.transform.position = position;
+    }
+
     public void ResetObject()
     {
-        throw new System.NotImplementedException();
+        //Variables como health, reset
+
+
+        //Mover al origen
+        this.MoveTo(Vector3.zero);
     }
 
     public void SetActive(bool active)
     {
-        throw new System.NotImplementedException();
+        this.gameObject.SetActive(active);
+    }
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            this.SetActive(false);
+            parentSlimePool.PutToPool(this);
+        }
     }
 
 }
