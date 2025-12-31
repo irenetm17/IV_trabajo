@@ -2,39 +2,66 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SlimePool : IObjectPool
+public class SlimePool : MonoBehaviour, IObjectPool
 {
     [SerializeField]
     private int initialSize = 40;
     private Queue<Slime> slimePoolList;
 
+    [SerializeField]
+    private GameObject slimePrefab;
+
     public void Awake()
     {
         slimePoolList = new Queue<Slime>(initialSize);
+        StartPool();
     }
 
-
-
-    public void PutToPool(IObjectPool obj)
-    {
-        throw new System.NotImplementedException();
-    }
 
     public void StartPool()
     {
-        throw new System.NotImplementedException();
+        for (int i = 0; i<initialSize ; i++ )
+        {
+            GameObject slimeTempGO = Instantiate(slimePrefab);
+            Slime slimeTemp = slimeTempGO.GetComponent<Slime>();
+            slimeTemp.parentSlimePool = this;
+            slimeTemp.ResetObject();
+            slimeTemp.SetActive(false);
+            slimePoolList.Enqueue(slimeTemp);
+        }
     }
+
 
     public IPoolObject TakeFromPool()
     {
-        throw new System.NotImplementedException();
+        if( slimePoolList.Count == 0)
+        {
+            GameObject slimeTempGO = Instantiate(slimePrefab);
+            Slime slimeTemp = slimeTempGO.GetComponent<Slime>();
+            slimeTemp.parentSlimePool = this;
+            slimeTemp.ResetObject();
+            slimeTemp.SetActive(true);
+            return slimeTemp;
+        }
+        else
+        {
+            Slime slimeTemp = slimePoolList.Dequeue();
+            slimeTemp.parentSlimePool = this;
+            slimeTemp.ResetObject();
+            slimeTemp.SetActive(true);
+            return slimeTemp;
+        }
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    public void PutToPool(IPoolObject obj)
     {
-        
+        obj.ResetObject();
+        obj.SetActive(false);
+        slimePoolList.Enqueue((Slime)obj);
     }
+
+
 
     // Update is called once per frame
     void Update()
