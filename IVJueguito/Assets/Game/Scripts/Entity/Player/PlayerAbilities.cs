@@ -1,24 +1,61 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerAbilities : MonoBehaviour
 {
     public float[] cooldowns = { 1f, 2f, 2f, 2f };
     private float[] lastUseTime = new float[4];
 
+    // HAY QUE USAR ESTA MIERDA DE BRUJERIA RARA QUE FUNCIONE ME CAGO EN LA HOSTIA
+    [SerializeField] private InputActionReference ability0; 
+    [SerializeField] private InputActionReference ability1;
+    [SerializeField] private InputActionReference ability2;
+    [SerializeField] private InputActionReference ability3;
+
     [SerializeField] private GameObject diam;
+
+    void OnEnable()
+    {
+        ability0.action.Enable();
+        ability1.action.Enable();
+        ability2.action.Enable();
+        ability3.action.Enable();
+    }
+
+    void OnDisable()
+    {
+        ability0.action.Disable();
+        ability1.action.Disable();
+        ability2.action.Disable();
+        ability3.action.Disable();
+    }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1)) TryUseAbility(0); // EN ESTOS SITIOS PONER LAS TECLAS QUE HAY QUE PULSAR PARA CADA HABILIDAD
-        if (Input.GetKeyDown(KeyCode.Alpha2)) TryUseAbility(1);
-        if (Input.GetKeyDown(KeyCode.Alpha3)) TryUseAbility(2);
-        if (Input.GetKeyDown(KeyCode.Alpha4)) TryUseAbility(3);
+        if (ability0.action.WasPressedThisFrame())
+        {
+            Debug.Log("Ability0 input detectado");
+            TryUseAbility(0);
+        }
+        if (ability1.action.WasPressedThisFrame())
+        {
+            TryUseAbility(1);
+        }
+        if (ability2.action.WasPressedThisFrame())
+        {
+            TryUseAbility(2);
+        }
+        if (ability3.action.WasPressedThisFrame())
+        {
+            TryUseAbility(3);
+        }
     }
 
     void TryUseAbility(int index)
     {
-        if (Time.time < lastUseTime[index] + cooldowns[index]) return;
+        if (Time.time < lastUseTime[index] + cooldowns[index])
+            return;
 
         lastUseTime[index] = Time.time;
 
@@ -33,38 +70,18 @@ public class PlayerAbilities : MonoBehaviour
 
     void AbilityDiamond()
     {
+        Debug.Log("AbilityDiamond ejecutada");
         diam.SetActive(true);
         StartCoroutine(Wait(0.5f));
-        diam.SetActive(false);
     }
 
-    /* PONER ESTO DE AQUI EN UNA CLASE QUE TENGA EL COLLIDER EN EL OBJETO diam 
-    void OnTriggerEnter(Collider other)
-    {
-        Enemy enemy = other.GetComponent<Enemy>();
-        if (enemy!=null)
-        {
-            // Bajar vida a enemigos
-        }
-    }*/
-
-    void AbilityRuby()
-    {
-        //aqui habra que generar un proyectil que creo que estara en el object pool
-    }
-
-    void AbilitySapphire()
-    {
-        //para esto necesito un poco de imaginacion aun
-    }
-
-    void AbilityEmerald()
-    {
-        //esto necesito la clase proyectil para ello 
-    }
+    void AbilityRuby() { }
+    void AbilitySapphire() { }
+    void AbilityEmerald() { }
 
     IEnumerator Wait(float duration)
     {
         yield return new WaitForSeconds(duration);
+        diam.SetActive(false);
     }
 }
