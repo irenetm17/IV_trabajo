@@ -43,10 +43,10 @@ MonoBehaviour:
     m_Value: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0.25
+    m_Value: 1.56
   scatter:
     m_OverrideState: 1
-    m_Value: 0.5
+    m_Value: 0.617
   clamp:
     m_OverrideState: 0
     m_Value: 65472
@@ -84,12 +84,12 @@ MonoBehaviour:
   active: 1
   mode:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 2
   gaussianStart:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 10
   gaussianEnd:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 30
   gaussianMaxRadius:
     m_OverrideState: 0
@@ -98,13 +98,13 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
   focusDistance:
-    m_OverrideState: 0
-    m_Value: 10
+    m_OverrideState: 1
+    m_Value: 2.29
   aperture:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 5.6
   focalLength:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 50
   bladeCount:
     m_OverrideState: 0
@@ -458,28 +458,82 @@ MonoBehaviour:
         m_PostInfinity: 2
         m_RotationOrder: 4
   hueVsSat:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value:
-      <length>k__BackingField: 0
+      <length>k__BackingField: 4
       m_Loop: 1
       m_ZeroValue: 0.5
       m_Range: 1
       m_Curve:
         serializedVersion: 2
-        m_Curve: []
+        m_Curve:
+        - serializedVersion: 3
+          time: 0.14096916
+          value: 0.37788016
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.3215859
+          value: 0.7741935
+          inSlope: 0.7615187
+          outSlope: 0.7615187
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.5110132
+          value: 0.40552998
+          inSlope: -0.20206235
+          outSlope: -0.20206235
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.6629956
+          value: 0.7741935
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
   satVsSat:
     m_OverrideState: 0
     m_Value:
-      <length>k__BackingField: 0
+      <length>k__BackingField: 2
       m_Loop: 0
       m_ZeroValue: 0.5
       m_Range: 1
       m_Curve:
         serializedVersion: 2
-        m_Curve: []
+        m_Curve:
+        - serializedVersion: 3
+          time: 0.18722467
+          value: 0.76036865
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.65198237
+          value: 0.76036865
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
