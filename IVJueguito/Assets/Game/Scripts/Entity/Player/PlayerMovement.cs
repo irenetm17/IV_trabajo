@@ -24,22 +24,18 @@ public class PlayerMovement : Entity
 
     private void FixedUpdate()
     {
-        // Dirección de la cámara
         Vector3 forward = cam.transform.forward;
         Vector3 right = cam.transform.right;
 
-        // Eliminamos la coordenada Y de la cámara
         forward.y = 0f;
         right.y = 0f;
 
         forward.Normalize();
         right.Normalize();
 
-        // Convertimos el input a movimiento relativo a la cámara
         Vector3 moveDir = forward * _moveDirection.y + right * _moveDirection.x;
 
-        // Aplicamos velocidad
-        _rb.linearVelocity = moveDir * _moveSpeed;
+        _rb.linearVelocity = new Vector3(moveDir.x * _moveSpeed, Physics.gravity.y, moveDir.z * _moveSpeed);
     }
 
 
