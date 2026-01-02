@@ -152,11 +152,14 @@ MonoBehaviour:
   - 2
   - 2
   - 2
-  ability0: {fileID: 924539146580067127, guid: db54bd73f0ac6ff4a8a4e4826782e4b4, type: 3}
-  ability1: {fileID: 5160654773384131328, guid: db54bd73f0ac6ff4a8a4e4826782e4b4, type: 3}
   ability2: {fileID: 5492574780323536035, guid: db54bd73f0ac6ff4a8a4e4826782e4b4, type: 3}
   ability3: {fileID: 3217371199949232416, guid: db54bd73f0ac6ff4a8a4e4826782e4b4, type: 3}
   diam: {fileID: 4831768372541796379}
+  fireballPrefab: {fileID: 7847159357427887921, guid: 12e35f47460a0e948bd8b3f3c695a356, type: 3}
+  fireballSpawnPoint: {fileID: 1282163240840796693}
+  ground:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &4059822705098517335
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,7 +427,7 @@ Transform:
   m_GameObject: {fileID: 4831768372541796379}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.25, y: 0, z: 0}
+  m_LocalPosition: {x: 1.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -449,7 +452,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.5, y: 3, z: 3}
+  m_Size: {x: 3.5, y: 3.5, z: 3.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &354035712007113784
 MonoBehaviour:
