@@ -11,10 +11,25 @@ public class PlayerAbilities : MonoBehaviour
     public InputActionReference ability2;
     public InputActionReference ability3;
 
+    [Header("DIAMANTE")]
     [SerializeField] private GameObject diam;
+
+    [Header("RUBI")]
     [SerializeField] private GameObject fireballPrefab;
     [SerializeField] private Transform fireballSpawnPoint;
     [SerializeField] private LayerMask ground;
+
+    [Header("ZAFIRO")]
+    [SerializeField] private GameObject sapphireZone;
+    [SerializeField] private float sapphireGrowTime = 0.3f;
+    [SerializeField] private float sapphireActiveTime = 1.5f;
+
+    [Header("ESMERALDA")]
+    [SerializeField] private GameObject emeraldColider;
+    [SerializeField] private SpriteRenderer emeraldSprite;
+    [SerializeField] private float emeraldFadeTime = 0.4f;
+    [SerializeField] private float emeraldActiveTime = 1.5f;
+
 
 
     void OnEnable()
@@ -100,8 +115,68 @@ public class PlayerAbilities : MonoBehaviour
         }
     }
 
-    void AbilitySapphire() { }
-    void AbilityEmerald() { }
+    void AbilitySapphire()
+    {
+        StartCoroutine(SapphireRoutine());
+    }
+    IEnumerator SapphireRoutine()
+    {
+        sapphireZone.SetActive(true);
+        
+        foreach (Transform child in sapphireZone.transform) // Activar todos los hijos
+        {
+            child.gameObject.SetActive(true);
+            Sapphire s = child.GetComponent<Sapphire>();
+            s.Init();
+        }
+
+        sapphireZone.transform.localScale = Vector3.zero;
+        float t = 0f;
+        while (t < sapphireGrowTime)
+        {
+            t += Time.deltaTime;
+            float progress = t / sapphireGrowTime;
+            sapphireZone.transform.localScale = Vector3.Lerp(Vector3.zero, Vector3.one, progress); // escalado de 0 a 1
+            yield return null;
+        }
+        sapphireZone.transform.localScale = Vector3.one;
+
+        yield return new WaitForSeconds(sapphireActiveTime);
+
+        sapphireZone.SetActive(false);
+    }
+
+    void AbilityEmerald()
+    {
+        StartCoroutine(EmeraldRoutine());
+    }
+    IEnumerator EmeraldRoutine()
+    {
+        emeraldColider.SetActive(true);
+        emeraldSprite.gameObject.SetActive(true);
+
+        
+        Color c = emeraldSprite.color;// Empezar invisible
+        c.a = 0f;
+        emeraldSprite.color = c;
+        float t = 0f;
+        while (t < emeraldFadeTime)// Fade in
+        {
+            t += Time.deltaTime;
+            float alpha = Mathf.Lerp(0f, 1f, t / emeraldFadeTime);
+            c.a = alpha;
+            emeraldSprite.color = c;
+            yield return null;
+        }
+        c.a = 1f;
+        emeraldSprite.color = c;
+
+        yield return new WaitForSeconds(emeraldActiveTime);
+
+        emeraldColider.SetActive(false);
+        emeraldSprite.gameObject.SetActive(false);
+    }
+
 
     IEnumerator Wait(float duration)
     {
