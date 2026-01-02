@@ -5,7 +5,7 @@ public class AttackState : EnemyState
 {
     public override void Enter(Enemy enemy)
     {
-        
+        enemy.animator.SetBool("nearPlayer", true);
     }
     public override void Execute(Enemy enemy, float deltaTime)
     {
@@ -18,6 +18,6 @@ public class AttackState : EnemyState
     }
     public override void Exit(Enemy enemy)
     {
-
+        enemy.animator.SetBool("nearPlayer", false);
     }
 }

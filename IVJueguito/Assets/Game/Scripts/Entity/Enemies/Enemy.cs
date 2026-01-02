@@ -96,13 +96,15 @@ public class Enemy : MonoBehaviour, IEnemy
 
     public void MoveTo(Vector3 target)
     {
+        animator.SetFloat("Speed", 1.0f);
         float step = flyweightData.speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, target, step);
+        animator.SetFloat("Speed", 0.0f);
     }
 
     public void StopMoving()
     {
-
+        animator.SetFloat("Speed", 0.0f);
     }
 
     public Vector3 SearchPlayer()
