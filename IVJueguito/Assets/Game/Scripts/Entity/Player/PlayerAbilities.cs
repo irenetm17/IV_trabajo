@@ -8,25 +8,23 @@ public class PlayerAbilities : MonoBehaviour
     private float[] lastUseTime = new float[4];
 
     // HAY QUE USAR ESTA MIERDA DE BRUJERIA RARA QUE FUNCIONE ME CAGO EN LA HOSTIA
-    public InputActionReference ability0; 
-    public InputActionReference ability1;
     public InputActionReference ability2;
     public InputActionReference ability3;
 
     [SerializeField] private GameObject diam;
+    [SerializeField] private GameObject fireballPrefab;
+    [SerializeField] private Transform fireballSpawnPoint;
+    [SerializeField] private LayerMask ground;
+
 
     void OnEnable()
     {
-        ability0.action.Enable();
-        ability1.action.Enable();
         ability2.action.Enable();
         ability3.action.Enable();
     }
 
     void OnDisable()
     {
-        ability0.action.Disable();
-        ability1.action.Disable();
         ability2.action.Disable();
         ability3.action.Disable();
     }
@@ -76,7 +74,32 @@ public class PlayerAbilities : MonoBehaviour
         StartCoroutine(Wait(0.5f));
     }
 
-    void AbilityRuby() { }
+    void AbilityRuby()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(
+            Mouse.current.position.ReadValue()
+        );
+
+        if (Physics.Raycast(ray, out RaycastHit hit, 500f, ground))
+        {
+            Vector3 targetPoint = hit.point;
+
+            // Evita disparar hacia abajo
+            targetPoint.y = fireballSpawnPoint.position.y;
+
+            Vector3 direction = (targetPoint - fireballSpawnPoint.position).normalized;
+
+            GameObject fireball = Instantiate(
+                fireballPrefab,
+                fireballSpawnPoint.position,
+                Quaternion.identity
+            );
+
+            Ruby ruby = fireball.GetComponent<Ruby>();
+            ruby.Init(direction);
+        }
+    }
+
     void AbilitySapphire() { }
     void AbilityEmerald() { }
 

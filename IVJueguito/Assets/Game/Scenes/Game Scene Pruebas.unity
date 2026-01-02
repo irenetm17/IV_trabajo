@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 55974916}
   - component: {fileID: 55974915}
   - component: {fileID: 55974918}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Game Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -804,6 +804,10 @@ PrefabInstance:
     - target: {fileID: 304585299909854720, guid: 61e4e4e3ca55ca14694eafc644d98e7c, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 304585299909854720, guid: 61e4e4e3ca55ca14694eafc644d98e7c, type: 3}
+      propertyPath: 'cooldowns.Array.data[1]'
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 499244875834560001, guid: 61e4e4e3ca55ca14694eafc644d98e7c, type: 3}
       propertyPath: m_LocalPosition.x
