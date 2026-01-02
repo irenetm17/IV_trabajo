@@ -8,10 +8,10 @@ public class PlayerAbilities : MonoBehaviour
     private float[] lastUseTime = new float[4];
 
     // HAY QUE USAR ESTA MIERDA DE BRUJERIA RARA QUE FUNCIONE ME CAGO EN LA HOSTIA
-    [SerializeField] private InputActionReference ability0; 
-    [SerializeField] private InputActionReference ability1;
-    [SerializeField] private InputActionReference ability2;
-    [SerializeField] private InputActionReference ability3;
+    public InputActionReference ability0; 
+    public InputActionReference ability1;
+    public InputActionReference ability2;
+    public InputActionReference ability3;
 
     [SerializeField] private GameObject diam;
 
@@ -33,12 +33,13 @@ public class PlayerAbilities : MonoBehaviour
 
     void Update()
     {
-        if (ability0.action.WasPressedThisFrame())
+
+        if (Mouse.current.leftButton.IsPressed()) // Lo del raton de las narices
         {
             Debug.Log("Ability0 input detectado");
             TryUseAbility(0);
         }
-        if (ability1.action.WasPressedThisFrame())
+        if (Mouse.current.rightButton.IsPressed())
         {
             TryUseAbility(1);
         }
