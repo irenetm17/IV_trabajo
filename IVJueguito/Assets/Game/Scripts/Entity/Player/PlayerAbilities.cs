@@ -1,15 +1,24 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
+using Unity.VisualScripting;
 
-public class PlayerAbilities : MonoBehaviour
+
+public class PlayerAbilities : MonoBehaviour, IObserver
 {
     public float[] cooldowns = { 1f, 2f, 2f, 2f };
+    [SerializeField] private Image[] cooldownImages;
+    [SerializeField] private Image[] bloqueadosImages;
+
     private float[] lastUseTime = new float[4];
 
     // HAY QUE USAR ESTA MIERDA DE BRUJERIA RARA QUE FUNCIONE ME CAGO EN LA HOSTIA
     public InputActionReference ability2;
     public InputActionReference ability3;
+
+    [SerializeField] private int gemas = 0;//serializable para pruebas
+
 
     [Header("DIAMANTE")]
     [SerializeField] private GameObject diam;
@@ -30,7 +39,39 @@ public class PlayerAbilities : MonoBehaviour
     [SerializeField] private float emeraldFadeTime = 0.4f;
     [SerializeField] private float emeraldActiveTime = 1.5f;
 
+    void Start()
+    {
+        EventManager.instance.Subscribir(eventType.PlayerStatsUpdated, this);
+        EventManager.instance.Subscribir(eventType.CollectiblePicked, this);
+    }
+    public void OnEvent(IEvent evento)
+    {
+        if (evento.Tipo == eventType.PlayerStatsUpdated)
+        {
+            PlayerStatsEvent event2 = (PlayerStatsEvent)evento; //desempaqueta
 
+            bloqueadosImages[gemas].gameObject.SetActive(false); //desbloquea la habilidad correspondiente
+            gemas += event2.gems; //cosas de gemas
+        }
+
+        if (evento.Tipo == eventType.CollectiblePicked)
+        {
+            CollectibleEvent event4 = (CollectibleEvent)evento; //desempaqueta
+            if(event4.tipo == CollectibleType.Gema)
+            {
+                bloqueadosImages[gemas].gameObject.SetActive(false); //desbloquea la habilidad correspondiente
+                gemas += event4.amount;
+            }
+        }
+    }
+    void OnDestroy()
+    {
+        if (EventManager.instance != null)
+        {
+            EventManager.instance.Desuscribir(eventType.PlayerStatsUpdated, this);
+            EventManager.instance.Desuscribir(eventType.CollectiblePicked, this);
+        }
+    }
 
     void OnEnable()
     {
@@ -64,11 +105,23 @@ public class PlayerAbilities : MonoBehaviour
         {
             TryUseAbility(3);
         }
+        UpdateCooldownUI();
     }
+    void UpdateCooldownUI()
+    {
+        for (int i = 0; i < cooldownImages.Length; i++)
+        {
+            float cooldown = cooldowns[i];
+            float timePassed = Time.time - lastUseTime[i];
+            float remaining = Mathf.Clamp01(1 - (timePassed / cooldown));
+            cooldownImages[i].fillAmount = remaining;
+        }
+    }
+
 
     void TryUseAbility(int index)
     {
-        if (Time.time < lastUseTime[index] + cooldowns[index])
+        if ((Time.time < lastUseTime[index] + cooldowns[index]) || gemas < index+1)
             return;
 
         lastUseTime[index] = Time.time;
