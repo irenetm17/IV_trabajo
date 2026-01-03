@@ -10,10 +10,10 @@ public class PlayerStatsEvent : IEvent
         }
     }
 
-    public int health;
+    public float health;
     public int gems;
 
-    public PlayerStatsEvent(int health, int gems)
+    public PlayerStatsEvent(float health, int gems)
     {
         this.health = health;
         this.gems = gems;
