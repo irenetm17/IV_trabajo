@@ -11,7 +11,8 @@ public enum eventType //lista de tipos de evento. Fuera de la clase para poder u
     LevelCompleted,
     GamePaused,
     AchievementUnlocked,
-    DialogueStarted
+    DialogueStarted,
+    DamageTaken
 }
 
 public class EventManager : MonoBehaviour

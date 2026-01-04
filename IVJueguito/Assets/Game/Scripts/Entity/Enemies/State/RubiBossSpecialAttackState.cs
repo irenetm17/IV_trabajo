@@ -1,25 +1,21 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "States/Attack")]
-public class AttackState : EnemyState
+[CreateAssetMenu(menuName = "States/SpecialAttack")]
+public class RubiBossSpecialAttackState : EnemyState
 {
     [SerializeField] float attackDelay = 0.5f;
     [SerializeField] float attackDuration = 1f;
-
     public override void Enter(Enemy enemy)
     {
-        Debug.Log($"<color=cyan>{enemy.name}</color> ha entrado en el estado: <color=yellow>{this.name}</color>");
-
         enemy.hasAttacked = false;
         enemy.StopMoving();
         enemy.stateTimer = Time.time;
-        //enemy.animator.SetBool("nearPlayer", true);
     }
     public override void Execute(Enemy enemy, float deltaTime)
     {
         enemy.stateTimer += deltaTime;
 
-        if (enemy.stateTimer >= attackDelay && !enemy.hasAttacked)
+        if(enemy.stateTimer >= attackDelay && !enemy.hasAttacked)
         {
             enemy.DamageTarget(enemy.flyweightData.damage);
             enemy.hasAttacked = false;
@@ -27,19 +23,18 @@ public class AttackState : EnemyState
 
         if (enemy.stateTimer >= attackDuration)
         {
-            if (enemy.DistanceWithPlayer() > enemy.flyweightData.reachPlayerRadius)
+            if (enemy.DistanceWithPlayer() < enemy.flyweightData.reachPlayerRadius)
             {
                 enemy.ChangeState(enemy.flyweightData.chaseState);
             }
-            /*else 
+            else
             {
-                enemy.ChangeState(enemy.flyweightData.attackState);
-            }*/
+                enemy.ChangeState(enemy.flyweightData.idleState);
+            }
         }
     }
     public override void Exit(Enemy enemy)
     {
-        //enemy.animator.SetBool("nearPlayer", true);
+
     }
 }
-
