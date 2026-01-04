@@ -3,37 +3,40 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "States/SpecialGimmick")]
 public class RubiBossSpecialGimmickState : EnemyState
 {
-    public float chargeTime = 5f;
-    public float windRadius = 30f;
-    public float windForce = 20f;
-    public float startTime;
+    [SerializeField] float chargeTime = 5f;
+    [SerializeField] float windRadius = 30f;
+    [SerializeField] float windForce = 20f;
     public override void Enter(Enemy enemy)
     {
+        Debug.Log($"<color=cyan>{enemy.name}</color> ha entrado en el estado: <color=yellow>{this.name}</color>");
+
         enemy.StopMoving();
-        startTime = Time.time;
+        enemy.stateTimer = Time.time;
+        enemy.tookDamage = false;
     }
     public override void Execute(Enemy enemy, float deltaTime)
     {
-        float timeElapsed = Time.time - startTime;
+        MiniBoss boss = enemy as MiniBoss;
+        if (boss == null) return;
+
+        float timeElapsed = Time.time - boss.stateTimer;
         float dist = enemy.DistanceWithPlayer();
 
-        if(timeElapsed > chargeTime)
+        if(timeElapsed >= chargeTime)
         {
-            enemy.ChangeState(enemy.flyweightData.specialAttackBossState);
+            boss.ChangeState(boss.MiniBossData.specialAttackBossState);
         }
 
-        if (dist < windRadius)
-        {
-            enemy.pushPlayer(windForce);
-        }
+        boss.pushPlayer(windForce, windRadius);
+        
 
-        if (enemy.TakeDamage())
+        if (boss.tookDamage)
         {
-            enemy.ChangeState(stuntBossState);
+            boss.ChangeState(boss.MiniBossData.stunBossState);
         }
     }
     public override void Exit(Enemy enemy)
     {
-
+        
     }
 }

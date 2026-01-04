@@ -10,6 +10,8 @@ public class EnemyFlyweight : ScriptableObject
     public float speed;
     public int damage;
     public float patrolRadius;
+    public float detectPlayerRadius;
+    public float reachPlayerRadius;
 
     [Header("Apariencia")]
     public AnimatorOverrideController animatorOverride;

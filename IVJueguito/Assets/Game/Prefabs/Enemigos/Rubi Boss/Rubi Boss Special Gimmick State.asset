@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94044a8828d30244cb5fb23743de6a0b, type: 3}
+  m_Name: Rubi Boss Special Gimmick State
+  m_EditorClassIdentifier: Assembly-CSharp::RubiBossSpecialGimmickState
+  chargeTime: 5
+  windRadius: 20
+  windForce: 20
