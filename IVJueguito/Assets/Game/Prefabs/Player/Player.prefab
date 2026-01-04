@@ -689,7 +689,7 @@ Transform:
   m_GameObject: {fileID: 7671133791367624582}
   serializedVersion: 2
   m_LocalRotation: {x: -0.011449207, y: -0.72416013, z: -0.01202593, w: 0.68943197}
-  m_LocalPosition: {x: 23.630249, y: -0.786005, z: 1.1617737}
+  m_LocalPosition: {x: 23.630219, y: -0.7860048, z: 1.1617584}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -842,7 +842,7 @@ GameObject:
   - component: {fileID: 7067534413111131017}
   - component: {fileID: 8393618300959087692}
   m_Layer: 0
-  m_Name: Capsule (1)
+  m_Name: Poderes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

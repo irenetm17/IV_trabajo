@@ -8,7 +8,7 @@ public class Proyectile : MonoBehaviour
     void Start()
     {
         //ESTO ES PARA PROBAR COSAS
-        Init(Vector3.left, 20f);
+        //Init(Vector3.left, 20f);
     }
 
     public void Init(Vector3 dir, float spd)
@@ -22,9 +22,9 @@ public class Proyectile : MonoBehaviour
         direccion = -1 * direccion;
     }
 
-    void FixedUpdate()
+    void Update()
     {
-        transform.position += direccion * speed * Time.fixedDeltaTime;
+        transform.position += direccion * speed * Time.deltaTime;
 
     }
 }

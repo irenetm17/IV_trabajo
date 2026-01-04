@@ -52,16 +52,31 @@ public class Ruby : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        
         Enemy enemy = collision.collider.GetComponent<Enemy>();
         PlayerMovement player = collision.collider.GetComponent<PlayerMovement>();
         if (player == null)
         {
+            //Enemigo
             if (enemy != null)
             {
                 // Bajar vida a enemigos
                 Debug.LogWarning("Le hice pupa");
                 Destroy(gameObject);
             }
+
+
+            //Muro de Hielo
+            MuroHieloRubi muroHielo = collision.gameObject.GetComponent<MuroHieloRubi>();
+
+            if( muroHielo != null )
+            {
+                muroHielo.DerretirMuro();
+            }
+
         }
+
+
+
     }
 }
