@@ -176,7 +176,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.44891423, g: 0.9811321, b: 0.45965552, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -339,8 +339,11 @@ MonoBehaviour:
   - 2
   - 4
   - 3
+  cooldownImages: []
+  bloqueadosImages: []
   ability2: {fileID: 5492574780323536035, guid: db54bd73f0ac6ff4a8a4e4826782e4b4, type: 3}
   ability3: {fileID: 3217371199949232416, guid: db54bd73f0ac6ff4a8a4e4826782e4b4, type: 3}
+  gemas: 0
   diam: {fileID: 4831768372541796379}
   fireballPrefab: {fileID: 7847159357427887921, guid: 12e35f47460a0e948bd8b3f3c695a356, type: 3}
   fireballSpawnPoint: {fileID: 1282163240840796693}

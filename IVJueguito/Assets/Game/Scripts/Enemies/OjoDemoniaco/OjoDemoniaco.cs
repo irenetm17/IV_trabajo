@@ -1,3 +1,4 @@
+﻿using System.Collections;
 using UnityEngine;
 
 public class OjoDemoniaco : MonoBehaviour
@@ -24,6 +25,24 @@ public class OjoDemoniaco : MonoBehaviour
 
     [SerializeField]
     private float _shootingDistance = 30f;
+
+    [SerializeField]
+    private Light _light;
+    private float minIntensity = 0f;
+    [SerializeField]
+    private float maxIntensity = 300f;
+    [SerializeField]
+    private float _pulseDuration = 2f; // tiempo de subida (y bajada)
+
+
+    private void Start()
+    {
+        if (_light != null)
+        {
+            _light.intensity = minIntensity;
+            StartCoroutine(LightPulseCoroutine());
+        }
+    }
 
 
 
@@ -53,7 +72,35 @@ public class OjoDemoniaco : MonoBehaviour
         }
 
     }
-    
+
+
+    private IEnumerator LightPulseCoroutine()
+    {
+        while (true)
+        {
+            // Subida int
+
+            float t = 0f;
+            while (t < _pulseDuration)
+            {
+                t += Time.deltaTime;
+                float lerp = t / _pulseDuration;
+                _light.intensity = Mathf.Lerp(minIntensity, maxIntensity, lerp);
+                yield return null;
+            }
+
+            // Bajada int
+            t = 0f;
+            while (t < _pulseDuration)
+            {
+                t += Time.deltaTime;
+                float lerp = t / _pulseDuration;
+                _light.intensity = Mathf.Lerp(maxIntensity, minIntensity, lerp);
+                yield return null;
+            }
+        }
+    }
+
 
 
 
