@@ -52,7 +52,11 @@ public class PlayerAbilities : MonoBehaviour, IObserver
         {
             PlayerStatsEvent event2 = (PlayerStatsEvent)evento; //desempaqueta
 
-            bloqueadosImages[gemas].gameObject.SetActive(false); //desbloquea la habilidad correspondiente
+
+            
+                bloqueadosImages[gemas].gameObject.SetActive(false); //desbloquea la habilidad correspondiente
+            
+
             gemas += event2.gems; //cosas de gemas
         }
 
@@ -61,7 +65,7 @@ public class PlayerAbilities : MonoBehaviour, IObserver
             CollectibleEvent event4 = (CollectibleEvent)evento; //desempaqueta
             if(event4.tipo == CollectibleType.Gema)
             {
-                bloqueadosImages[gemas].gameObject.SetActive(false); //desbloquea la habilidad correspondiente
+                    bloqueadosImages[gemas].gameObject.SetActive(false); //desbloquea la habilidad correspondiente
                 gemas += event4.amount;
             }
         }
