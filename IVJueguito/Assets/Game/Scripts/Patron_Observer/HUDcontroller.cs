@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class HUDcontroller : MonoBehaviour, IObserver
 {
@@ -11,7 +12,7 @@ public class HUDcontroller : MonoBehaviour, IObserver
     [SerializeField] private Image[] hearts;
     [SerializeField] private float maxHealth = 3f;
 
-    private float currentHealth;
+    [SerializeField] private float currentHealth = 1f;
 
     private bool isPaused = false;
     [Header("DIALOGOS")]
@@ -65,7 +66,7 @@ public class HUDcontroller : MonoBehaviour, IObserver
         }
     }
 
-    #region VIDAS Y GEMAS
+    #region VIDAS
     private void UpdateHearts()
     {
         float remainingHealth = currentHealth;
@@ -84,6 +85,9 @@ public class HUDcontroller : MonoBehaviour, IObserver
     #region DIALOGOS
     private void StartDialogue(string[] array)
     {
+        SimpleEvent quieto = new SimpleEvent(eventType.PlayerCanMove);
+        EventManager.instance.Publicar(quieto);
+
         arrayTextosDialogos = array;
         didDialogueStart = true;
         dialoguePanel.SetActive(true);
@@ -104,7 +108,7 @@ public class HUDcontroller : MonoBehaviour, IObserver
             yield return new WaitForSeconds(typingTime);
         }
 
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(3.5f);
         if (textoDialogo.text == arrayTextosDialogos[lineIndex])
         {
             ActivarCartel();
@@ -121,11 +125,14 @@ public class HUDcontroller : MonoBehaviour, IObserver
         {
             didDialogueStart = false;
             dialoguePanel.SetActive(false);
+
+            SimpleEvent muevete = new SimpleEvent(eventType.PlayerCanMove);
+            EventManager.instance.Publicar(muevete);
         }
     }
     void Update()
     {
-        if (didDialogueStart && Input.GetMouseButtonDown(0) && (lineIndex < arrayTextosDialogos.Length))
+        if (didDialogueStart && Mouse.current.leftButton.IsPressed() && (lineIndex < arrayTextosDialogos.Length))
         {
             dialoguePanel.SetActive(true);
             if (textoDialogo.text == arrayTextosDialogos[lineIndex])
@@ -150,7 +157,7 @@ public class HUDcontroller : MonoBehaviour, IObserver
 
     void Start()
     {
-        currentHealth = maxHealth;
+        //currentHealth = maxHealth;
         UpdateHearts();
 
         EventManager.instance.Subscribir(eventType.PlayerStatsUpdated, this);
