@@ -122,6 +122,9 @@ MonoBehaviour:
   hasAttacked: 0
   stateTimer: 0
   triggerSpecial: 0
+  specialDone: 0
+  activateParticles: 1
+  windArea: {fileID: 1557951959012301445, guid: 9268e1593f9fe46448cfee9ce6de4b88, type: 3}
 --- !u!1 &7759444854279912717
 GameObject:
   m_ObjectHideFlags: 0

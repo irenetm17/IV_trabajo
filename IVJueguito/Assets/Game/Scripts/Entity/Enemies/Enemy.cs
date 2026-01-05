@@ -35,7 +35,7 @@ public class Enemy : MonoBehaviour, IEnemy, IObserver
         flyweightData = EnemyFlyweightFactory.Instance.GetFlyweight(type); // Obtener datos compartidos del tipo de enemigo
 
         // Aplicar animaciones según tipo
-        if (flyweightData.animatorOverride != null && animator != null)
+        if (flyweightData.animatorOverride != null)
         {
             animator.runtimeAnimatorController = flyweightData.animatorOverride;
         }
@@ -58,9 +58,13 @@ public class Enemy : MonoBehaviour, IEnemy, IObserver
         stateMachine = new StateMachine();
         stateMachine.Initialize(flyweightData.idleState, this);
     }
-    void Start()
+
+    void Awake()
     {
         animator = GetComponent<Animator>();
+    }
+    void Start()
+    {
         Initialize(tipoParaTest);
         EventManager.instance.Subscribir(eventType.DamageTaken, this);
     }

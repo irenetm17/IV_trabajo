@@ -31,7 +31,6 @@ public class ChaseBossState : EnemyState
 
         if (boss.triggerSpecial)
         {
-            Debug.LogError($"¡CULPABLE! El Boss salta porque -> HP Actual: {boss.currentHp} | Trigger es: {boss.triggerSpecial}");
             boss.ChangeState(boss.MiniBossData.specialGimmickBossState);
         }
 
