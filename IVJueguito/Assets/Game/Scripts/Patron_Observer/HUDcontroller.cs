@@ -14,6 +14,10 @@ public class HUDcontroller : MonoBehaviour, IObserver
 
     [SerializeField] private float currentHealth = 1f;
 
+    [Header("LLAVES")]
+    private int numLlaves = 0;
+    [SerializeField] private Image[] keys;
+
     private bool isPaused = false;
     [Header("DIALOGOS")]
     [SerializeField] private GameObject dialoguePanel;
@@ -43,8 +47,17 @@ public class HUDcontroller : MonoBehaviour, IObserver
                 currentHealth = Mathf.Clamp(currentHealth, 0f, maxHealth);
                 UpdateHearts();
             }
+            if (event4.tipo == CollectibleType.Llaves)
+            {
+                numLlaves += event4.amount;
+                UpdateKeys();
+            }
         }
-
+        if (evento.Tipo == eventType.UseKey)
+        {
+            numLlaves--;
+            UpdateKeys();
+        }
         if (evento.Tipo == eventType.GamePaused)
         {
             //CollectibleEvent event5 = (CollectibleEvent)evento;
@@ -66,7 +79,7 @@ public class HUDcontroller : MonoBehaviour, IObserver
         }
     }
 
-    #region VIDAS
+    #region VIDAS Y LLAVES
     private void UpdateHearts()
     {
         float remainingHealth = currentHealth;
@@ -77,6 +90,20 @@ public class HUDcontroller : MonoBehaviour, IObserver
             hearts[i].fillAmount = fill;
 
             remainingHealth -= 1f;
+        }
+    }
+    private void UpdateKeys()
+    {
+        for (int i = 0; i < keys.Length; i++)
+        {
+            if (i < numLlaves)
+            {
+                keys[i].enabled = true;
+            }
+            else
+            {
+                keys[i].enabled = false;
+            }
         }
     }
     #endregion
@@ -159,11 +186,13 @@ public class HUDcontroller : MonoBehaviour, IObserver
     {
         //currentHealth = maxHealth;
         UpdateHearts();
+        UpdateKeys();
 
         EventManager.instance.Subscribir(eventType.PlayerStatsUpdated, this);
         EventManager.instance.Subscribir(eventType.DialogueStarted, this);
         EventManager.instance.Subscribir(eventType.CollectiblePicked, this);
         EventManager.instance.Subscribir(eventType.GamePaused, this);
+        EventManager.instance.Subscribir(eventType.UseKey, this);
     }
     void OnDestroy()
     {
@@ -173,6 +202,7 @@ public class HUDcontroller : MonoBehaviour, IObserver
             EventManager.instance.Desuscribir(eventType.DialogueStarted, this);
             EventManager.instance.Desuscribir(eventType.CollectiblePicked, this);
             EventManager.instance.Desuscribir(eventType.GamePaused, this);
+            EventManager.instance.Desuscribir(eventType.UseKey, this);
         }
     }
 }
