@@ -5,6 +5,8 @@ public class IdleState : EnemyState
 {
     public override void Enter(Enemy enemy)
     {
+        Debug.Log($"<color=cyan>{enemy.name}</color> ha entrado en el estado: <color=yellow>{this.name}</color>");
+
         enemy.hasWayPoint = false;
     }
     public override void Execute(Enemy enemy, float deltaTime)
@@ -27,7 +29,7 @@ public class IdleState : EnemyState
             enemy.hasWayPoint = false;
         }
 
-        if (enemy.DistanceWithPlayer() < 30f)
+        if (enemy.DistanceWithPlayer() < enemy.flyweightData.detectPlayerRadius)
         {
             enemy.ChangeState(enemy.flyweightData.chaseState);
         }

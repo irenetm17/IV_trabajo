@@ -77,7 +77,10 @@ public class SlimeSpawner : MonoBehaviour
 
             IPoolObject slimePooled = _slimePool.TakeFromPool();
             slimePooled.ResetObject();
-            slimePooled.MoveTo(spawnPosition);
+            slimePooled.DisplaceTo(spawnPosition);
+
+
+            Debug.Log("Slime spawned at pos: " + spawnPosition);
         }
 
         //Llamar a la pool y resetear, activar y mover el slime de la pool al randomSpreadSpawn (de momento no)

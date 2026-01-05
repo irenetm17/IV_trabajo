@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Slime : /*Enemy, */MonoBehaviour, IPoolObject  // Tambien implementará el Enemy
+public class Slime : Enemy, IPoolObject  // Tambien implementará el Enemy
 {
     public SlimePool parentSlimePool;
 
@@ -9,7 +9,7 @@ public class Slime : /*Enemy, */MonoBehaviour, IPoolObject  // Tambien implement
         throw new System.NotImplementedException();
     }
 
-    public void MoveTo(Vector3 position)
+    public void DisplaceTo(Vector3 position)
     {
         this.transform.position = position;
     }
@@ -20,7 +20,7 @@ public class Slime : /*Enemy, */MonoBehaviour, IPoolObject  // Tambien implement
 
 
         //Mover al origen
-        this.MoveTo(Vector3.zero);
+        this.DisplaceTo(Vector3.zero);
     }
 
     public void SetActive(bool active)
@@ -33,8 +33,8 @@ public class Slime : /*Enemy, */MonoBehaviour, IPoolObject  // Tambien implement
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            this.SetActive(false);
-            parentSlimePool.PutToPool(this);
+            //this.SetActive(false);
+            //parentSlimePool.PutToPool(this);
         }
     }
 

@@ -4,7 +4,7 @@ using UnityEngine.AI;
 using UnityEngine.UIElements;
 using UnityEngine.VFX;
 
-public class Enemy : MonoBehaviour, IEnemy
+public class Enemy : MonoBehaviour, IEnemy, IObserver
 {
     [Header("Datos")]
     public int currentHp;
@@ -21,13 +21,24 @@ public class Enemy : MonoBehaviour, IEnemy
 
     private StateMachine stateMachine;
 
-    // Variables usadas por estados (Idle)
+    // Variables usadas por estados
     [HideInInspector] public Vector3 currentWayPoint;
+
     [HideInInspector] public bool hasWayPoint = false;
+    [HideInInspector] public bool tookDamage = false;
+    [HideInInspector] public bool hasAttacked = false;
+
+    [HideInInspector] public float stateTimer;
 
     public void Initialize(EnemyType type)
     {
         flyweightData = EnemyFlyweightFactory.Instance.GetFlyweight(type); // Obtener datos compartidos del tipo de enemigo
+
+        // Aplicar animaciones según tipo
+        if (flyweightData.animatorOverride != null && animator != null)
+        {
+            animator.runtimeAnimatorController = flyweightData.animatorOverride;
+        }
 
         spawnPosition = transform.position;
         currentHp = flyweightData.maxHP;
@@ -41,11 +52,7 @@ public class Enemy : MonoBehaviour, IEnemy
             playerTransform = playerObj.transform;
         }
 
-        // Aplicar animaciones según tipo
-        if (flyweightData.animatorOverride != null && animator != null)
-        {
-            animator.runtimeAnimatorController = flyweightData.animatorOverride;
-        }
+        
 
         // Crear máquina de estados e iniciar en Idle
         stateMachine = new StateMachine();
@@ -53,14 +60,36 @@ public class Enemy : MonoBehaviour, IEnemy
     }
     void Start()
     {
-       // Debug.Log("El objeto ha nacido");
+        animator = GetComponent<Animator>();
         Initialize(tipoParaTest);
+        EventManager.instance.Subscribir(eventType.DamageTaken, this);
     }
-    void Update()
+
+    void OnDestroy()
+    {
+        // Limpieza obligatoria
+        if (EventManager.instance != null)
+        {
+            EventManager.instance.Desuscribir(eventType.DamageTaken, this);
+        }
+    }
+
+    public void OnEvent(IEvent evento)
+    {
+        if (evento is DamageTakenEvent dmgEvent)
+        {
+            if (dmgEvent.Target == this.gameObject)
+            {
+                Debug.Log("Evento publicado por la puta cara");
+                tookDamage = true;
+            }
+        }
+    }
+
+    protected virtual void Update()
     {
         if (!isAlive) return;
 
-        // Delegar comportamiento al estado actual
         stateMachine.Update(this, Time.deltaTime);
     }
     public void ChangeState(EnemyState newState)
@@ -81,6 +110,10 @@ public class Enemy : MonoBehaviour, IEnemy
     public void TakeDamage(int damage)
     {
         currentHp -= damage;
+
+        DamageTakenEvent evt = new DamageTakenEvent(this.gameObject);
+        EventManager.instance.Publicar(evt);
+
         if (currentHp <= 0)
         {
             isAlive = false;
@@ -96,15 +129,15 @@ public class Enemy : MonoBehaviour, IEnemy
 
     public void MoveTo(Vector3 target)
     {
-        animator.SetFloat("Speed", 1.0f);
+        //animator.SetFloat("Speed", 1.0f);
         float step = flyweightData.speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, target, step);
-        animator.SetFloat("Speed", 0.0f);
+        //animator.SetFloat("Speed", 0.0f);
     }
 
     public void StopMoving()
     {
-        animator.SetFloat("Speed", 0.0f);
+        //animator.SetFloat("Speed", 0.0f);
     }
 
     public Vector3 SearchPlayer()

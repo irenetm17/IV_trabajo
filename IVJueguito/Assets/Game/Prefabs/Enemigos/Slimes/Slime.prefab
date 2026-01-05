@@ -101,10 +101,10 @@ GameObject:
   - component: {fileID: 5081018207574839445}
   - component: {fileID: 3050283574688783119}
   - component: {fileID: 6408445120153973650}
-  - component: {fileID: -8209001829429112378}
   - component: {fileID: 3154187771450529499}
+  - component: {fileID: 2303107158095143725}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Slime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -176,26 +176,6 @@ CapsuleCollider:
   m_Height: 7.8043175
   m_Direction: 1
   m_Center: {x: 0, y: -0.024341583, z: 0}
---- !u!114 &-8209001829429112378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8335818464000128432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ecd67d33d5ad5246a14f3a99a5ccde8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  currentHp: 0
-  isAlive: 0
-  flyweightData: {fileID: 11400000, guid: 6e00e3a7f6e6c444c9e8b27de96ebe88, type: 2}
-  patrolRadius: 0
-  animator: {fileID: 0}
-  tipoParaTest: 0
-  currentWayPoint: {x: 0, y: 0, z: 0}
-  hasWayPoint: 0
 --- !u!114 &3154187771450529499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,3 +188,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73e742067e7ba5946b9a333e6a08578e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Entity
+--- !u!114 &2303107158095143725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8335818464000128432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 060a49de50f74b44bbda95077b6d9b1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Slime
+  currentHp: 0
+  isAlive: 0
+  flyweightData: {fileID: 11400000, guid: 6e00e3a7f6e6c444c9e8b27de96ebe88, type: 2}
+  patrolRadius: 0
+  animator: {fileID: 0}
+  tipoParaTest: 0
+  currentWayPoint: {x: 0, y: 0, z: 0}
+  hasWayPoint: 0
+  tookDamage: 0
+  hasAttacked: 0
+  stateTimer: 0
+  parentSlimePool: {fileID: 0}

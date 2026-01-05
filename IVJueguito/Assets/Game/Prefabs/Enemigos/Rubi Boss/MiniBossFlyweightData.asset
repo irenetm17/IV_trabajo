@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e63dbb45488c46d4c8222fa0287da850, type: 3}
+  m_Name: MiniBossFlyweightData
+  m_EditorClassIdentifier: Assembly-CSharp::MiniBossFlyweight
+  typeID: 4
+  maxHP: 1000
+  speed: 5
+  damage: 1
+  patrolRadius: 30
+  detectPlayerRadius: 30
+  reachPlayerRadius: 15
+  animatorOverride: {fileID: 22100000, guid: 49086ca237bb77247a6361eb9b99ccaa, type: 2}
+  idleState: {fileID: 11400000, guid: 3e8c5184c1118394ba1673aa5ab4c9a6, type: 2}
+  chaseState: {fileID: 11400000, guid: 41a8acac47d0dbe4aa30864240632604, type: 2}
+  attackState: {fileID: 11400000, guid: 083afa618287cdb489956dc8f498b4da, type: 2}
+  dieState: {fileID: 11400000, guid: 91a2967ea66ca454481c76a61b98d0ee, type: 2}
+  specialGimmickBossState: {fileID: 11400000, guid: b2bcf91983cd49b43a00a0f3770fa8fc, type: 2}
+  specialAttackBossState: {fileID: 11400000, guid: eec41f9338810dd4896b9dbf5c15f526, type: 2}
+  stunBossState: {fileID: 11400000, guid: 8dc0f701274fe274b869d23c2760d387, type: 2}

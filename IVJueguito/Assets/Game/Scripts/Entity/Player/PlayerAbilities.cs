@@ -11,6 +11,7 @@ public class PlayerAbilities : MonoBehaviour, IObserver
     [SerializeField] private Image[] cooldownImages;
     [SerializeField] private Image[] bloqueadosImages;
 
+    private bool canMove = true;
     private float[] lastUseTime = new float[4];
 
     // HAY QUE USAR ESTA MIERDA DE BRUJERIA RARA QUE FUNCIONE ME CAGO EN LA HOSTIA
@@ -43,6 +44,7 @@ public class PlayerAbilities : MonoBehaviour, IObserver
     {
         EventManager.instance.Subscribir(eventType.PlayerStatsUpdated, this);
         EventManager.instance.Subscribir(eventType.CollectiblePicked, this);
+        EventManager.instance.Subscribir(eventType.PlayerCanMove, this);
     }
     public void OnEvent(IEvent evento)
     {
@@ -67,6 +69,11 @@ public class PlayerAbilities : MonoBehaviour, IObserver
                 gemas += event4.amount;
             }
         }
+
+        if (evento.Tipo == eventType.PlayerCanMove)
+        {
+            canMove = !canMove;
+        }
     }
     void OnDestroy()
     {
@@ -74,6 +81,7 @@ public class PlayerAbilities : MonoBehaviour, IObserver
         {
             EventManager.instance.Desuscribir(eventType.PlayerStatsUpdated, this);
             EventManager.instance.Desuscribir(eventType.CollectiblePicked, this);
+            EventManager.instance.Desuscribir(eventType.PlayerCanMove, this);
         }
     }
 
@@ -91,7 +99,8 @@ public class PlayerAbilities : MonoBehaviour, IObserver
 
     void Update()
     {
-
+        UpdateCooldownUI();
+        if (!canMove) return;
         if (Mouse.current.leftButton.IsPressed()) // Lo del raton de las narices
         {
             Debug.Log("Ability0 input detectado");
@@ -109,7 +118,6 @@ public class PlayerAbilities : MonoBehaviour, IObserver
         {
             TryUseAbility(3);
         }
-        UpdateCooldownUI();
     }
     void UpdateCooldownUI()
     {
