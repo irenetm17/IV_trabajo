@@ -22,6 +22,7 @@ public class EventManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        DontDestroyOnLoad(this.gameObject); //para que no se destruya al cambiar de escena
     }
 
     Dictionary<eventType, List<IObserver> > diccionario  = new Dictionary<eventType, List<IObserver> >();
