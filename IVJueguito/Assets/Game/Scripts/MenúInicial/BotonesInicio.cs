@@ -8,11 +8,14 @@ public class BotonesInicio : MonoBehaviour
 
     private void Start()
     {
-        panelCreditos.SetActive(false);
-        menuInicial.SetActive(true);
+        if(panelCreditos != null)
+            panelCreditos.SetActive(false);
+        if(menuInicial != null)
+            menuInicial.SetActive(true);
     }
     public void IniciarJuego()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Game Scene");
         EventManager.instance.Publicar(new SimpleEvent(eventType.LevelStarted));
     }
@@ -31,5 +34,9 @@ public class BotonesInicio : MonoBehaviour
     {
         panelCreditos.SetActive(false);
         menuInicial.SetActive(true);
+    }
+    public void IrMenuPrincipal()
+    {
+        SceneManager.LoadScene("MenuInicial");
     }
 }

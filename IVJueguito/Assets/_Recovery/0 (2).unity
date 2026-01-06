@@ -2165,7 +2165,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 295386871}
         m_TargetAssemblyTypeName: BotonesInicio, Assembly-CSharp
-        m_MethodName: IrMenuPrincipal
+        m_MethodName: SalirJuego
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
