@@ -5,6 +5,12 @@ public class BotonesInicio : MonoBehaviour
 {
     [SerializeField] private GameObject panelCreditos;
     [SerializeField] private GameObject menuInicial;
+
+    private void Start()
+    {
+        panelCreditos.SetActive(false);
+        menuInicial.SetActive(true);
+    }
     public void IniciarJuego()
     {
         SceneManager.LoadScene("Game Scene");
