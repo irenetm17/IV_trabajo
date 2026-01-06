@@ -27,6 +27,11 @@ public class HUDcontroller : MonoBehaviour, IObserver
     private int lineIndex;
     private bool didDialogueStart;
 
+
+    [SerializeField] private GameObject BotonPausa;
+    [SerializeField] private GameObject BotonDespausa;
+    [SerializeField] private GameObject panelPausa;
+
     public void OnEvent(IEvent evento)
     {
         if (evento.Tipo == eventType.PlayerStatsUpdated)
@@ -65,11 +70,19 @@ public class HUDcontroller : MonoBehaviour, IObserver
             if (isPaused)
             {
                 Time.timeScale = 0f;
+                BotonDespausa.SetActive(true);
+                BotonPausa.SetActive(false);
+                panelPausa.SetActive(true);
             }
             else
             {
                 Time.timeScale = 1f;
+                BotonPausa.SetActive(true);
+                BotonDespausa.SetActive(false);
+                panelPausa.SetActive(false);
             }
+
+
         }
 
         if (evento.Tipo == eventType.DialogueStarted)
@@ -193,6 +206,10 @@ public class HUDcontroller : MonoBehaviour, IObserver
         EventManager.instance.Subscribir(eventType.CollectiblePicked, this);
         EventManager.instance.Subscribir(eventType.GamePaused, this);
         EventManager.instance.Subscribir(eventType.UseKey, this);
+
+        BotonPausa.SetActive(true);
+        BotonDespausa.SetActive(false);
+        panelPausa.SetActive(false);
     }
     void OnDestroy()
     {
