@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &20870031 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+  m_PrefabInstance: {fileID: 1592387374}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &30665200
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,6 +557,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 107995433}
   m_CullTransparentMesh: 1
+--- !u!4 &111906103 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+  m_PrefabInstance: {fileID: 630932755}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &116153882
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -617,6 +627,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 350cfa67aa38a9d43800d592f8a023d5, type: 3}
+--- !u!4 &124137169 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+  m_PrefabInstance: {fileID: 1934096544}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &127052867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1372,7 +1387,7 @@ Transform:
   m_GameObject: {fileID: 167852244}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.97, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1453,6 +1468,71 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 167916858}
   m_CullTransparentMesh: 1
+--- !u!1001 &171392526
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1063353340}
+    m_Modifications:
+    - target: {fileID: 1578319313047441056, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_Name
+      value: MURO ROCA DIAMANTE (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -25.330933
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -30.17482
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 160.97754
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fce8293f859403844943be8b1255564c, type: 3}
 --- !u!1001 &172539722
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1515,6 +1595,76 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4377253562344611308, guid: f36d3d9eabd17f84c870540601893303, type: 3}
   m_PrefabInstance: {fileID: 172539722}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &179476388 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+  m_PrefabInstance: {fileID: 2028500257}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &186561091
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1063353340}
+    m_Modifications:
+    - target: {fileID: 1578319313047441056, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_Name
+      value: MURO ROCA DIAMANTE (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -273.24808
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -27.97482
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 156.97754
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fce8293f859403844943be8b1255564c, type: 3}
 --- !u!1001 &186834383
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1660,6 +1810,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7550579351736356427, guid: 556531033421cd64d808e2c52441fc54, type: 3}
   m_PrefabInstance: {fileID: 194100690}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &203722636 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+  m_PrefabInstance: {fileID: 1916621792}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &206907787
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1063353340}
+    m_Modifications:
+    - target: {fileID: 1578319313047441056, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_Name
+      value: MURO ROCA DIAMANTE (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 170.02191
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -28.37482
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8.272949
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fce8293f859403844943be8b1255564c, type: 3}
 --- !u!1001 &223858150
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1792,6 +2004,71 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5592417039994149930, guid: 350cfa67aa38a9d43800d592f8a023d5, type: 3}
   m_PrefabInstance: {fileID: 227177612}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &230019071
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1063353340}
+    m_Modifications:
+    - target: {fileID: 1578319313047441056, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_Name
+      value: MURO ROCA DIAMANTE (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.191999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.191999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -147.24805
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -27.97482
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 185.07755
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.0042524245
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.999991
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180.487
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fce8293f859403844943be8b1255564c, type: 3}
 --- !u!1001 &237590574
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2079,6 +2356,76 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 265295594}
   m_CullTransparentMesh: 1
+--- !u!1001 &291499866
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1063353340}
+    m_Modifications:
+    - target: {fileID: 1578319313047441056, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_Name
+      value: MURO ROCA DIAMANTE (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.191999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.191999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -168.14716
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -27.97482
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 185.25537
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.0042524245
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.999991
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180.487
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fce8293f859403844943be8b1255564c, type: 3}
+--- !u!4 &294806228 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+  m_PrefabInstance: {fileID: 291499866}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &295386866
 GameObject:
   m_ObjectHideFlags: 0
@@ -2355,6 +2702,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4377253562344611308, guid: f36d3d9eabd17f84c870540601893303, type: 3}
   m_PrefabInstance: {fileID: 315208928}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &327177277 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+  m_PrefabInstance: {fileID: 1033961046}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -2492,6 +2844,11 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!4 &335159617 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+  m_PrefabInstance: {fileID: 1455810967}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &341302186
 GameObject:
   m_ObjectHideFlags: 0
@@ -3789,7 +4146,7 @@ Transform:
   m_GameObject: {fileID: 475924419}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.5, y: -1.24, z: 7.7}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4048,6 +4405,71 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 350cfa67aa38a9d43800d592f8a023d5, type: 3}
+--- !u!1001 &518094332
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1063353340}
+    m_Modifications:
+    - target: {fileID: 1578319313047441056, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_Name
+      value: MURO ROCA DIAMANTE (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -233.24808
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -27.97482
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 21.077545
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fce8293f859403844943be8b1255564c, type: 3}
 --- !u!1 &539108699
 GameObject:
   m_ObjectHideFlags: 0
@@ -4126,6 +4548,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 539108699}
   m_CullTransparentMesh: 1
+--- !u!4 &550750171 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+  m_PrefabInstance: {fileID: 1313374599}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &568853715 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5592417039994149930, guid: 350cfa67aa38a9d43800d592f8a023d5, type: 3}
@@ -4308,6 +4735,71 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6894747768573112149, guid: 2030f61aa117017498a78e1697a18d8b, type: 3}
   m_PrefabInstance: {fileID: 582749237}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &601206729
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1063353340}
+    m_Modifications:
+    - target: {fileID: 1578319313047441056, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_Name
+      value: MURO ROCA DIAMANTE (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -112.34808
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -27.97482
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 77.97754
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fce8293f859403844943be8b1255564c, type: 3}
 --- !u!1001 &610103274
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4630,6 +5122,71 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2030f61aa117017498a78e1697a18d8b, type: 3}
+--- !u!1001 &630932755
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1063353340}
+    m_Modifications:
+    - target: {fileID: 1578319313047441056, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_Name
+      value: MURO ROCA DIAMANTE (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -25.330933
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -30.17482
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 182.27756
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fce8293f859403844943be8b1255564c, type: 3}
 --- !u!1001 &632288370
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4691,6 +5248,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4377253562344611308, guid: f36d3d9eabd17f84c870540601893303, type: 3}
   m_PrefabInstance: {fileID: 632288370}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &636037537 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+  m_PrefabInstance: {fileID: 1803242658}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &659765010
 GameObject:
@@ -4840,7 +5402,7 @@ Transform:
   m_GameObject: {fileID: 659765010}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -24.429993, y: -2, z: -12.130005}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5059,6 +5621,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 676754892}
   m_CullTransparentMesh: 1
+--- !u!4 &676898027 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+  m_PrefabInstance: {fileID: 976349179}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &686115830
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5128,6 +5695,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5592417039994149930, guid: 350cfa67aa38a9d43800d592f8a023d5, type: 3}
   m_PrefabInstance: {fileID: 686115830}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &688498191 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+  m_PrefabInstance: {fileID: 601206729}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &692295686
 PrefabInstance:
@@ -5260,6 +5832,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4377253562344611308, guid: f36d3d9eabd17f84c870540601893303, type: 3}
   m_PrefabInstance: {fileID: 714927261}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &737914465 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+  m_PrefabInstance: {fileID: 1668404007}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &763424164
 GameObject:
@@ -5463,6 +6040,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4377253562344611308, guid: f36d3d9eabd17f84c870540601893303, type: 3}
   m_PrefabInstance: {fileID: 775206800}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &780069483 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+  m_PrefabInstance: {fileID: 2062537057}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &783048544
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5604,6 +6186,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 784859961}
   m_CullTransparentMesh: 1
+--- !u!4 &792045492 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+  m_PrefabInstance: {fileID: 230019071}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &792098114
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6260,12 +6847,92 @@ Transform:
   m_GameObject: {fileID: 897166571}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.1100464, y: -3.7, z: -18.860016}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1281235360}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &904340181 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+  m_PrefabInstance: {fileID: 186561091}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &904453227 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+  m_PrefabInstance: {fileID: 171392526}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &919480530
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1063353340}
+    m_Modifications:
+    - target: {fileID: 1578319313047441056, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_Name
+      value: MURO ROCA DIAMANTE (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.191999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.191999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -233.44464
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -27.97482
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 185.81088
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.0042524245
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.999991
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180.487
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fce8293f859403844943be8b1255564c, type: 3}
+--- !u!4 &922543833 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+  m_PrefabInstance: {fileID: 948889898}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &930612186
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6389,6 +7056,71 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4377253562344611308, guid: f36d3d9eabd17f84c870540601893303, type: 3}
   m_PrefabInstance: {fileID: 943133317}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &948889898
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1063353340}
+    m_Modifications:
+    - target: {fileID: 1578319313047441056, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_Name
+      value: MURO ROCA DIAMANTE (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -157.44806
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -27.97482
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 76.87753
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fce8293f859403844943be8b1255564c, type: 3}
 --- !u!1 &959140522
 GameObject:
   m_ObjectHideFlags: 0
@@ -6499,6 +7231,71 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5592417039994149930, guid: 350cfa67aa38a9d43800d592f8a023d5, type: 3}
   m_PrefabInstance: {fileID: 388637812}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &976349179
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1063353340}
+    m_Modifications:
+    - target: {fileID: 1578319313047441056, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_Name
+      value: MURO ROCA DIAMANTE (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -112.34808
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -27.97482
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 165.57755
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fce8293f859403844943be8b1255564c, type: 3}
 --- !u!1 &980711739
 GameObject:
   m_ObjectHideFlags: 0
@@ -6891,6 +7688,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1011200196}
   m_CullTransparentMesh: 1
+--- !u!4 &1011561733 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+  m_PrefabInstance: {fileID: 206907787}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1018140220
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6961,11 +7763,148 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7550579351736356427, guid: 556531033421cd64d808e2c52441fc54, type: 3}
   m_PrefabInstance: {fileID: 1018140220}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1019108177 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+  m_PrefabInstance: {fileID: 1712662778}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1033961046
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1063353340}
+    m_Modifications:
+    - target: {fileID: 1578319313047441056, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_Name
+      value: MURO ROCA DIAMANTE (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -273.24808
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -27.97482
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 114.47754
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fce8293f859403844943be8b1255564c, type: 3}
 --- !u!4 &1049776717 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6894747768573112149, guid: 2030f61aa117017498a78e1697a18d8b, type: 3}
   m_PrefabInstance: {fileID: 1396784269}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1063353339
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1063353340}
+  m_Layer: 0
+  m_Name: Muros
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1063353340
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063353339}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -105.35193, y: -8.625179, z: -87.077545}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1188644331}
+  - {fileID: 904453227}
+  - {fileID: 124137169}
+  - {fileID: 792045492}
+  - {fileID: 922543833}
+  - {fileID: 335159617}
+  - {fileID: 904340181}
+  - {fileID: 676898027}
+  - {fileID: 294806228}
+  - {fileID: 2057902605}
+  - {fileID: 636037537}
+  - {fileID: 1649734307}
+  - {fileID: 1420493430}
+  - {fileID: 2013686755}
+  - {fileID: 1999723629}
+  - {fileID: 203722636}
+  - {fileID: 327177277}
+  - {fileID: 780069483}
+  - {fileID: 1312897309}
+  - {fileID: 1019108177}
+  - {fileID: 1815911389}
+  - {fileID: 688498191}
+  - {fileID: 1751919049}
+  - {fileID: 1130542306}
+  - {fileID: 1683096935}
+  - {fileID: 111906103}
+  - {fileID: 1169560725}
+  - {fileID: 737914465}
+  - {fileID: 179476388}
+  - {fileID: 1382990377}
+  - {fileID: 1926507330}
+  - {fileID: 1074515555}
+  - {fileID: 550750171}
+  - {fileID: 1011561733}
+  - {fileID: 20870031}
+  - {fileID: 2120424931}
+  m_Father: {fileID: 2113668888}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1065544225
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7035,6 +7974,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7550579351736356427, guid: 556531033421cd64d808e2c52441fc54, type: 3}
   m_PrefabInstance: {fileID: 1065544225}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1074515555 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+  m_PrefabInstance: {fileID: 1188801328}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1089638372
 GameObject:
@@ -7420,6 +8364,11 @@ Transform:
   - {fileID: 1366159342}
   m_Father: {fileID: 1808949072}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1130542306 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+  m_PrefabInstance: {fileID: 1944354284}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1134816497
 GameObject:
   m_ObjectHideFlags: 0
@@ -7495,6 +8444,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1134816497}
   m_CullTransparentMesh: 1
+--- !u!4 &1169560725 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+  m_PrefabInstance: {fileID: 1674150783}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1171494840
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7557,6 +8511,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4377253562344611308, guid: f36d3d9eabd17f84c870540601893303, type: 3}
   m_PrefabInstance: {fileID: 1171494840}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1188644331 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+  m_PrefabInstance: {fileID: 2008785504}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1188801328
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1063353340}
+    m_Modifications:
+    - target: {fileID: 1578319313047441056, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_Name
+      value: MURO ROCA DIAMANTE
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 101.25195
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -28.17482
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 242.45566
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fce8293f859403844943be8b1255564c, type: 3}
 --- !u!1001 &1190022123
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8497,7 +9529,7 @@ Transform:
   m_GameObject: {fileID: 1281235359}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 849.91, y: 13.16, z: 371.76}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8506,7 +9538,7 @@ Transform:
   - {fileID: 659765016}
   - {fileID: 167852250}
   - {fileID: 475924420}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1852614959}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1287444949
 GameObject:
@@ -8852,6 +9884,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4377253562344611308, guid: f36d3d9eabd17f84c870540601893303, type: 3}
   m_PrefabInstance: {fileID: 1311764285}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1312897309 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+  m_PrefabInstance: {fileID: 1951040454}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1313018589
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8980,6 +10017,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6894747768573112149, guid: 2030f61aa117017498a78e1697a18d8b, type: 3}
   m_PrefabInstance: {fileID: 1313168772}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1313374599
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1063353340}
+    m_Modifications:
+    - target: {fileID: 1578319313047441056, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_Name
+      value: MURO ROCA DIAMANTE (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 191.65192
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -28.37482
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8.272949
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fce8293f859403844943be8b1255564c, type: 3}
 --- !u!1001 &1318519215
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9346,6 +10440,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4377253562344611308, guid: f36d3d9eabd17f84c870540601893303, type: 3}
   m_PrefabInstance: {fileID: 1381665065}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1382990377 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+  m_PrefabInstance: {fileID: 1915131483}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1385826789
 GameObject:
   m_ObjectHideFlags: 0
@@ -9421,6 +10520,71 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1385826789}
   m_CullTransparentMesh: 1
+--- !u!1001 &1388948178
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1063353340}
+    m_Modifications:
+    - target: {fileID: 1578319313047441056, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_Name
+      value: MURO ROCA DIAMANTE (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -157.44806
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -27.97482
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 34.377533
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fce8293f859403844943be8b1255564c, type: 3}
 --- !u!1001 &1394669698
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9742,6 +10906,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7550579351736356427, guid: 556531033421cd64d808e2c52441fc54, type: 3}
   m_PrefabInstance: {fileID: 1401734029}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1420493430 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+  m_PrefabInstance: {fileID: 1816206318}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1422458762
 GameObject:
   m_ObjectHideFlags: 0
@@ -9941,6 +11110,71 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4377253562344611308, guid: f36d3d9eabd17f84c870540601893303, type: 3}
   m_PrefabInstance: {fileID: 1440176963}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1445535027
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1063353340}
+    m_Modifications:
+    - target: {fileID: 1578319313047441056, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_Name
+      value: MURO ROCA DIAMANTE (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.191999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.191999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -189.74634
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -27.97482
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 185.43927
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.0042524245
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.999991
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180.487
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fce8293f859403844943be8b1255564c, type: 3}
 --- !u!1 &1452969852
 GameObject:
   m_ObjectHideFlags: 0
@@ -10019,6 +11253,71 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1452969852}
   m_CullTransparentMesh: 1
+--- !u!1001 &1455810967
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1063353340}
+    m_Modifications:
+    - target: {fileID: 1578319313047441056, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_Name
+      value: MURO ROCA DIAMANTE (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -233.24808
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -27.97482
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 85.47754
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fce8293f859403844943be8b1255564c, type: 3}
 --- !u!1 &1456802597
 GameObject:
   m_ObjectHideFlags: 0
@@ -10166,6 +11465,71 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7550579351736356427, guid: 556531033421cd64d808e2c52441fc54, type: 3}
   m_PrefabInstance: {fileID: 1467386623}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1469772882
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1063353340}
+    m_Modifications:
+    - target: {fileID: 1578319313047441056, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_Name
+      value: MURO ROCA DIAMANTE (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -273.24808
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -27.97482
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 178.77756
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fce8293f859403844943be8b1255564c, type: 3}
 --- !u!4 &1489445742 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5592417039994149930, guid: 350cfa67aa38a9d43800d592f8a023d5, type: 3}
@@ -10459,6 +11823,71 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1553582740
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1063353340}
+    m_Modifications:
+    - target: {fileID: 1578319313047441056, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_Name
+      value: MURO ROCA DIAMANTE (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.191999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.191999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -255.74377
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -27.97482
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 186.00052
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.0042524245
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.999991
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180.487
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fce8293f859403844943be8b1255564c, type: 3}
 --- !u!1001 &1556983891
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10583,6 +12012,71 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4377253562344611308, guid: f36d3d9eabd17f84c870540601893303, type: 3}
   m_PrefabInstance: {fileID: 1581024945}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1592387374
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1063353340}
+    m_Modifications:
+    - target: {fileID: 1578319313047441056, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_Name
+      value: MURO ROCA DIAMANTE (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 274.9281
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -28.97482
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 144.17755
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fce8293f859403844943be8b1255564c, type: 3}
 --- !u!1001 &1601983382
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10785,6 +12279,71 @@ MonoBehaviour:
   BotonPausa: {fileID: 107995433}
   BotonDespausa: {fileID: 1837789287}
   panelPausa: {fileID: 354071636}
+--- !u!1001 &1616713942
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1063353340}
+    m_Modifications:
+    - target: {fileID: 1578319313047441056, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_Name
+      value: MURO ROCA DIAMANTE (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 274.9281
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -28.97482
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 122.17755
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fce8293f859403844943be8b1255564c, type: 3}
 --- !u!1001 &1618465767
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11129,6 +12688,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4377253562344611308, guid: f36d3d9eabd17f84c870540601893303, type: 3}
   m_PrefabInstance: {fileID: 1647106423}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1649734307 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+  m_PrefabInstance: {fileID: 1962670037}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1658939087
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11296,6 +12860,136 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1664663943}
   m_CullTransparentMesh: 1
+--- !u!1001 &1668404007
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1063353340}
+    m_Modifications:
+    - target: {fileID: 1578319313047441056, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_Name
+      value: MURO ROCA DIAMANTE (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.191999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.191999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -125.44885
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -27.97482
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 184.89233
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.0042524245
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.999991
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180.487
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fce8293f859403844943be8b1255564c, type: 3}
+--- !u!1001 &1674150783
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1063353340}
+    m_Modifications:
+    - target: {fileID: 1578319313047441056, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_Name
+      value: MURO ROCA DIAMANTE (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -112.34808
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -27.97482
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 208.27756
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fce8293f859403844943be8b1255564c, type: 3}
 --- !u!1001 &1679239365
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11437,6 +13131,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1682053413}
   m_CullTransparentMesh: 1
+--- !u!4 &1683096935 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+  m_PrefabInstance: {fileID: 518094332}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1684082899
 GameObject:
   m_ObjectHideFlags: 0
@@ -11673,6 +13372,71 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6894747768573112149, guid: 2030f61aa117017498a78e1697a18d8b, type: 3}
   m_PrefabInstance: {fileID: 58566605}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1712662778
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1063353340}
+    m_Modifications:
+    - target: {fileID: 1578319313047441056, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_Name
+      value: MURO ROCA DIAMANTE (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -112.34808
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -27.97482
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 100.27756
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fce8293f859403844943be8b1255564c, type: 3}
 --- !u!1001 &1721952161
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11876,6 +13640,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1737291187}
   m_CullTransparentMesh: 1
+--- !u!4 &1751919049 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+  m_PrefabInstance: {fileID: 1553582740}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1758229403
 GameObject:
   m_ObjectHideFlags: 0
@@ -12454,6 +14223,71 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1797479231}
   m_CullTransparentMesh: 1
+--- !u!1001 &1803242658
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1063353340}
+    m_Modifications:
+    - target: {fileID: 1578319313047441056, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_Name
+      value: MURO ROCA DIAMANTE (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -233.24808
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -27.97482
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 64.577545
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fce8293f859403844943be8b1255564c, type: 3}
 --- !u!1001 &1806368736
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12708,6 +14542,76 @@ Transform:
   - {fileID: 1109038322}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1815911389 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+  m_PrefabInstance: {fileID: 919480530}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1816206318
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1063353340}
+    m_Modifications:
+    - target: {fileID: 1578319313047441056, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_Name
+      value: MURO ROCA DIAMANTE (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -112.34808
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -27.97482
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 143.97754
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fce8293f859403844943be8b1255564c, type: 3}
 --- !u!1 &1837789287
 GameObject:
   m_ObjectHideFlags: 0
@@ -13074,6 +14978,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1842907920}
   m_CullTransparentMesh: 1
+--- !u!4 &1852614959 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1462392786656739671, guid: fa9c6f49d51ef984a80e97eb303b4827, type: 3}
+  m_PrefabInstance: {fileID: 5057054233819601991}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1859765728
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13341,6 +15250,136 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 350cfa67aa38a9d43800d592f8a023d5, type: 3}
+--- !u!1001 &1915131483
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1063353340}
+    m_Modifications:
+    - target: {fileID: 1578319313047441056, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_Name
+      value: MURO ROCA DIAMANTE (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -233.24808
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -27.97482
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 107.27756
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fce8293f859403844943be8b1255564c, type: 3}
+--- !u!1001 &1916621792
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1063353340}
+    m_Modifications:
+    - target: {fileID: 1578319313047441056, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_Name
+      value: MURO ROCA DIAMANTE (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -233.24808
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -27.97482
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 42.97754
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fce8293f859403844943be8b1255564c, type: 3}
 --- !u!1001 &1926214137
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13406,6 +15445,141 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 350cfa67aa38a9d43800d592f8a023d5, type: 3}
+--- !u!4 &1926507330 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+  m_PrefabInstance: {fileID: 1469772882}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1934096544
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1063353340}
+    m_Modifications:
+    - target: {fileID: 1578319313047441056, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_Name
+      value: MURO ROCA DIAMANTE (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -112.34808
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -27.97482
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 186.47754
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fce8293f859403844943be8b1255564c, type: 3}
+--- !u!1001 &1944354284
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1063353340}
+    m_Modifications:
+    - target: {fileID: 1578319313047441056, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_Name
+      value: MURO ROCA DIAMANTE (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -157.44806
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -27.97482
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 12.477539
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fce8293f859403844943be8b1255564c, type: 3}
 --- !u!1001 &1949048252
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13472,6 +15646,201 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4377253562344611308, guid: f36d3d9eabd17f84c870540601893303, type: 3}
   m_PrefabInstance: {fileID: 1949048252}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1951040454
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1063353340}
+    m_Modifications:
+    - target: {fileID: 1578319313047441056, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_Name
+      value: MURO ROCA DIAMANTE (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.191999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.191999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -211.64557
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -27.97482
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 185.62561
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.0042524245
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.999991
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180.487
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fce8293f859403844943be8b1255564c, type: 3}
+--- !u!1001 &1962670037
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1063353340}
+    m_Modifications:
+    - target: {fileID: 1578319313047441056, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_Name
+      value: MURO ROCA DIAMANTE (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -273.24808
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -27.97482
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 136.07755
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fce8293f859403844943be8b1255564c, type: 3}
+--- !u!1001 &1965364347
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1063353340}
+    m_Modifications:
+    - target: {fileID: 1578319313047441056, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_Name
+      value: MURO ROCA DIAMANTE (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -157.44806
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -27.97482
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 55.97754
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fce8293f859403844943be8b1255564c, type: 3}
 --- !u!1 &1972897048
 GameObject:
   m_ObjectHideFlags: 0
@@ -13946,6 +16315,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1999723629 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+  m_PrefabInstance: {fileID: 1388948178}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2005110927
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14070,6 +16444,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4377253562344611308, guid: f36d3d9eabd17f84c870540601893303, type: 3}
   m_PrefabInstance: {fileID: 2008475437}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2008785504
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1063353340}
+    m_Modifications:
+    - target: {fileID: 1578319313047441056, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_Name
+      value: MURO ROCA DIAMANTE
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 29.261902
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -28.274822
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.137543
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fce8293f859403844943be8b1255564c, type: 3}
 --- !u!1 &2009367429
 GameObject:
   m_ObjectHideFlags: 0
@@ -14102,6 +16533,11 @@ Transform:
   - {fileID: 1643062878}
   m_Father: {fileID: 406718989}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &2013686755 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+  m_PrefabInstance: {fileID: 1445535027}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2021395560
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14172,6 +16608,71 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7550579351736356427, guid: 556531033421cd64d808e2c52441fc54, type: 3}
   m_PrefabInstance: {fileID: 2021395560}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2028500257
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1063353340}
+    m_Modifications:
+    - target: {fileID: 1578319313047441056, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_Name
+      value: MURO ROCA DIAMANTE (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -157.44806
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -27.97482
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 98.67755
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fce8293f859403844943be8b1255564c, type: 3}
 --- !u!1 &2055306024
 GameObject:
   m_ObjectHideFlags: 0
@@ -14343,6 +16844,76 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!4 &2057902605 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+  m_PrefabInstance: {fileID: 1965364347}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2062537057
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1063353340}
+    m_Modifications:
+    - target: {fileID: 1578319313047441056, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_Name
+      value: MURO ROCA DIAMANTE (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.1920002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -112.34808
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -27.97482
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 122.077545
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fce8293f859403844943be8b1255564c, type: 3}
 --- !u!1001 &2075016663
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14506,8 +17077,14 @@ Transform:
   m_Children:
   - {fileID: 1876664104}
   - {fileID: 359772393}
+  - {fileID: 1063353340}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &2120424931 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8916588940953550486, guid: fce8293f859403844943be8b1255564c, type: 3}
+  m_PrefabInstance: {fileID: 1616713942}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2120566954
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14851,7 +17428,7 @@ Transform:
   m_GameObject: {fileID: 2144764604}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.699951, y: 0, z: -18.860016}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14929,7 +17506,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1462392786656739671, guid: fa9c6f49d51ef984a80e97eb303b4827, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 838.21
+      value: 699.3
       objectReference: {fileID: 0}
     - target: {fileID: 1462392786656739671, guid: fa9c6f49d51ef984a80e97eb303b4827, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14937,7 +17514,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1462392786656739671, guid: fa9c6f49d51ef984a80e97eb303b4827, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 363.97
+      value: 209.8
       objectReference: {fileID: 0}
     - target: {fileID: 1462392786656739671, guid: fa9c6f49d51ef984a80e97eb303b4827, type: 3}
       propertyPath: m_LocalRotation.w
@@ -14970,6 +17547,10 @@ PrefabInstance:
     - target: {fileID: 3212280971688946740, guid: fa9c6f49d51ef984a80e97eb303b4827, type: 3}
       propertyPath: m_LocalScale.x
       value: 3.8637
+      objectReference: {fileID: 0}
+    - target: {fileID: 3430512012379872541, guid: fa9c6f49d51ef984a80e97eb303b4827, type: 3}
+      propertyPath: _moveSpeed
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4316406822803628297, guid: fa9c6f49d51ef984a80e97eb303b4827, type: 3}
       propertyPath: 'cooldownImages.Array.data[0]'
@@ -15007,9 +17588,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8393130179108757277, guid: fa9c6f49d51ef984a80e97eb303b4827, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1462392786656739671, guid: fa9c6f49d51ef984a80e97eb303b4827, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1281235360}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa9c6f49d51ef984a80e97eb303b4827, type: 3}
 --- !u!1660057539 &9223372036854775807
@@ -15027,7 +17615,6 @@ SceneRoots:
   - {fileID: 1602432515}
   - {fileID: 980711742}
   - {fileID: 1997386743}
-  - {fileID: 1281235360}
   - {fileID: 406718989}
   - {fileID: 1808949072}
   - {fileID: 1205552235}
