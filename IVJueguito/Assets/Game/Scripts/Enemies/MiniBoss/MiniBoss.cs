@@ -6,6 +6,7 @@ public class MiniBoss : Enemy
     [HideInInspector] public bool specialDone = false;
     [HideInInspector] public bool activateParticles = true;
     [SerializeField] ParticleSystem windArea;
+    [SerializeField] ParticleSystem stunned;
         public MiniBossFlyweight MiniBossData
         {
             get { return (MiniBossFlyweight)flyweightData; }
@@ -34,7 +35,13 @@ public class MiniBoss : Enemy
             //rb.linearVelocity += dir * force * Time.deltaTime;
             //rb.AddForce(dir * force, ForceMode.Force);
         }
-        }
+    }
+
+
+        public void StunEffect()
+            {
+                stunned.Play();
+            }
     protected override void Update()
     {
         base.Update();
