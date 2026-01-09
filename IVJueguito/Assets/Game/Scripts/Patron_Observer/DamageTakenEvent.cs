@@ -6,16 +6,17 @@ public class DamageTakenEvent : IEvent
     {
         get
         {
-            return eventType.PlayerStatsUpdated;
+            return eventType.DamageTaken;
         }
     }
 
-    public GameObject Target { get; private set; } 
-    public int Amount { get; private set; }
+    public Enemy Target;
+    public float Amount;
 
     // Constructor
-    public DamageTakenEvent(GameObject target)
+    public DamageTakenEvent(Enemy target, float damage)
     {
         Target = target;
+        Amount = damage;
     }
 }

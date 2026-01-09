@@ -21,7 +21,7 @@ public class AttackState : EnemyState
         if (enemy.stateTimer >= attackDelay)
         {
             
-                if (enemy.DistanceWithPlayer() > enemy.flyweightData.reachPlayerRadius)
+                if (enemy.DistanceWithPlayer() >= enemy.flyweightData.reachPlayerRadius)
                 {
                     enemy.ChangeState(enemy.flyweightData.chaseState);
                 }

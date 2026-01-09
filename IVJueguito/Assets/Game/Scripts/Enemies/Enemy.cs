@@ -7,7 +7,7 @@ using UnityEngine.VFX;
 public class Enemy : MonoBehaviour, IEnemy, IObserver
 {
     [Header("Datos")]
-    public int currentHp;
+    public float currentHp;
     public bool isAlive;
     public EnemyFlyweight flyweightData; // Datos compartidos por tipo de enemigo (Flyweight)
 
@@ -75,10 +75,12 @@ public class Enemy : MonoBehaviour, IEnemy, IObserver
 
     public void OnEvent(IEvent evento)
     {
-        if (evento is DamageTakenEvent dmgEvent)
+        if (evento.Tipo == eventType.DamageTaken)
         {
-            if (dmgEvent.Target == this.gameObject)
+            DamageTakenEvent event2 = (DamageTakenEvent)evento;
+            if (event2.Target == this.GetComponent<Enemy>())
             {
+                TakeDamage(event2.Amount);
                 Debug.Log("Evento publicado por la puta cara");
                 tookDamage = true;
             }
@@ -106,12 +108,12 @@ public class Enemy : MonoBehaviour, IEnemy, IObserver
         transform.position = pos;
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         currentHp -= damage;
 
-        DamageTakenEvent evt = new DamageTakenEvent(this.gameObject);
-        EventManager.instance.Publicar(evt);
+        //DamageTakenEvent evt = new DamageTakenEvent(this.gameObject);
+        //EventManager.instance.Publicar(evt);
 
         if (currentHp <= 0)
         {
@@ -121,9 +123,10 @@ public class Enemy : MonoBehaviour, IEnemy, IObserver
 
     }
 
-    public void DamageTarget(int damageDealt)
+    public void DamageTarget(float damageDealt)
     {
-        // Aquí irá el daño al jugador
+        PlayerStatsEvent vidasRestar = new PlayerStatsEvent(-damageDealt, 0);
+        EventManager.instance.Publicar(vidasRestar);
     }
 
     public void MoveTo(Vector3 target)

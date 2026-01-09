@@ -13,10 +13,14 @@ public class PlayerMovement : Entity, IObserver
     private bool canMove = true;
     public bool CanMove => canMove;
     public InputActionReference move;
+    private Animator animator;
+    private Transform hijo;
 
     void Start()
     {
         EventManager.instance.Subscribir(eventType.PlayerCanMove, this);
+        animator = GetComponentInChildren<Animator>();
+        hijo = transform.GetChild(0);
     }
     public void OnEvent(IEvent evento)
     {
@@ -42,7 +46,35 @@ public class PlayerMovement : Entity, IObserver
 
     private void Update()
     {
-        if (!canMove) return;
+        if (!canMove)
+        {
+            animator.SetFloat("speed", 0f);
+            return;
+        }
+        // Detectar tecla mantenida en lugar de solo la pulsación del frame
+        if (Keyboard.current != null)
+        {
+            bool front = Keyboard.current.sKey.isPressed;
+            bool back = Keyboard.current.wKey.isPressed;
+            bool right =  Keyboard.current.dKey.isPressed;
+            bool left = Keyboard.current.aKey.isPressed;
+            if (right)
+            {
+                hijo.localScale = new Vector3(Mathf.Abs(hijo.localScale.x) * -1, hijo.localScale.y, hijo.localScale.z);
+            }
+            if(left)
+            {
+                hijo.localScale = new Vector3(Mathf.Abs(hijo.localScale.x), hijo.localScale.y, hijo.localScale.z);
+            }
+            if (animator != null)
+            {
+                animator.SetBool("front", front);
+                animator.SetBool("back", back);
+                animator.SetBool("lateral", left||right);
+            }
+        }
+
+
         _moveDirection = move.action.ReadValue<Vector2>();
     }
 
@@ -61,6 +93,14 @@ public class PlayerMovement : Entity, IObserver
         Vector3 moveDir = forward * _moveDirection.y + right * _moveDirection.x;
 
         _rb.linearVelocity = new Vector3(moveDir.x * _moveSpeed, Physics.gravity.y, moveDir.z * _moveSpeed);
+        if (_moveDirection != Vector2.zero)
+        {
+            animator.SetFloat("speed", 1.0f);
+        }
+        else
+        {
+            animator.SetFloat("speed", 0f);
+        }
     }
 
 
