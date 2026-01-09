@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Pink_Slime_Controller
+  m_Controller: {fileID: 9100000, guid: e319e0343e6320e46bb1629fa298b22c, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 4c3e25f2f8e85a641af2b79dc17720ba, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c590287f8026c3a49ad2c4c2fdfaeb63, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 9b50e115bee89184fa41af2bc9f424fc, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 1f8f7d48df744d349bef1a9ce87c6d97, type: 2}

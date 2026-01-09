@@ -53,8 +53,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.213784
-  m_Height: 3.6032472
+  m_Radius: 1.27
+  m_Height: 3.62
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &2412696159323623145
@@ -123,7 +123,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.03}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1282163240840796693}
@@ -175,8 +175,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.44891423, g: 0.9811321, b: 0.45965552, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 8fb0db1134d3bf14c9b19e8d94456996, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.9019608}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -692,7 +692,7 @@ Transform:
   m_GameObject: {fileID: 7671133791367624582}
   serializedVersion: 2
   m_LocalRotation: {x: -0.011449207, y: -0.72416013, z: -0.01202593, w: 0.68943197}
-  m_LocalPosition: {x: 23.630219, y: -0.7860048, z: 1.1617584}
+  m_LocalPosition: {x: 23.630249, y: -0.786005, z: 1.1617737}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -843,9 +843,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1282163240840796693}
   - component: {fileID: 7067534413111131017}
+  - component: {fileID: 991893453790690980}
   - component: {fileID: 8393618300959087692}
   m_Layer: 0
-  m_Name: Poderes
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -927,6 +928,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &991893453790690980
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8018094081124796696}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a41c892fcd5579e488b7ad95a77f0266, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &8393618300959087692
 MonoBehaviour:
   m_ObjectHideFlags: 0
