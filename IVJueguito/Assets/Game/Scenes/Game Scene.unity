@@ -14967,6 +14967,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3212280971688946740, guid: fa9c6f49d51ef984a80e97eb303b4827, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.8637
+      objectReference: {fileID: 0}
     - target: {fileID: 4316406822803628297, guid: fa9c6f49d51ef984a80e97eb303b4827, type: 3}
       propertyPath: 'cooldownImages.Array.data[0]'
       value: 

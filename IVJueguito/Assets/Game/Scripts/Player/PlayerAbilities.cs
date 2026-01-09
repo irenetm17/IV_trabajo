@@ -20,6 +20,7 @@ public class PlayerAbilities : MonoBehaviour, IObserver
 
     [SerializeField] private int gemas = 0;//serializable para pruebas
 
+    private Animator animator;
 
     [Header("DIAMANTE")]
     [SerializeField] private GameObject diam;
@@ -45,6 +46,8 @@ public class PlayerAbilities : MonoBehaviour, IObserver
         EventManager.instance.Subscribir(eventType.PlayerStatsUpdated, this);
         EventManager.instance.Subscribir(eventType.CollectiblePicked, this);
         EventManager.instance.Subscribir(eventType.PlayerCanMove, this);
+
+        animator = GetComponentInChildren<Animator>();
     }
     public void OnEvent(IEvent evento)
     {
@@ -52,11 +55,14 @@ public class PlayerAbilities : MonoBehaviour, IObserver
         {
             PlayerStatsEvent event2 = (PlayerStatsEvent)evento; //desempaqueta
 
-            gemas += event2.gems; //cosas de gemas
-
-            if(gemas > 0)
+            if(event2.gems != 0)
             {
-                bloqueadosImages[gemas - 1].gameObject.SetActive(false); //desbloquea la habilidad correspondiente
+                gemas += event2.gems;
+
+                if (gemas > 0 && gemas <=4)
+                {
+                    bloqueadosImages[gemas - 1].gameObject.SetActive(false); //desbloquea la habilidad correspondiente
+                }
             }
         }
 
@@ -154,6 +160,7 @@ public class PlayerAbilities : MonoBehaviour, IObserver
     {
         Debug.Log("AbilityDiamond ejecutada");
         diam.SetActive(true);
+        animator.SetBool("attacking", true);
         StartCoroutine(Wait(0.5f));
     }
 
@@ -255,5 +262,6 @@ public class PlayerAbilities : MonoBehaviour, IObserver
     {
         yield return new WaitForSeconds(duration);
         diam.SetActive(false);
+        animator.SetBool("attacking", false);
     }
 }

@@ -8,7 +8,7 @@ public class EnemyFlyweight : ScriptableObject
     [Header("Stats Base")]
     public int maxHP;
     public float speed;
-    public int damage;
+    public float damage;
     public float patrolRadius;
     public float detectPlayerRadius;
     public float reachPlayerRadius;

@@ -61,7 +61,9 @@ public class Ruby : MonoBehaviour
             if (enemy != null)
             {
                 // Bajar vida a enemigos
-                Debug.LogWarning("Le hice pupa");
+                DamageTakenEvent pegarEnemigos = new DamageTakenEvent(enemy, 1.0f);
+                EventManager.instance.Publicar(pegarEnemigos);
+
                 Destroy(gameObject);
             }
 
