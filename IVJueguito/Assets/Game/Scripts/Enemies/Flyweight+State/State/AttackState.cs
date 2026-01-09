@@ -4,7 +4,6 @@ using UnityEngine;
 public class AttackState : EnemyState
 {
     [SerializeField] float attackDelay = 0.5f;
-    [SerializeField] float attackDuration = 1f;
 
     public override void Enter(Enemy enemy)
     {
