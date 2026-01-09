@@ -162,6 +162,7 @@ public class PlayerAbilities : MonoBehaviour, IObserver
         Ray ray = Camera.main.ScreenPointToRay(
             Mouse.current.position.ReadValue()
         );
+        bool izq = (Mouse.current.position.ReadValue().x < (Screen.width * 0.5f));
 
         if (Physics.Raycast(ray, out RaycastHit hit, 500f, ground))
         {
@@ -177,7 +178,11 @@ public class PlayerAbilities : MonoBehaviour, IObserver
                 fireballSpawnPoint.position,
                 Quaternion.identity
             );
-
+            fireball.transform.localScale = new Vector3(
+                izq ? 3f : -3f,
+                3f,
+                (izq ? 3f : -3f)
+            );
             Ruby ruby = fireball.GetComponent<Ruby>();
             ruby.Init(direction);
         }
