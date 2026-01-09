@@ -12,7 +12,9 @@ public enum eventType //lista de tipos de evento. Fuera de la clase para poder u
     GamePaused,
     AchievementUnlocked,
     DialogueStarted,
-    DamageTaken
+    DamageTaken,
+    PlayerCanMove,
+    UseKey
 }
 
 public class EventManager : MonoBehaviour
@@ -21,6 +23,7 @@ public class EventManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        
     }
 
     Dictionary<eventType, List<IObserver> > diccionario  = new Dictionary<eventType, List<IObserver> >();

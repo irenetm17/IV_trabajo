@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class HUDcontroller : MonoBehaviour, IObserver
 {
@@ -11,7 +12,11 @@ public class HUDcontroller : MonoBehaviour, IObserver
     [SerializeField] private Image[] hearts;
     [SerializeField] private float maxHealth = 3f;
 
-    private float currentHealth;
+    [SerializeField] private float currentHealth = 1f;
+
+    [Header("LLAVES")]
+    private int numLlaves = 0;
+    [SerializeField] private Image[] keys;
 
     private bool isPaused = false;
     [Header("DIALOGOS")]
@@ -21,6 +26,11 @@ public class HUDcontroller : MonoBehaviour, IObserver
     private float typingTime = 0.05f;
     private int lineIndex;
     private bool didDialogueStart;
+
+
+    [SerializeField] private GameObject BotonPausa;
+    [SerializeField] private GameObject BotonDespausa;
+    [SerializeField] private GameObject panelPausa;
 
     public void OnEvent(IEvent evento)
     {
@@ -42,8 +52,17 @@ public class HUDcontroller : MonoBehaviour, IObserver
                 currentHealth = Mathf.Clamp(currentHealth, 0f, maxHealth);
                 UpdateHearts();
             }
+            if (event4.tipo == CollectibleType.Llaves)
+            {
+                numLlaves += event4.amount;
+                UpdateKeys();
+            }
         }
-
+        if (evento.Tipo == eventType.UseKey)
+        {
+            numLlaves--;
+            UpdateKeys();
+        }
         if (evento.Tipo == eventType.GamePaused)
         {
             //CollectibleEvent event5 = (CollectibleEvent)evento;
@@ -51,11 +70,19 @@ public class HUDcontroller : MonoBehaviour, IObserver
             if (isPaused)
             {
                 Time.timeScale = 0f;
+                BotonDespausa.SetActive(true);
+                BotonPausa.SetActive(false);
+                panelPausa.SetActive(true);
             }
             else
             {
                 Time.timeScale = 1f;
+                BotonPausa.SetActive(true);
+                BotonDespausa.SetActive(false);
+                panelPausa.SetActive(false);
             }
+
+
         }
 
         if (evento.Tipo == eventType.DialogueStarted)
@@ -65,7 +92,7 @@ public class HUDcontroller : MonoBehaviour, IObserver
         }
     }
 
-    #region VIDAS Y GEMAS
+    #region VIDAS Y LLAVES
     private void UpdateHearts()
     {
         float remainingHealth = currentHealth;
@@ -78,12 +105,29 @@ public class HUDcontroller : MonoBehaviour, IObserver
             remainingHealth -= 1f;
         }
     }
+    private void UpdateKeys()
+    {
+        for (int i = 0; i < keys.Length; i++)
+        {
+            if (i < numLlaves)
+            {
+                keys[i].enabled = true;
+            }
+            else
+            {
+                keys[i].enabled = false;
+            }
+        }
+    }
     #endregion
 
 
     #region DIALOGOS
     private void StartDialogue(string[] array)
     {
+        SimpleEvent quieto = new SimpleEvent(eventType.PlayerCanMove);
+        EventManager.instance.Publicar(quieto);
+
         arrayTextosDialogos = array;
         didDialogueStart = true;
         dialoguePanel.SetActive(true);
@@ -104,7 +148,7 @@ public class HUDcontroller : MonoBehaviour, IObserver
             yield return new WaitForSeconds(typingTime);
         }
 
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(3.5f);
         if (textoDialogo.text == arrayTextosDialogos[lineIndex])
         {
             ActivarCartel();
@@ -121,11 +165,14 @@ public class HUDcontroller : MonoBehaviour, IObserver
         {
             didDialogueStart = false;
             dialoguePanel.SetActive(false);
+
+            SimpleEvent muevete = new SimpleEvent(eventType.PlayerCanMove);
+            EventManager.instance.Publicar(muevete);
         }
     }
     void Update()
     {
-        if (didDialogueStart && Input.GetMouseButtonDown(0) && (lineIndex < arrayTextosDialogos.Length))
+        if (didDialogueStart && Mouse.current.leftButton.IsPressed() && (lineIndex < arrayTextosDialogos.Length))
         {
             dialoguePanel.SetActive(true);
             if (textoDialogo.text == arrayTextosDialogos[lineIndex])
@@ -150,13 +197,19 @@ public class HUDcontroller : MonoBehaviour, IObserver
 
     void Start()
     {
-        currentHealth = maxHealth;
+        //currentHealth = maxHealth;
         UpdateHearts();
+        UpdateKeys();
 
         EventManager.instance.Subscribir(eventType.PlayerStatsUpdated, this);
         EventManager.instance.Subscribir(eventType.DialogueStarted, this);
         EventManager.instance.Subscribir(eventType.CollectiblePicked, this);
         EventManager.instance.Subscribir(eventType.GamePaused, this);
+        EventManager.instance.Subscribir(eventType.UseKey, this);
+
+        BotonPausa.SetActive(true);
+        BotonDespausa.SetActive(false);
+        panelPausa.SetActive(false);
     }
     void OnDestroy()
     {
@@ -166,6 +219,7 @@ public class HUDcontroller : MonoBehaviour, IObserver
             EventManager.instance.Desuscribir(eventType.DialogueStarted, this);
             EventManager.instance.Desuscribir(eventType.CollectiblePicked, this);
             EventManager.instance.Desuscribir(eventType.GamePaused, this);
+            EventManager.instance.Desuscribir(eventType.UseKey, this);
         }
     }
 }

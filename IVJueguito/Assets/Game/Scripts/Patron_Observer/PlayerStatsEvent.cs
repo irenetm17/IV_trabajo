@@ -18,4 +18,8 @@ public class PlayerStatsEvent : IEvent
         this.health = health;
         this.gems = gems;
     }
+    /*
+     PlayerStatsEvent vidasRestar = new PlayerStatsEvent(-1.0f, 0);
+     EventManager.instance.Publicar(vidasRestar);
+     */
 }

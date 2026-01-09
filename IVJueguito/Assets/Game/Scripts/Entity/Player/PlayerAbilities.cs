@@ -11,6 +11,7 @@ public class PlayerAbilities : MonoBehaviour, IObserver
     [SerializeField] private Image[] cooldownImages;
     [SerializeField] private Image[] bloqueadosImages;
 
+    private bool canMove = true;
     private float[] lastUseTime = new float[4];
 
     // HAY QUE USAR ESTA MIERDA DE BRUJERIA RARA QUE FUNCIONE ME CAGO EN LA HOSTIA
@@ -43,6 +44,7 @@ public class PlayerAbilities : MonoBehaviour, IObserver
     {
         EventManager.instance.Subscribir(eventType.PlayerStatsUpdated, this);
         EventManager.instance.Subscribir(eventType.CollectiblePicked, this);
+        EventManager.instance.Subscribir(eventType.PlayerCanMove, this);
     }
     public void OnEvent(IEvent evento)
     {
@@ -50,8 +52,12 @@ public class PlayerAbilities : MonoBehaviour, IObserver
         {
             PlayerStatsEvent event2 = (PlayerStatsEvent)evento; //desempaqueta
 
-            bloqueadosImages[gemas].gameObject.SetActive(false); //desbloquea la habilidad correspondiente
             gemas += event2.gems; //cosas de gemas
+
+            if(gemas > 0)
+            {
+                bloqueadosImages[gemas - 1].gameObject.SetActive(false); //desbloquea la habilidad correspondiente
+            }
         }
 
         if (evento.Tipo == eventType.CollectiblePicked)
@@ -59,9 +65,17 @@ public class PlayerAbilities : MonoBehaviour, IObserver
             CollectibleEvent event4 = (CollectibleEvent)evento; //desempaqueta
             if(event4.tipo == CollectibleType.Gema)
             {
-                bloqueadosImages[gemas].gameObject.SetActive(false); //desbloquea la habilidad correspondiente
                 gemas += event4.amount;
+                if (gemas > 0)
+                {
+                    bloqueadosImages[gemas - 1].gameObject.SetActive(false); //desbloquea la habilidad correspondiente
+                }
             }
+        }
+
+        if (evento.Tipo == eventType.PlayerCanMove)
+        {
+            canMove = !canMove;
         }
     }
     void OnDestroy()
@@ -70,6 +84,7 @@ public class PlayerAbilities : MonoBehaviour, IObserver
         {
             EventManager.instance.Desuscribir(eventType.PlayerStatsUpdated, this);
             EventManager.instance.Desuscribir(eventType.CollectiblePicked, this);
+            EventManager.instance.Desuscribir(eventType.PlayerCanMove, this);
         }
     }
 
@@ -87,7 +102,8 @@ public class PlayerAbilities : MonoBehaviour, IObserver
 
     void Update()
     {
-
+        UpdateCooldownUI();
+        if (!canMove) return;
         if (Mouse.current.leftButton.IsPressed()) // Lo del raton de las narices
         {
             Debug.Log("Ability0 input detectado");
@@ -105,7 +121,6 @@ public class PlayerAbilities : MonoBehaviour, IObserver
         {
             TryUseAbility(3);
         }
-        UpdateCooldownUI();
     }
     void UpdateCooldownUI()
     {
@@ -147,6 +162,7 @@ public class PlayerAbilities : MonoBehaviour, IObserver
         Ray ray = Camera.main.ScreenPointToRay(
             Mouse.current.position.ReadValue()
         );
+        bool izq = (Mouse.current.position.ReadValue().x < (Screen.width * 0.5f));
 
         if (Physics.Raycast(ray, out RaycastHit hit, 500f, ground))
         {
@@ -162,7 +178,11 @@ public class PlayerAbilities : MonoBehaviour, IObserver
                 fireballSpawnPoint.position,
                 Quaternion.identity
             );
-
+            fireball.transform.localScale = new Vector3(
+                izq ? 3f : -3f,
+                3f,
+                (izq ? 3f : -3f)
+            );
             Ruby ruby = fireball.GetComponent<Ruby>();
             ruby.Init(direction);
         }
