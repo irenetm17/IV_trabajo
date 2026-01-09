@@ -19,7 +19,7 @@ MonoBehaviour:
   patrolRadius: 20
   detectPlayerRadius: 30
   reachPlayerRadius: 5
-  animatorOverride: {fileID: 22100000, guid: 49086ca237bb77247a6361eb9b99ccaa, type: 2}
+  animatorOverride: {fileID: 22100000, guid: 37a00b458bc1b384285c8e04105a6ef2, type: 2}
   idleState: {fileID: 11400000, guid: 3e8c5184c1118394ba1673aa5ab4c9a6, type: 2}
   chaseState: {fileID: 11400000, guid: c4941b0633ebca944a531f92f1628f9d, type: 2}
   attackState: {fileID: 11400000, guid: 083afa618287cdb489956dc8f498b4da, type: 2}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb1f0ee702666d34286432e351cf5702, type: 3}
   m_Name: SlimeLavaFlyweightData 2
   m_EditorClassIdentifier: Assembly-CSharp::EnemyFlyweight
-  typeID: 0
+  typeID: 2
   maxHP: 300
   speed: 7
   damage: 30
