@@ -39,7 +39,7 @@ public class MiniBoss : Enemy
     {
         base.Update();
 
-        if (DistanceWithPlayer() < 20 && specialDone == false)
+        if (currentHp < 500 && specialDone == false)
         {
             triggerSpecial = true;
             specialDone = true;

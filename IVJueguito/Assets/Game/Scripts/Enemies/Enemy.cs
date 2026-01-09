@@ -55,7 +55,7 @@ public class Enemy : MonoBehaviour, IEnemy, IObserver
 
     void Awake()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     void Start()

@@ -5,6 +5,8 @@ public class ChaseBossState : EnemyState
 {
     public override void Enter(Enemy enemy)
     {
+        enemy.animator.SetBool("nearPlayer", false);
+
         Debug.Log($"<color=cyan>{enemy.name}</color> ha entrado en el estado: <color=yellow>{this.name}</color>");
 
         MiniBoss boss = enemy as MiniBoss;

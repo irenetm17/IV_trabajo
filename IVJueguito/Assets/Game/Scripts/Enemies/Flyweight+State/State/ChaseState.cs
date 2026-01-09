@@ -6,7 +6,7 @@ public class ChaseState : EnemyState
 {
     public override void Enter(Enemy enemy)
     {
-        
+        enemy.animator.SetBool("nearPlayer", false);
     }
     public override void Execute(Enemy enemy, float deltaTime)
     {
