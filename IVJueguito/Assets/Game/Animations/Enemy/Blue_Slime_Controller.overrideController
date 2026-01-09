@@ -7,7 +7,7 @@ AnimatorOverrideController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Blue_Slime_Controller
-  m_Controller: {fileID: 9100000, guid: b9989b1c994c2644282044ec2262499e, type: 2}
+  m_Controller: {fileID: 9100000, guid: e319e0343e6320e46bb1629fa298b22c, type: 2}
   m_Clips:
-  - m_OriginalClip: {fileID: 7400000, guid: e92c1effacb7aee4cb2acf4a0e883faf, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: e92c1effacb7aee4cb2acf4a0e883faf, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 4c3e25f2f8e85a641af2b79dc17720ba, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 2c66f4c9263777f49840c134d248182b, type: 2}

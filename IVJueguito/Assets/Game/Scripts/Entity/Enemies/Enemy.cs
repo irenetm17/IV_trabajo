@@ -34,12 +34,6 @@ public class Enemy : MonoBehaviour, IEnemy, IObserver
     {
         flyweightData = EnemyFlyweightFactory.Instance.GetFlyweight(type); // Obtener datos compartidos del tipo de enemigo
 
-        // Aplicar animaciones según tipo
-        if (flyweightData.animatorOverride != null)
-        {
-            animator.runtimeAnimatorController = flyweightData.animatorOverride;
-        }
-
         spawnPosition = transform.position;
         currentHp = flyweightData.maxHP;
         isAlive = true;
@@ -63,6 +57,7 @@ public class Enemy : MonoBehaviour, IEnemy, IObserver
     {
         animator = GetComponent<Animator>();
     }
+
     void Start()
     {
         Initialize(tipoParaTest);
