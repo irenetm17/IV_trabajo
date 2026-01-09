@@ -33,7 +33,9 @@ public class Sapphire : MonoBehaviour
             {
                 gameObject.SetActive(false);
                 // Bajar vida a enemigos
-                Debug.LogWarning("Le hice pupa");
+
+                DamageTakenEvent pegarEnemigos = new DamageTakenEvent(enemy, 1.0f);
+                EventManager.instance.Publicar(pegarEnemigos);
             }
         }
     }

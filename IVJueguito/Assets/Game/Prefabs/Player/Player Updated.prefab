@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 3212280971688946740}
   - component: {fileID: 614829828007416452}
   - component: {fileID: 1849906961380051481}
+  - component: {fileID: 3280480946610411167}
   m_Layer: 0
   m_Name: Poderes
   m_TagString: Untagged
@@ -220,6 +221,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73e742067e7ba5946b9a333e6a08578e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Entity
+--- !u!95 &3280480946610411167
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2387676666619493963}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a41c892fcd5579e488b7ad95a77f0266, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4134227882408657655
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,7 +10,9 @@ public class Diamond : MonoBehaviour
         if (enemy != null)
         {
             // Bajar vida a enemigos
-            Debug.Log("Le hice pupa");
+            DamageTakenEvent pegarEnemigos = new DamageTakenEvent(enemy, 1.0f);
+            EventManager.instance.Publicar(pegarEnemigos);
+            //Debug.Log("Le hice pupa");
         }
 
         MuroRocaDiamante muroRocaDiamante = other.GetComponent<MuroRocaDiamante>();
