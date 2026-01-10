@@ -18,10 +18,12 @@ public class CofreInteractuar : MonoBehaviour
     private float distance;
     private bool interactuado = false;
 
+    private Animator animator;
 
     void Start()
     {
         player = FindObjectOfType<PlayerMovement>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -51,13 +53,17 @@ public class CofreInteractuar : MonoBehaviour
         //Cesar aqui va lo del cofre abriendose, solo animacion
         /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        imagenDelCofre.gameObject.SetActive(true);
+        animator.SetBool("Abrir", true);
+
         StartCoroutine(MoveUp(10f));
-        CollectibleEvent collectibleEvent = new CollectibleEvent(cosaDelCofre, 1);
-        EventManager.instance.Publicar(collectibleEvent);
     }
     public IEnumerator MoveUp(float speed)
     {
+        yield return new WaitForSeconds(0.5f);
+        imagenDelCofre.gameObject.SetActive(true);
+        CollectibleEvent collectibleEvent = new CollectibleEvent(cosaDelCofre, 1);
+        EventManager.instance.Publicar(collectibleEvent);
+
         float parentY = imagenDelCofre.gameObject.transform.parent.position.y;
         while (imagenDelCofre.gameObject.transform.position.y < parentY)
         {
