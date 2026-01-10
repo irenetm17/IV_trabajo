@@ -417,6 +417,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cofre (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1426156439008400568, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: be537ea2fb8ef5c42ac7cd6abef7ea1a, type: 3}
     - target: {fileID: 1976818990355995679, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
       propertyPath: m_LocalPosition.x
       value: 174.29999
@@ -456,6 +460,22 @@ PrefabInstance:
     - target: {fileID: 1976818990355995679, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8147624122366726116, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8147624122366726116, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8147624122366726116, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8444800689484922375, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: cosaDelCofre
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12355,6 +12375,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cofre (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1426156439008400568, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: be537ea2fb8ef5c42ac7cd6abef7ea1a, type: 3}
     - target: {fileID: 1976818990355995679, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
       propertyPath: m_LocalPosition.x
       value: 517.60004
@@ -12394,6 +12418,22 @@ PrefabInstance:
     - target: {fileID: 1976818990355995679, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8147624122366726116, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8147624122366726116, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8147624122366726116, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8444800689484922375, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: cosaDelCofre
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13663,13 +13703,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cofre (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1426156439008400568, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6d5765523ef22a4894e7c927ce8d377, type: 3}
     - target: {fileID: 1976818990355995679, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
       propertyPath: m_LocalPosition.x
       value: 884.7
       objectReference: {fileID: 0}
     - target: {fileID: 1976818990355995679, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.1021004
+      value: -2.18
       objectReference: {fileID: 0}
     - target: {fileID: 1976818990355995679, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13702,6 +13746,30 @@ PrefabInstance:
     - target: {fileID: 1976818990355995679, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4862039068482315585, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8147624122366726116, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 8147624122366726116, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.385
+      objectReference: {fileID: 0}
+    - target: {fileID: 8147624122366726116, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 8147624122366726116, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8444800689484922375, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: cosaDelCofre
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18953,6 +19021,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cofre (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1426156439008400568, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2a79f2949fa7c1646997b7c399fad478, type: 3}
     - target: {fileID: 1976818990355995679, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.7000122
@@ -18992,6 +19064,22 @@ PrefabInstance:
     - target: {fileID: 1976818990355995679, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4862039068482315585, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8147624122366726116, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8147624122366726116, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8444800689484922375, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: cosaDelCofre
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23550,6 +23638,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cofre (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1426156439008400568, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: be537ea2fb8ef5c42ac7cd6abef7ea1a, type: 3}
     - target: {fileID: 1976818990355995679, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
       propertyPath: m_LocalPosition.x
       value: 280.34
@@ -23589,6 +23681,26 @@ PrefabInstance:
     - target: {fileID: 1976818990355995679, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4521449246261405657, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8147624122366726116, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8147624122366726116, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8147624122366726116, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8444800689484922375, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: cosaDelCofre
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23742,6 +23854,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cofre (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1426156439008400568, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: be537ea2fb8ef5c42ac7cd6abef7ea1a, type: 3}
     - target: {fileID: 1976818990355995679, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
       propertyPath: m_LocalPosition.x
       value: 609.4
@@ -23781,6 +23897,22 @@ PrefabInstance:
     - target: {fileID: 1976818990355995679, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8147624122366726116, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8147624122366726116, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8147624122366726116, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8444800689484922375, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: cosaDelCofre
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -30804,6 +30936,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cofre (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1426156439008400568, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4c12bde96881c834ead433fe9f90971e, type: 3}
     - target: {fileID: 1976818990355995679, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
       propertyPath: m_LocalPosition.x
       value: 155
@@ -30843,6 +30979,30 @@ PrefabInstance:
     - target: {fileID: 1976818990355995679, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4862039068482315585, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8147624122366726116, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 8147624122366726116, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8147624122366726116, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 8147624122366726116, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8444800689484922375, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: cosaDelCofre
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -33405,17 +33565,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cofre
       objectReference: {fileID: 0}
+    - target: {fileID: 1426156439008400568, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: be537ea2fb8ef5c42ac7cd6abef7ea1a, type: 3}
     - target: {fileID: 1976818990355995679, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
       propertyPath: m_LocalPosition.x
       value: -24.49878
       objectReference: {fileID: 0}
     - target: {fileID: 1976818990355995679, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.1021004
+      value: -3.31
       objectReference: {fileID: 0}
     - target: {fileID: 1976818990355995679, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -139.94458
+      value: -125.16
       objectReference: {fileID: 0}
     - target: {fileID: 1976818990355995679, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
       propertyPath: m_LocalRotation.w
@@ -33444,6 +33608,26 @@ PrefabInstance:
     - target: {fileID: 1976818990355995679, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4862039068482315585, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8147624122366726116, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8147624122366726116, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8147624122366726116, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8444800689484922375, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      propertyPath: cosaDelCofre
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
