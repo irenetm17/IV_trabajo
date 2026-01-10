@@ -386,23 +386,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1366
-      height: 576
-    m_Scale: {x: 0.4, y: 0.4}
-    m_Translation: {x: 683, y: 288}
+      width: 990
+      height: 229
+    m_Scale: {x: 0.15902779, y: 0.15902779}
+    m_Translation: {x: 495, y: 114.499985}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -1707.5
-      y: -720
-      width: 3415
-      height: 1440
+      x: -3112.6636
+      y: -719.9999
+      width: 6225.327
+      height: 1439.9999
     m_MinimalGUI: 1
-  m_defaultScale: 0.4
-  m_LastWindowPixelSize: {x: 1366, y: 597}
+  m_defaultScale: 0.15902779
+  m_LastWindowPixelSize: {x: 990, y: 250}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -431,7 +431,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 79
+    y: 24
     width: 227
     height: 319
   m_SerializedDataModeController:
@@ -453,18 +453,18 @@ MonoBehaviour:
       m_ExpandedIDs: eefaffffdec500001ac6000028c7000066c80000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Puerta Cerradura (2)
-        m_OriginalName: Puerta Cerradura (2)
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -504164
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_TrimLeadingAndTrailingWhitespace: 0
         m_ClientGUIView: {fileID: 9}
@@ -496,8 +496,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Scene\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 228
-    y: 79
+    x: 229
+    y: 24
     width: 761
     height: 319
   m_SerializedDataModeController:
@@ -1244,11 +1244,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.37417075, y: 0.19072251, z: -0.07894606, w: -0.9041062}
     speed: 2
-    m_Value: {x: -0.37564126, y: 0.1892465, z: -0.07866793, w: -0.90382016}
+    m_Value: {x: -0.37417072, y: 0.1907225, z: -0.078946054, w: -0.9041062}
   m_Size:
     m_Target: 457.4746
     speed: 2
-    m_Value: 479.031
+    m_Value: 457.4746
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1546,7 +1546,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 424
+    y: 369
     width: 990
     height: 250
   m_SerializedDataModeController:
@@ -1590,7 +1590,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 202}
     m_SelectedIDs: 8ed00000
     m_LastClickedID: 53390
-    m_ExpandedIDs: 00000000c4cf0000c6cf0000c8cf0000cacf0000cccf0000cecf0000d0cf0000d2cf0000d4cf000000ca9a3b
+    m_ExpandedIDs: 000000001ad500001cd500001ed5000020d5000022d5000024d5000026d5000028d500002ad50000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1619,7 +1619,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c4cf0000c6cf0000c8cf0000cacf0000cccf0000cecf0000d0cf0000d2cf0000d4cf000000ca9a3b
+    m_ExpandedIDs: 000000001ad500001cd500001ed5000020d5000022d5000024d5000026d5000028d500002ad50000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1773,8 +1773,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 991
-    y: 79
+    x: 992
+    y: 24
     width: 374
     height: 595
   m_SerializedDataModeController:

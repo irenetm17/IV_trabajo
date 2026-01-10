@@ -37,6 +37,7 @@ public class OjoDemoniaco : MonoBehaviour
 
     private void Start()
     {
+        _player = GameObject.FindObjectOfType<PlayerMovement>().gameObject;
         if (_light != null)
         {
             _light.intensity = minIntensity;
