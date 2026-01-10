@@ -81,8 +81,6 @@ public class Enemy : MonoBehaviour, IEnemy, IObserver
             if (event2.Target == this.GetComponent<Enemy>())
             {
                 TakeDamage(event2.Amount);
-                Debug.Log("Evento publicado por la puta cara");
-                tookDamage = true;
             }
         }
     }
@@ -111,14 +109,14 @@ public class Enemy : MonoBehaviour, IEnemy, IObserver
     public void TakeDamage(float damage)
     {
         currentHp -= damage;
-
+        tookDamage = true;
         //DamageTakenEvent evt = new DamageTakenEvent(this.gameObject);
         //EventManager.instance.Publicar(evt);
 
         if (currentHp <= 0)
         {
-            isAlive = false;
             ChangeState(flyweightData.dieState);
+            isAlive = false;
         }
 
     }
@@ -131,15 +129,15 @@ public class Enemy : MonoBehaviour, IEnemy, IObserver
 
     public void MoveTo(Vector3 target)
     {
-        //animator.SetFloat("Speed", 1.0f);
+        
         float step = flyweightData.speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, target, step);
-        //animator.SetFloat("Speed", 0.0f);
+        
     }
 
     public void StopMoving()
     {
-        //animator.SetFloat("Speed", 0.0f);
+        
     }
 
     public Vector3 SearchPlayer()

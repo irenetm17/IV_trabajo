@@ -4,6 +4,7 @@ using UnityEngine;
 public class AttackState : EnemyState
 {
     [SerializeField] float attackDelay = 0.5f;
+    [SerializeField] float attackTime = 2f;
 
     public override void Enter(Enemy enemy)
     {
@@ -21,14 +22,18 @@ public class AttackState : EnemyState
         if (enemy.stateTimer >= attackDelay)
         {
             
-                if (enemy.DistanceWithPlayer() >= enemy.flyweightData.reachPlayerRadius)
+                if (enemy.DistanceWithPlayer() > enemy.flyweightData.reachPlayerRadius)
                 {
                     enemy.ChangeState(enemy.flyweightData.chaseState);
                 }
                 else 
                 {
+                if (enemy.stateTimer >= attackTime)
+                {
                     enemy.DamageTarget(enemy.flyweightData.damage);
                     enemy.ChangeState(enemy.flyweightData.attackState);
+                }
+                    
                 }
             
         }

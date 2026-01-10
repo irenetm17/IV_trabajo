@@ -3,7 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "States/SpecialGimmick")]
 public class RubiBossSpecialGimmickState : EnemyState
 {
-    [SerializeField] float chargeTime = 10f;
+    [SerializeField] float chargeTime = 5f;
     [SerializeField] float windRadius = 30f;
     [SerializeField] float windForce = 2000f;
     public override void Enter(Enemy enemy)
@@ -11,22 +11,20 @@ public class RubiBossSpecialGimmickState : EnemyState
         Debug.Log($"<color=cyan>{enemy.name}</color> ha entrado en el estado: <color=yellow>{this.name}</color>");
 
         enemy.StopMoving();
-        enemy.stateTimer = Time.time;
+        enemy.stateTimer = 0;
         enemy.tookDamage = false;
     }
     public override void Execute(Enemy enemy, float deltaTime)
     {
         MiniBoss boss = enemy as MiniBoss;
-        if (boss == null) return;
 
-        float timeElapsed = Time.time - boss.stateTimer;
+        enemy.stateTimer += deltaTime;
         float dist = enemy.DistanceWithPlayer();
 
         boss.pushPlayer(windForce, windRadius);
 
-        if (timeElapsed >= chargeTime)
+        if (enemy.stateTimer >= chargeTime)
         {
-            Debug.Log(timeElapsed);
             boss.ChangeState(boss.MiniBossData.specialAttackBossState);
         }
 

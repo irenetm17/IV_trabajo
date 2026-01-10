@@ -7,7 +7,6 @@ public class StunBossState : EnemyState
     public override void Enter(Enemy enemy)
     {
         MiniBoss boss = enemy as MiniBoss;
-        if (boss == null) return;
 
         Debug.Log($"<color=cyan>{enemy.name}</color> ha entrado en el estado: <color=yellow>{this.name}</color>");
 

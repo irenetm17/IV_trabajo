@@ -7,6 +7,7 @@ public class MiniBoss : Enemy
     [HideInInspector] public bool activateParticles = true;
     [SerializeField] ParticleSystem windArea;
     [SerializeField] ParticleSystem stunned;
+    public ParticleSystem explosion;
         public MiniBossFlyweight MiniBossData
         {
             get { return (MiniBossFlyweight)flyweightData; }
@@ -37,16 +38,21 @@ public class MiniBoss : Enemy
         }
     }
 
-
         public void StunEffect()
             {
                 stunned.Play();
             }
+
+        public void SpecialAttack()
+        {
+            explosion.Play();
+        }
+
     protected override void Update()
     {
         base.Update();
 
-        if (currentHp < 500 && specialDone == false)
+        if (currentHp < 5 && specialDone == false)
         {
             triggerSpecial = true;
             specialDone = true;
