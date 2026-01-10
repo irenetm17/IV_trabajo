@@ -33,7 +33,8 @@ public class IdleState : EnemyState
         {
             enemy.ChangeState(enemy.flyweightData.chaseState);
         }
-        
+
+
     }
     public override void Exit(Enemy enemy)
     {

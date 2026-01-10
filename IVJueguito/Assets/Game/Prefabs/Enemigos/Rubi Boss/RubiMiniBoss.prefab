@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4052663455310972283}
   - component: {fileID: 2042687348104967425}
-  - component: {fileID: 6741578430264216650}
+  - component: {fileID: 4060952285241105091}
   - component: {fileID: 358078136523087138}
   - component: {fileID: -4082400216599373559}
   m_Layer: 0
@@ -63,8 +63,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
---- !u!136 &6741578430264216650
-CapsuleCollider:
+--- !u!65 &4060952285241105091
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -81,10 +81,8 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 5.321447
-  m_Height: 12.202098
-  m_Direction: 1
+  serializedVersion: 3
+  m_Size: {x: 11.53, y: 12.2, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &358078136523087138
 MonoBehaviour:
@@ -125,6 +123,8 @@ MonoBehaviour:
   specialDone: 0
   activateParticles: 1
   windArea: {fileID: 1557951959012301445, guid: 9268e1593f9fe46448cfee9ce6de4b88, type: 3}
+  stunned: {fileID: 2399277942632489173, guid: 9ce9c2b4426a33f4eb8f99e4a3a2aeb0, type: 3}
+  explosion: {fileID: 1686580220360186229, guid: fbd595e6f4090b64cbb2d057fa0fc3bc, type: 3}
 --- !u!1 &7759444854279912717
 GameObject:
   m_ObjectHideFlags: 0
