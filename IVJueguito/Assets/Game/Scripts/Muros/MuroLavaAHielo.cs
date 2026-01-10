@@ -27,8 +27,8 @@ public class MuroLavaAHielo : MonoBehaviour
             }
 
         }
-
-        if (other.CompareTag("TempanoHielo"))
+        Sapphire tempano = other.GetComponent<Sapphire>();
+        if (tempano != null)
         {
             // Desactivar hacer daño al jugador
             _isHurtful = false;
