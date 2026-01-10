@@ -130,4 +130,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc3418987943af043908da4a0909242d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MuroHieloRubi
-  _animatorMuro: {fileID: 0}
+  _animatorMuro: {fileID: 3140310989114198354}

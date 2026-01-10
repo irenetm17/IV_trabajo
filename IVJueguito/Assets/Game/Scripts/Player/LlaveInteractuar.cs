@@ -18,12 +18,14 @@ public class LlaveInteractuar : MonoBehaviour, IObserver
     private bool interactuado = false;
     private int numLlaves = 0;
 
+    private Animator animator;
 
     void Start()
     {
         player = FindObjectOfType<PlayerMovement>();
         EventManager.instance.Subscribir(eventType.UseKey, this);
         EventManager.instance.Subscribir(eventType.CollectiblePicked, this);
+        animator = GetComponent<Animator>();
     }
 
     public void OnEvent(IEvent evento)
@@ -83,6 +85,7 @@ public class LlaveInteractuar : MonoBehaviour, IObserver
             //Cesar aqui va lo de la puerta abriendose
             /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+            animator.SetBool("AbrirPuerta", true);
             //Despues de abrir la puerta, usaremos esto para volver a dejar al jugador moverse
             SimpleEvent muevete = new SimpleEvent(eventType.PlayerCanMove);
             EventManager.instance.Publicar(muevete);
