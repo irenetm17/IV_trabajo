@@ -461,9 +461,9 @@ GameObject:
   - component: {fileID: 4574947630911719939}
   - component: {fileID: 5953891957725586803}
   - component: {fileID: 1708315378198902062}
-  - component: {fileID: 4672880282095284430}
+  - component: {fileID: 6692172322501054964}
   m_Layer: 0
-  m_Name: Pared y Puerta 2
+  m_Name: Puerta Cerradura
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -559,18 +559,18 @@ MonoBehaviour:
   F: {fileID: 5803561925288276271}
   arrayTextos:
   - No puedo abrir la puerta si no tengo una llave.
---- !u!114 &4672880282095284430
+--- !u!114 &6692172322501054964
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7135545097568473596}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73e742067e7ba5946b9a333e6a08578e, type: 3}
+  m_Script: {fileID: 11500000, guid: 76e689b8c4bcf2141b96ec51bdb25c81, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Entity
+  m_EditorClassIdentifier: Assembly-CSharp::PuertaAutomatica
 --- !u!1 &7406864815425680295
 GameObject:
   m_ObjectHideFlags: 0

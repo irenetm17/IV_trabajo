@@ -84,8 +84,11 @@ public class LlaveInteractuar : MonoBehaviour, IObserver
             /////////////////////////////////////////////////////////////////////////////////////////////////////////
             //Cesar aqui va lo de la puerta abriendose
             /////////////////////////////////////////////////////////////////////////////////////////////////////////
+            DoorOpenedEvent open = new DoorOpenedEvent(this.gameObject.GetComponent<PuertaAutomatica>(), true);
+            EventManager.instance.Publicar(open);
 
-            animator.SetBool("AbrirPuerta", true);
+            //OpenDoor();
+
             //Despues de abrir la puerta, usaremos esto para volver a dejar al jugador moverse
             SimpleEvent muevete = new SimpleEvent(eventType.PlayerCanMove);
             EventManager.instance.Publicar(muevete);
@@ -103,4 +106,15 @@ public class LlaveInteractuar : MonoBehaviour, IObserver
         }
 
     }
+
+    public void OpenDoor()
+    {
+        animator.SetBool("AbrirPuerta", true);
+    }   
+
+    public void CloseDoor()
+    {
+        animator.SetBool("AbrirPuerta", false);
+    }
+
 }
