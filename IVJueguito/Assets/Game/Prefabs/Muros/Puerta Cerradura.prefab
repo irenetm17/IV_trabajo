@@ -571,6 +571,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76e689b8c4bcf2141b96ec51bdb25c81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuertaAutomatica
+  Light: {fileID: 8251313524611243541}
+  GreenLight: {fileID: 2100000, guid: 1dfcc781ce402754ab910960ff921db3, type: 2}
+  RedLight: {fileID: 2100000, guid: 42803ac9281ae754da195b6fa126c100, type: 2}
 --- !u!1 &7406864815425680295
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,7 +752,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 42803ac9281ae754da195b6fa126c100, type: 2}
+  - {fileID: 2100000, guid: 0355621f3e116e747bbe46c7dd9c98f7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

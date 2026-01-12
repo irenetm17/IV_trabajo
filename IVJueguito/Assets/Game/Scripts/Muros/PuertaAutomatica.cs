@@ -4,6 +4,9 @@ public class PuertaAutomatica : MonoBehaviour, IObserver
 {
 
     private Animator animator;
+    [SerializeField] private GameObject Light;
+    [SerializeField] private Material GreenLight;
+    [SerializeField] private Material RedLight;
 
     void Start()
     {
@@ -39,10 +42,12 @@ public class PuertaAutomatica : MonoBehaviour, IObserver
     public void AbrirPuerta()
     {
         animator.SetBool("AbrirPuerta", true);
+        Light.GetComponent<Renderer>().material = GreenLight;
     }
 
     public void CerrarPuerta()
     {
         animator.SetBool("AbrirPuerta", false);
+        Light.GetComponent<Renderer>().material = RedLight;
     }
 }
