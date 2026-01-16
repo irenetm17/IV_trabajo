@@ -10,6 +10,7 @@ public class DieState : EnemyState
         enemy.animator.SetBool("alive", false);
 
         enemy.KillEnemy();
+        // hola
     }
     public override void Execute(Enemy enemy, float deltaTime)
     {
