@@ -8,6 +8,7 @@ public interface IEnemy
     public void Spawn(Vector3 pos);
     public void TakeDamage(float damage);
     public void DamageTarget(float damageDealt);
+    public void KillEnemy();
     public void MoveTo(Vector3 target);
     public void StopMoving();
     public Vector3 SearchPlayer();

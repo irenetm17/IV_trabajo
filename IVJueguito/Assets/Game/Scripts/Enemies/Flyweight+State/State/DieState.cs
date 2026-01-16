@@ -8,15 +8,19 @@ public class DieState : EnemyState
     {
         enemy.stateTimer = 0;
         enemy.animator.SetBool("alive", false);
+
+        enemy.KillEnemy();
+        // hola
     }
     public override void Execute(Enemy enemy, float deltaTime)
     {
-        enemy.stateTimer += deltaTime;
+        enemy.KillEnemy();
+
+        /*enemy.stateTimer += deltaTime;
         if(enemy.stateTimer > dieTime)
         {
-            Destroy(enemy);
-        }
-        
+            enemy.KillEnemy();
+        }*/        
     }
     public override void Exit(Enemy enemy)
     {

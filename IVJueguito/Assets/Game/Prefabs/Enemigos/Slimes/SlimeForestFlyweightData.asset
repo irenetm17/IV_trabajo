@@ -15,7 +15,7 @@ MonoBehaviour:
   typeID: 0
   maxHP: 3
   speed: 7
-  damage: 0.5
+  damage: 0.25
   patrolRadius: 20
   detectPlayerRadius: 30
   reachPlayerRadius: 5

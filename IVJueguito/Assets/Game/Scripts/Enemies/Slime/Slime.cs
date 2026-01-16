@@ -4,6 +4,17 @@ public class Slime : Enemy, IPoolObject  // Tambien implementará el Enemy
 {
     public SlimePool parentSlimePool;
 
+    public override void KillEnemy()
+    {
+        // Si tenemos una pool asignada, volvemos a ella
+        if (parentSlimePool != null)
+        {
+            ResetObject();
+            SetActive(false);
+            parentSlimePool.PutToPool(this);
+        }
+    }
+
     public bool isActive()
     {
         throw new System.NotImplementedException();

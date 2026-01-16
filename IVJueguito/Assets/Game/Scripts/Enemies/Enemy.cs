@@ -93,7 +93,7 @@ public class Enemy : MonoBehaviour, IEnemy, IObserver
     }
     public void ChangeState(EnemyState newState)
     {
-        //Debug.Log($"{name} cambió de estado a: {newState.name}"); 
+        Debug.Log($"{name} cambió de estado a: {newState.name}"); 
         stateMachine.ChangeState(newState, this);
     }
     public bool IsAlive()
@@ -125,6 +125,11 @@ public class Enemy : MonoBehaviour, IEnemy, IObserver
     {
         PlayerStatsEvent vidasRestar = new PlayerStatsEvent(-damageDealt, 0);
         EventManager.instance.Publicar(vidasRestar);
+    }
+
+    public virtual void KillEnemy()
+    {
+        Destroy(gameObject);
     }
 
     public void MoveTo(Vector3 target)
