@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fff0749368fa28f4f8903a0fc9c5dce5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 07d1fa113507777409f8d25836fbad21, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,7 +101,7 @@ Animator:
   m_GameObject: {fileID: 806053061354658935}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: 257ef324095b15b4ba9d5112668a62e8, type: 2}
+  m_Controller: {fileID: 22100000, guid: 37a00b458bc1b384285c8e04105a6ef2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 3154187771450529499}
   - component: {fileID: 3343029075071737548}
   m_Layer: 3
-  m_Name: Slime
+  m_Name: SlimeIce
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -223,10 +223,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Slime
   currentHp: 0
   isAlive: 0
-  flyweightData: {fileID: 11400000, guid: 6e00e3a7f6e6c444c9e8b27de96ebe88, type: 2}
+  flyweightData: {fileID: 11400000, guid: 88e5fa9647faa5845af7f577e7579030, type: 2}
   patrolRadius: 0
   animator: {fileID: 0}
-  tipoParaTest: 0
+  tipoParaTest: 1
   currentWayPoint: {x: 0, y: 0, z: 0}
   hasWayPoint: 0
   tookDamage: 0

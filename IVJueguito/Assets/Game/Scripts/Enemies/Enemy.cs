@@ -127,6 +127,11 @@ public class Enemy : MonoBehaviour, IEnemy, IObserver
         EventManager.instance.Publicar(vidasRestar);
     }
 
+    public virtual void KillEnemy()
+    {
+        Destroy(gameObject);
+    }
+
     public void MoveTo(Vector3 target)
     {
         

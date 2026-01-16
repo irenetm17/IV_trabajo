@@ -11,12 +11,13 @@ public class DieState : EnemyState
     }
     public override void Execute(Enemy enemy, float deltaTime)
     {
-        enemy.stateTimer += deltaTime;
+        enemy.KillEnemy();
+
+        /*enemy.stateTimer += deltaTime;
         if(enemy.stateTimer > dieTime)
         {
-            Destroy(enemy);
-        }
-        
+            enemy.KillEnemy();
+        }*/        
     }
     public override void Exit(Enemy enemy)
     {
