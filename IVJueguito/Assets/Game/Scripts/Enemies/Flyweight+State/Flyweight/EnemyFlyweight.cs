@@ -13,7 +13,10 @@ public class EnemyFlyweight : ScriptableObject
     public float detectPlayerRadius;
     public float reachPlayerRadius;
 
-    [Header("Comportamientos")]
+    [Header("Apariencia")]
+    public RuntimeAnimatorController animatorController;
+
+    [Header("Estados")]
     public EnemyState idleState;
     public EnemyState chaseState;
     public EnemyState attackState;

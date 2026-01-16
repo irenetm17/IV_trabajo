@@ -10,6 +10,7 @@ public class ChaseBossState : EnemyState
         Debug.Log($"<color=cyan>{enemy.name}</color> ha entrado en el estado: <color=yellow>{this.name}</color>");
 
         MiniBoss boss = enemy as MiniBoss;
+        if (boss == null) return;
 
         boss.triggerSpecial = false;
     }
@@ -29,11 +30,6 @@ public class ChaseBossState : EnemyState
         if (boss.DistanceWithPlayer() > enemy.flyweightData.detectPlayerRadius)
         {
             boss.ChangeState(boss.flyweightData.idleState);
-        }
-
-        if (boss.triggerSpecial)
-        {
-            boss.ChangeState(boss.MiniBossData.specialGimmickBossState);
         }
 
     }

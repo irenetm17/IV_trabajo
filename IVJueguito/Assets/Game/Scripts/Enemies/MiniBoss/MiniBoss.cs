@@ -3,7 +3,8 @@ using UnityEngine;
 public class MiniBoss : Enemy
 {
     [HideInInspector] public bool triggerSpecial = false;
-    [HideInInspector] public bool specialDone = false;
+    [HideInInspector] public bool special1Done = false;
+    [HideInInspector] public bool special2Done = false;
     [HideInInspector] public bool activateParticles = true;
     [SerializeField] ParticleSystem windArea;
     [SerializeField] ParticleSystem stunned;
@@ -19,6 +20,7 @@ public class MiniBoss : Enemy
             {
                 windArea.Play();
                 activateParticles = false;
+                Debug.Log("Efecto de viento encendido");
             }
 
             GameObject player = GameObject.FindWithTag("Player");
@@ -33,30 +35,49 @@ public class MiniBoss : Enemy
             Rigidbody rb = player.GetComponent<Rigidbody>();
 
 
-            player.transform.Translate(dir * force * Time.deltaTime, Space.World);
-            //rb.linearVelocity += dir * force * Time.deltaTime;
-            //rb.AddForce(dir * force, ForceMode.Force);
+            //player.transform.Translate(dir * force * Time.deltaTime, Space.World);
+            rb.linearVelocity += dir * force * Time.deltaTime;
+            rb.AddForce(dir * force, ForceMode.Force);
         }
     }
 
-        public void StunEffect()
-            {
-                stunned.Play();
-            }
+    public void StopWind()
+    {
+        windArea.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+        activateParticles = true;
+        Debug.Log("Efecto apagado");
+    }
+    public void StunEffect()
+        {
+
+            stunned.Play();
+        
+            Debug.Log("Efecto de stun encendido");
+        }
 
         public void SpecialAttack()
         {
+        
             explosion.Play();
+        
+            Debug.Log("Efecto de explosión encendido");
+
         }
 
     protected override void Update()
     {
         base.Update();
 
-        if (currentHp < 5 && specialDone == false)
+        if (currentHp <= 15 && special1Done == false)
         {
-            triggerSpecial = true;
-            specialDone = true;
+            this.ChangeState(this.MiniBossData.specialGimmickBossState);
+            special1Done = true;
+        }
+
+        if (currentHp <= 5 && special2Done == false)
+        {
+            this.ChangeState(this.MiniBossData.specialGimmickBossState);
+            special2Done = true;
         }
 
     }
