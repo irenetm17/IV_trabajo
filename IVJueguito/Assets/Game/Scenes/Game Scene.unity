@@ -19246,8 +19246,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 41476086956bd2a4d9736711d860586a, type: 3}
     volumen: 1
   - id: CaminarMago
-    clip: {fileID: 8300000, guid: e78b5d265bc02be46a76275867e645ee, type: 3}
-    volumen: 1
+    clip: {fileID: 8300000, guid: e1e4a9ae5f17eed42b256f7181092b9b, type: 3}
+    volumen: 0.1
   - id: CaminarSlime
     clip: {fileID: 8300000, guid: 33b8a740984b9b74383c5d0f59cecd58, type: 3}
     volumen: 1

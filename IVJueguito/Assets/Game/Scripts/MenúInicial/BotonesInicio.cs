@@ -15,28 +15,33 @@ public class BotonesInicio : MonoBehaviour
     }
     public void IniciarJuego()
     {
+        AudioService.instance.PlaySFX("Boton");
         Time.timeScale = 1f;
         SceneManager.LoadScene("Game Scene");
         EventManager.instance.Publicar(new SimpleEvent(eventType.LevelStarted));
     }
     public void SalirJuego()
     {
+        AudioService.instance.PlaySFX("Boton");
         Application.Quit();
         Debug.Log("Salir del juego");
     }
 
     public void AbrirCreditos()
     {
+        AudioService.instance.PlaySFX("Boton");
         panelCreditos.SetActive(true);
         menuInicial.SetActive(false);
     }
     public void CerrarCreditos()
     {
+        AudioService.instance.PlaySFX("Boton");
         panelCreditos.SetActive(false);
         menuInicial.SetActive(true);
     }
     public void IrMenuPrincipal()
     {
+        AudioService.instance.PlaySFX("Boton");
         SceneManager.LoadScene("MenuInicial");
     }
 }

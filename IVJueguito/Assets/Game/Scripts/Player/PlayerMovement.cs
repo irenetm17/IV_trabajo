@@ -95,6 +95,7 @@ public class PlayerMovement : Entity, IObserver
         _rb.linearVelocity = new Vector3(moveDir.x * _moveSpeed, Physics.gravity.y, moveDir.z * _moveSpeed);
         if (_moveDirection != Vector2.zero)
         {
+            AudioService.instance.PlaySFX("CaminarMago");
             animator.SetFloat("speed", 1.0f);
         }
         else
