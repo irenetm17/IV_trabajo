@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioEventHandler : MonoBehaviour, IObserver
 {
@@ -8,8 +9,17 @@ public class AudioEventHandler : MonoBehaviour, IObserver
         EventManager.instance.Subscribir(eventType.PlayerStatsUpdated, this);
         EventManager.instance.Subscribir(eventType.UseKey, this);
         EventManager.instance.Subscribir(eventType.PlayerDied, this);
+        EventManager.instance.Subscribir(eventType.GamePaused, this);
 
-        AudioService.instance.PlayMusic("MusicaFondo", true);
+        int numeroEscena = SceneManager.GetActiveScene().buildIndex;
+        if (numeroEscena == 0) 
+        {
+            AudioService.instance.PlayMusic("MusicaFondo", true);
+        }
+        else if (numeroEscena == 1)
+        {
+            AudioService.instance.PlayMusic("MusicaMenu", true);
+        }
     }
     public void OnEvent(IEvent evento)
     {
@@ -39,6 +49,9 @@ public class AudioEventHandler : MonoBehaviour, IObserver
                 AudioService.instance.PlaySFX("MagoMuere");
                 break;
 
+            case eventType.GamePaused:
+                AudioService.instance.PlaySFX("Boton");
+                break;
 
         }
     }
