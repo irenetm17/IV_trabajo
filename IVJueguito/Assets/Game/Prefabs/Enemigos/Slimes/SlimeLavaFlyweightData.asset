@@ -10,16 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb1f0ee702666d34286432e351cf5702, type: 3}
-  m_Name: SlimeIceFlyweightData 1
+  m_Name: SlimeLavaFlyweightData
   m_EditorClassIdentifier: Assembly-CSharp::EnemyFlyweight
-  typeID: 1
-  maxHP: 200
+  typeID: 2
+  maxHP: 10
   speed: 7
-  damage: 20
+  damage: 1
   patrolRadius: 20
   detectPlayerRadius: 30
   reachPlayerRadius: 5
-  animatorOverride: {fileID: 22100000, guid: 37a00b458bc1b384285c8e04105a6ef2, type: 2}
   idleState: {fileID: 11400000, guid: 3e8c5184c1118394ba1673aa5ab4c9a6, type: 2}
   chaseState: {fileID: 11400000, guid: c4941b0633ebca944a531f92f1628f9d, type: 2}
   attackState: {fileID: 11400000, guid: 083afa618287cdb489956dc8f498b4da, type: 2}

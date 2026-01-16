@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb1f0ee702666d34286432e351cf5702, type: 3}
-  m_Name: SlimeLavaFlyweightData 2
+  m_Name: SlimeCaveFlyweightData
   m_EditorClassIdentifier: Assembly-CSharp::EnemyFlyweight
-  typeID: 2
-  maxHP: 300
+  typeID: 3
+  maxHP: 400
   speed: 7
-  damage: 30
+  damage: 40
   patrolRadius: 20
   detectPlayerRadius: 30
   reachPlayerRadius: 5

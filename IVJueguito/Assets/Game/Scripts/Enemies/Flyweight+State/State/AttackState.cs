@@ -19,8 +19,8 @@ public class AttackState : EnemyState
         enemy.stateTimer += deltaTime;
         enemy.animator.SetBool("nearPlayer", true);
 
-        if (enemy.stateTimer >= attackDelay)
-        {
+        //if (enemy.stateTimer >= attackDelay)
+        //{
             
                 if (enemy.DistanceWithPlayer() > enemy.flyweightData.reachPlayerRadius)
                 {
@@ -28,15 +28,15 @@ public class AttackState : EnemyState
                 }
                 else 
                 {
-                if (enemy.stateTimer >= attackTime)
+                if (enemy.stateTimer >= attackDelay)
                 {
                     enemy.DamageTarget(enemy.flyweightData.damage);
-                    enemy.ChangeState(enemy.flyweightData.attackState);
+                    enemy.ChangeState(enemy.flyweightData.chaseState);
                 }
                     
                 }
             
-        }
+        //}
 
     }
     public override void Exit(Enemy enemy)
