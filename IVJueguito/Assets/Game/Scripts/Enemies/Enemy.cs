@@ -39,6 +39,11 @@ public class Enemy : MonoBehaviour, IEnemy, IObserver
         isAlive = true;
         patrolRadius = flyweightData.patrolRadius;
 
+        if (animator != null && flyweightData.animatorController != null)
+        {
+            animator.runtimeAnimatorController = flyweightData.animatorController;
+        }
+
         // Buscar jugador
         GameObject playerObj = GameObject.FindWithTag("Player");
         if (playerObj != null)

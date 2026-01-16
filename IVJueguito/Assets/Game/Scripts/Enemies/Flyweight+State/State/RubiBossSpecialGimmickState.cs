@@ -17,6 +17,7 @@ public class RubiBossSpecialGimmickState : EnemyState
     public override void Execute(Enemy enemy, float deltaTime)
     {
         MiniBoss boss = enemy as MiniBoss;
+        if (boss == null) return;
 
         enemy.stateTimer += deltaTime;
         float dist = enemy.DistanceWithPlayer();

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Rubi Boss Special Attack State
   m_EditorClassIdentifier: Assembly-CSharp::RubiBossSpecialAttackState
   attackDelay: 0.5
-  attackDuration: 1
+  specialAttackdmg: 1
