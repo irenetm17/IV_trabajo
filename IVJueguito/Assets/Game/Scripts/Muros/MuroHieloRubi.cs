@@ -15,6 +15,7 @@ public class MuroHieloRubi : MonoBehaviour
     public void DerretirMuro()
     {
         _animatorMuro.enabled = true;
+        SimpleEvent simpleEvent = new SimpleEvent(eventType.UseKey);
         Destroy(gameObject,3f);
     }
 

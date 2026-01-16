@@ -64,6 +64,7 @@ public class OjoDemoniaco : MonoBehaviour
 
             Vector3 dir = _player.transform.position - _bulletT.position;
             dir = dir.normalized;
+            AudioService.instance.PlaySFX("Laser");
 
             Proyectile proyectil = bulletTemp.GetComponent<Proyectile>();
             proyectil.Init(dir, _speedShot);
