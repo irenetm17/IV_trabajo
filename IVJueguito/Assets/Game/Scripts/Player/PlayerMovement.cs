@@ -21,6 +21,7 @@ public class PlayerMovement : Entity, IObserver
         EventManager.instance.Subscribir(eventType.PlayerCanMove, this);
         animator = GetComponentInChildren<Animator>();
         hijo = transform.GetChild(0);
+
     }
     public void OnEvent(IEvent evento)
     {
