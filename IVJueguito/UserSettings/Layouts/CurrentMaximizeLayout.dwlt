@@ -274,18 +274,18 @@ MonoBehaviour:
       m_ExpandedIDs: fc7afdff90e1fdffc6e2fdffd866feff36e4ffff2ede0000c4ba080020bb0800
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Sprite
+        m_OriginalName: Sprite
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -15286
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_TrimLeadingAndTrailingWhitespace: 0
         m_ClientGUIView: {fileID: 6}
@@ -1371,7 +1371,7 @@ MonoBehaviour:
   m_Zoom: -1
   m_ScrollPosition: {x: 0, y: 0}
   m_SelectedObject: {fileID: 0}
-  m_SelectedSpriteRectGUID: 00000000000000000000000000000000
+  m_SelectedSpriteRectGUID: 5e97eb03825dee720800000000000000
   m_LastUsedModuleTypeName: UnityEditor.U2D.Sprites.SpriteFrameModule
 --- !u!114 &12
 MonoBehaviour:
