@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Unity.VisualScripting;
 
-public class CofreInteractuar : MonoBehaviour
+public class CofreInteractuar : Openable
 {
     [SerializeField] private float distanceToInteract = 3f;
     public InputActionReference input;
@@ -81,5 +81,15 @@ public class CofreInteractuar : MonoBehaviour
         EventManager.instance.Publicar(muevete);
     }
 
+    public override void SetState(bool open)
+    {
+        isOpen = open;
+
+        if (open)
+        {
+            interactuado = true;
+            animator.SetBool("Abrir", true);
+        }
+    }
 
 }
