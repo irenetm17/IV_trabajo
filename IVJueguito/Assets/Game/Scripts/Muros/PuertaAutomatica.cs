@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PuertaAutomatica : MonoBehaviour, IObserver
+public class PuertaAutomatica : Openable, IObserver
 {
 
     private Animator animator;
@@ -37,6 +37,15 @@ public class PuertaAutomatica : MonoBehaviour, IObserver
         {
             EventManager.instance.Desuscribir(eventType.DoorOpened, this);
         }
+    }
+    public override void SetState(bool open)
+    {
+        isOpen = open;
+
+        if (open)
+            AbrirPuerta();
+        else
+            CerrarPuerta();
     }
 
     public void AbrirPuerta()
