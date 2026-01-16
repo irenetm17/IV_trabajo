@@ -134,7 +134,6 @@ public class Enemy : MonoBehaviour, IEnemy, IObserver
 
     public void MoveTo(Vector3 target)
     {
-        
         float step = flyweightData.speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, target, step);
         
