@@ -18,5 +18,7 @@ public class DamageTakenEvent : IEvent
     {
         Target = target;
         Amount = damage;
+
+        Target.TakeDamage(Amount);
     }
 }

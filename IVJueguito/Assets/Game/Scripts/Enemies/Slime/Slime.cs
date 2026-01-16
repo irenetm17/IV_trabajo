@@ -9,6 +9,8 @@ public class Slime : Enemy, IPoolObject  // Tambien implementará el Enemy
         // Si tenemos una pool asignada, volvemos a ella
         if (parentSlimePool != null)
         {
+            ResetObject();
+            SetActive(false);
             parentSlimePool.PutToPool(this);
         }
     }

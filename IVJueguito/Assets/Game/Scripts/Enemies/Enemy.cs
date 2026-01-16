@@ -93,7 +93,7 @@ public class Enemy : MonoBehaviour, IEnemy, IObserver
     }
     public void ChangeState(EnemyState newState)
     {
-        //Debug.Log($"{name} cambió de estado a: {newState.name}"); 
+        Debug.Log($"{name} cambió de estado a: {newState.name}"); 
         stateMachine.ChangeState(newState, this);
     }
     public bool IsAlive()

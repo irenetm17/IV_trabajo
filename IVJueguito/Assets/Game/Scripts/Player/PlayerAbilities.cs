@@ -112,7 +112,6 @@ public class PlayerAbilities : MonoBehaviour, IObserver
         if (!canMove) return;
         if (Mouse.current.leftButton.IsPressed()) // Lo del raton de las narices
         {
-            Debug.Log("Ability0 input detectado");
             TryUseAbility(0);
         }
         if (Mouse.current.rightButton.IsPressed())
