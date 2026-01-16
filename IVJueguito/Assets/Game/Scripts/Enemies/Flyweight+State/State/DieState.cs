@@ -8,6 +8,8 @@ public class DieState : EnemyState
     {
         enemy.stateTimer = 0;
         enemy.animator.SetBool("alive", false);
+
+        enemy.KillEnemy();
     }
     public override void Execute(Enemy enemy, float deltaTime)
     {
