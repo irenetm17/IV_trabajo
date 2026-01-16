@@ -6,6 +6,8 @@ public class Slime : Enemy, IPoolObject  // Tambien implementará el Enemy
 
     public override void KillEnemy()
     {
+
+        AudioService.instance.PlaySFX("MuerteEnemigo");
         // Si tenemos una pool asignada, volvemos a ella
         if (parentSlimePool != null)
         {
@@ -46,6 +48,7 @@ public class Slime : Enemy, IPoolObject  // Tambien implementará el Enemy
         {
             //this.SetActive(false);
             //parentSlimePool.PutToPool(this);
+            AudioService.instance.PlaySFX("Mordisco");
         }
     }
 

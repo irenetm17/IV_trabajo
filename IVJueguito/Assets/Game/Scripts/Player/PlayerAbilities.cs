@@ -160,6 +160,7 @@ public class PlayerAbilities : MonoBehaviour, IObserver
         Debug.Log("AbilityDiamond ejecutada");
         diam.SetActive(true);
         animator.SetBool("attacking", true);
+        AudioService.instance.PlaySFX("UsarDiamante");
         StartCoroutine(Wait(0.5f));
     }
 
@@ -170,6 +171,7 @@ public class PlayerAbilities : MonoBehaviour, IObserver
         );
         bool izq = (Mouse.current.position.ReadValue().x < (Screen.width * 0.5f));
 
+        AudioService.instance.PlaySFX("UsarRubi");
         if (Physics.Raycast(ray, out RaycastHit hit, 500f, ground))
         {
             Vector3 targetPoint = hit.point;
@@ -196,6 +198,8 @@ public class PlayerAbilities : MonoBehaviour, IObserver
 
     void AbilitySapphire()
     {
+
+        AudioService.instance.PlaySFX("UsarHielo");
         StartCoroutine(SapphireRoutine());
     }
     IEnumerator SapphireRoutine()
@@ -227,6 +231,8 @@ public class PlayerAbilities : MonoBehaviour, IObserver
 
     void AbilityEmerald()
     {
+
+        AudioService.instance.PlaySFX("UsarEsmeralda");
         StartCoroutine(EmeraldRoutine());
     }
     IEnumerator EmeraldRoutine()

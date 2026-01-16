@@ -25,11 +25,12 @@ public class MiniBoss : Enemy
             if (DistanceWithPlayer() < radius)
             {
 
-            Debug.Log("Estoy entrando al emuje");
+            Debug.Log("Estoy entrando al empuje");
                     Vector3 dir = (player.transform.position - transform.position).normalized;
                     dir.y = 0;
+                AudioService.instance.PlaySFX("GolpeGolem");
 
-                    Rigidbody rb = player.GetComponent<Rigidbody>();
+            Rigidbody rb = player.GetComponent<Rigidbody>();
 
 
             player.transform.Translate(dir * force * Time.deltaTime, Space.World);
