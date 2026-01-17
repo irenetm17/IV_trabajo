@@ -61,7 +61,8 @@ public class SlimeSpawner : MonoBehaviour
         }
     }
 
-    void SpawnSlimes(Transform spawnPos)
+
+    public void SpawnSlimes(Transform spawnPos)
     {
         int numSlimesSpawn = Random.Range(_minSlimesSpawn,_maxSlimesSpawn); // Se calcula un numero random de spawn de slimes
 

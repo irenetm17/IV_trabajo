@@ -9,7 +9,8 @@ public class MiniBoss : Enemy
     [SerializeField] ParticleSystem windArea;
     [SerializeField] ParticleSystem stunned;
     public ParticleSystem explosion;
-        public MiniBossFlyweight MiniBossData
+    public SlimeSpawner sp;
+    public MiniBossFlyweight MiniBossData
         {
             get { return (MiniBossFlyweight)flyweightData; }
         }
@@ -39,6 +40,18 @@ public class MiniBoss : Enemy
             rb.linearVelocity += dir * force * Time.deltaTime;
             rb.AddForce(dir * force, ForceMode.Force);
         }
+    }
+
+    public void SpawnSlimes()
+    {
+        public Vector3 offset = new Vector3(0, 5, 0);
+
+        Transform t1 = this.playerTransform.forward; 
+        Transform t2; 
+        Transform t3;
+        sp.SpawnSlimes(t1);
+        sp.SpawnSlimes(t2);
+        sp.SpawnSlimes(t3);
     }
 
     public void StopWind()
