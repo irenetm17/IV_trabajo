@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class AudioEventHandler : MonoBehaviour, IObserver
 {
+    [SerializeField] private AudioMixer audioMixer;
     void Start()
     {
         EventManager.instance.Subscribir(eventType.CollectiblePicked, this);
@@ -10,6 +12,7 @@ public class AudioEventHandler : MonoBehaviour, IObserver
         EventManager.instance.Subscribir(eventType.UseKey, this);
         EventManager.instance.Subscribir(eventType.PlayerDied, this);
         EventManager.instance.Subscribir(eventType.GamePaused, this);
+        EventManager.instance.Subscribir(eventType.VolumeChanged, this);
 
         int numeroEscena = SceneManager.GetActiveScene().buildIndex;
         if (numeroEscena == 0) 
@@ -52,7 +55,15 @@ public class AudioEventHandler : MonoBehaviour, IObserver
             case eventType.GamePaused:
                 AudioService.instance.PlaySFX("Boton");
                 break;
-
+            case eventType.VolumeChanged:
+                VolumeEvent event3 = (VolumeEvent)evento;
+                SetVolume(event3.volumen);
+                break;
         }
+    }
+    public void SetVolume(float volumen)
+    {
+        float db = Mathf.Log10(volumen) * 20;
+        audioMixer.SetFloat("VolumenGeneral", db);
     }
 }
