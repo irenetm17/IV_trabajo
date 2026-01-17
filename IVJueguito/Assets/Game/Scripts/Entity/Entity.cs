@@ -5,6 +5,8 @@ public class Entity : MonoBehaviour
     protected Camera cam;
     protected Transform spritePivot;
 
+
+
     protected virtual void Awake()
     {
         cam = Camera.main;

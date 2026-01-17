@@ -512,7 +512,6 @@ GameObject:
   - component: {fileID: 720340241617490526}
   - component: {fileID: 7444851252132707061}
   - component: {fileID: 5381006384538865031}
-  - component: {fileID: 5428780608486872830}
   - component: {fileID: 3412813607452814621}
   m_Layer: 0
   m_Name: RubiMiniBoss
@@ -540,6 +539,7 @@ Transform:
   - {fileID: 7019493128095619449}
   - {fileID: 7022285755488844453}
   - {fileID: 3470820707683561260}
+  - {fileID: 1340343973870426979}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &7444851252132707061
@@ -592,18 +592,6 @@ CapsuleCollider:
   m_Height: 14.324425
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5428780608486872830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4996532326884467178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73e742067e7ba5946b9a333e6a08578e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Entity
 --- !u!114 &3412813607452814621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -627,6 +615,7 @@ MonoBehaviour:
   tookDamage: 0
   hasAttacked: 0
   stateTimer: 0
+  deathParticle: {fileID: 1200089942664312246}
   triggerSpecial: 0
   special1Done: 0
   special2Done: 0
@@ -1005,6 +994,73 @@ MonoBehaviour:
         DeclaredDuration: 0
         ForceSimulationSpeed: 0
         ForcedSimulationSpeed: {x: 0.1, y: 1}
+--- !u!1001 &376444729527316275
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 720340241617490526}
+    m_Modifications:
+    - target: {fileID: 1702569302389617744, guid: 410d5bc7071fb0f40a17f7c88a58d3f3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.5536907
+      objectReference: {fileID: 0}
+    - target: {fileID: 1702569302389617744, guid: 410d5bc7071fb0f40a17f7c88a58d3f3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.913086
+      objectReference: {fileID: 0}
+    - target: {fileID: 1702569302389617744, guid: 410d5bc7071fb0f40a17f7c88a58d3f3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.42458
+      objectReference: {fileID: 0}
+    - target: {fileID: 1702569302389617744, guid: 410d5bc7071fb0f40a17f7c88a58d3f3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1702569302389617744, guid: 410d5bc7071fb0f40a17f7c88a58d3f3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1702569302389617744, guid: 410d5bc7071fb0f40a17f7c88a58d3f3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1702569302389617744, guid: 410d5bc7071fb0f40a17f7c88a58d3f3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1702569302389617744, guid: 410d5bc7071fb0f40a17f7c88a58d3f3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1702569302389617744, guid: 410d5bc7071fb0f40a17f7c88a58d3f3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1702569302389617744, guid: 410d5bc7071fb0f40a17f7c88a58d3f3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2193291961736887670, guid: 410d5bc7071fb0f40a17f7c88a58d3f3, type: 3}
+      propertyPath: m_Name
+      value: DeathEffect
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 410d5bc7071fb0f40a17f7c88a58d3f3, type: 3}
+--- !u!198 &1200089942664312246 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1557951959012301445, guid: 410d5bc7071fb0f40a17f7c88a58d3f3, type: 3}
+  m_PrefabInstance: {fileID: 376444729527316275}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1340343973870426979 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1702569302389617744, guid: 410d5bc7071fb0f40a17f7c88a58d3f3, type: 3}
+  m_PrefabInstance: {fileID: 376444729527316275}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1173354350036795740
 PrefabInstance:
   m_ObjectHideFlags: 0
