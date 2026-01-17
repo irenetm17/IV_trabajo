@@ -7,9 +7,9 @@ public class SaveSlotUI : MonoBehaviour
 {
     public int slotIndex;
 
-    public TMP_Text livesText;
-    public TMP_Text gemsText;
-    public TMP_Text keysText;
+    [SerializeField] private Image[] hearts;
+    [SerializeField] private GameObject[] gems;
+    [SerializeField] private Image[] keys;
 
     void Start()
     {
@@ -22,15 +22,15 @@ public class SaveSlotUI : MonoBehaviour
         if (SaveManager.instance.HasSave())
         {
             SaveData data = SaveManager.instance.LoadGame();
-            livesText.text = data.playerLives.ToString();
-            gemsText.text = data.playerGems.ToString();
-            keysText.text = data.playerKeys.ToString();
+            UpdateHearts(data.playerLives);
+            UpdateGems(data.playerGems);
+            UpdateKeys(data.playerKeys);
         }
         else
         {
-            livesText.text = "3";
-            gemsText.text = "0";
-            keysText.text = "0";
+            UpdateHearts(3);
+            UpdateGems(0);
+            UpdateKeys(0);
         }
     }
 
@@ -45,4 +45,47 @@ public class SaveSlotUI : MonoBehaviour
         SaveManager.instance.DeleteSave();
         Refresh();
     }
+
+    #region VIDAS, GEMAS, LLAVES
+    private void UpdateHearts(float l)
+    {
+        float remainingHealth = l;
+
+        for (int i = 0; i < hearts.Length; i++)
+        {
+            float fill = Mathf.Clamp01(remainingHealth);//devuelve un valor entre 0 y 1, si es mas de 1 da 1
+            hearts[i].fillAmount = fill;
+
+            remainingHealth -= 1f;
+        }
+    }
+    private void UpdateGems(int g)
+    {
+        for (int i = 0; i < gems.Length; i++)
+        {
+            if (i < g)
+            {
+                gems[i].SetActive(true);
+            }
+            else
+            {
+                gems[i].SetActive(false);
+            }
+        }
+    }
+    private void UpdateKeys(int k)
+    {
+        for (int i = 0; i < keys.Length; i++)
+        {
+            if (i < k)
+            {
+                keys[i].enabled = true;
+            }
+            else
+            {
+                keys[i].enabled = false;
+            }
+        }
+    }
+    #endregion
 }
