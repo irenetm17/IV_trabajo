@@ -1,10 +1,11 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UIElements;
 using UnityEngine.VFX;
 
-public class Enemy : MonoBehaviour, IEnemy, IObserver
+public class Enemy : Entity, IEnemy, IObserver
 {
     [Header("Datos")]
     public float currentHp;
@@ -17,7 +18,7 @@ public class Enemy : MonoBehaviour, IEnemy, IObserver
 
     protected Transform playerTransform;
 
-    [SerializeField] private EnemyType tipoParaTest;
+    [SerializeField] protected EnemyType tipoParaTest;
 
     private StateMachine stateMachine;
 
@@ -29,6 +30,9 @@ public class Enemy : MonoBehaviour, IEnemy, IObserver
     [HideInInspector] public bool hasAttacked = false;
 
     [HideInInspector] public float stateTimer;
+
+    // ANimaciones Feedback
+    [SerializeField] private ParticleSystem deathParticle;
 
     public void Initialize(EnemyType type)
     {
@@ -58,16 +62,18 @@ public class Enemy : MonoBehaviour, IEnemy, IObserver
         stateMachine.Initialize(flyweightData.idleState, this);
     }
 
-    void Awake()
-    {
-        animator = GetComponentInChildren<Animator>();
-    }
+
+    
 
     void Start()
     {
+
+        animator = GetComponentInChildren<Animator>();
         Initialize(tipoParaTest);
         EventManager.instance.Subscribir(eventType.DamageTaken, this);
     }
+
+
 
     void OnDestroy()
     {
@@ -120,8 +126,9 @@ public class Enemy : MonoBehaviour, IEnemy, IObserver
 
         if (currentHp <= 0)
         {
-            ChangeState(flyweightData.dieState);
-            isAlive = false;
+            if(deathParticle!=null)
+                deathParticle.Play();
+            StartCoroutine(DieAnimation());
         }
 
     }
@@ -186,5 +193,21 @@ public class Enemy : MonoBehaviour, IEnemy, IObserver
         Debug.LogWarning("¡Fallo al encontrar suelo en el NavMesh!");
         return spawnPosition;
     }
+
+
+    IEnumerator DieAnimation()
+    {
+        while (transform.localScale.x > 0f)
+        {
+            Vector3 scale = transform.localScale;
+            scale.x -= 0.1f;
+            transform.localScale = scale;
+            yield return new WaitForSeconds(0.1f);
+        }
+        Debug.Log("Murio");
+        isAlive = false;
+        ChangeState(flyweightData.dieState);
+    }
+
 
 }

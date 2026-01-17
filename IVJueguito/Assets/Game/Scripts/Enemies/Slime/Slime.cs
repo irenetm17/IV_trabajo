@@ -4,6 +4,8 @@ public class Slime : Enemy, IPoolObject  // Tambien implementará el Enemy
 {
     public SlimePool parentSlimePool;
 
+
+
     public override void KillEnemy()
     {
 
@@ -11,7 +13,7 @@ public class Slime : Enemy, IPoolObject  // Tambien implementará el Enemy
         // Si tenemos una pool asignada, volvemos a ella
         if (parentSlimePool != null)
         {
-            ResetObject();
+            ChangeState(flyweightData.idleState);
             SetActive(false);
             parentSlimePool.PutToPool(this);
         }
@@ -30,7 +32,12 @@ public class Slime : Enemy, IPoolObject  // Tambien implementará el Enemy
     public void ResetObject()
     {
         //Variables como health, reset
+        Initialize(tipoParaTest);
 
+        // Estado
+        //ChangeState(slimeTemp.flyweightData.idleState);
+        //isAlive = true;
+        
 
         //Mover al origen
         this.DisplaceTo(Vector3.zero);

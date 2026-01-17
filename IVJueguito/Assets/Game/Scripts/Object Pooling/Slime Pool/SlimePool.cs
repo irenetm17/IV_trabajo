@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Splines;
 
 public class SlimePool : MonoBehaviour, IObjectPool
 {
@@ -29,6 +30,10 @@ public class SlimePool : MonoBehaviour, IObjectPool
             Slime slimeTemp = slimeTempGO.GetComponent<Slime>();
             slimeTemp.parentSlimePool = this;
             slimeTemp.ResetObject();
+            // Estado
+            slimeTemp.ChangeState(slimeTemp.flyweightData.idleState);
+            slimeTemp.isAlive = true;
+
             slimeTemp.SetActive(false);
             _slimePoolList.Enqueue(slimeTemp);
         }
@@ -37,22 +42,22 @@ public class SlimePool : MonoBehaviour, IObjectPool
 
     public IPoolObject TakeFromPool()
     {
-        if( _slimePoolList.Count == 0)
+        if( _slimePoolList.Count == 0) //generar nuevos
         {
             GameObject slimeTempGO = Instantiate(_slimePrefab);
             Slime slimeTemp = slimeTempGO.GetComponent<Slime>();
             slimeTemp.parentSlimePool = this;
-            slimeTemp.ResetObject();
             slimeTemp.SetActive(true);
+            slimeTemp.ResetObject();
             _actualSize++;
             return slimeTemp;
         }
-        else
+        else //Pillarlo de la pool
         {
             Slime slimeTemp = _slimePoolList.Dequeue();
             slimeTemp.parentSlimePool = this;
-            slimeTemp.ResetObject();
             slimeTemp.SetActive(true);
+            slimeTemp.ResetObject();
             return slimeTemp;
         }
     }
