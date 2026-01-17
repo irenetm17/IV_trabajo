@@ -11,7 +11,7 @@ public class HUDcontroller : MonoBehaviour, IObserver
     [Header("VIDAS")]
     [SerializeField] private Image[] hearts;
     [SerializeField] private float maxHealth = 3f;
-    private float currentHealth = 1f;
+    [SerializeField] private float currentHealth = 3f;
 
     [Header("LLAVES")]
     private int numLlaves = 0;
