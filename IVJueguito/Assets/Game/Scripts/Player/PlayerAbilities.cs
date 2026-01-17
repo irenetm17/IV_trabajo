@@ -77,7 +77,8 @@ public class PlayerAbilities : MonoBehaviour, IObserver
 
                 if (gemas > 0 && gemas <=4)
                 {
-                    bloqueadosImages[gemas - 1].gameObject.SetActive(false); //desbloquea la habilidad correspondiente
+                    for (int i = 0; i < gemas; i++)
+                        bloqueadosImages[i].gameObject.SetActive(false); //desbloquea la habilidad correspondiente
                 }
             }
         }

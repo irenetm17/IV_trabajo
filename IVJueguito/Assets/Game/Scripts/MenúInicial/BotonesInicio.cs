@@ -41,6 +41,7 @@ public class BotonesInicio : MonoBehaviour
     }
     public void IrMenuPrincipal()
     {
+        Time.timeScale = 1f;
         AudioService.instance.PlaySFX("Boton");
         SceneManager.LoadScene("MenuInicial");
     }

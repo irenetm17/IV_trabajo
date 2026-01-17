@@ -1,12 +1,12 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class SaveGameManager : MonoBehaviour
+public class SaveGameManager : MonoBehaviour, IObserver
 {
     public Transform player;
-    public float lives;
-    public int gems;
-    public int keys;
+    public float lives = 3;
+    public int gems = 0;
+    public int keys = 0;
     public Openable[] openables;
 
     void Start()
@@ -14,6 +14,12 @@ public class SaveGameManager : MonoBehaviour
         SaveManager.instance.SetSlot(GameSession.selectedSlot);
 
         SaveData data = SaveManager.instance.LoadGame();
+
+        EventManager.instance.Subscribir(eventType.PlayerStatsUpdated, this);
+        EventManager.instance.Subscribir(eventType.CollectiblePicked, this);
+        EventManager.instance.Subscribir(eventType.UseKey, this);
+        EventManager.instance.Subscribir(eventType.PlayerDied, this);
+        EventManager.instance.Subscribir(eventType.GameSaved, this);
 
         if (data == null)
         {
@@ -26,6 +32,45 @@ public class SaveGameManager : MonoBehaviour
 
         Load();
     }
+    public void OnEvent(IEvent evento)
+    {
+        if (evento.Tipo == eventType.GameSaved)
+        {
+            Save();
+        }
+        if (evento.Tipo == eventType.PlayerStatsUpdated)
+        {
+            PlayerStatsEvent event2 = (PlayerStatsEvent)evento; //desempaqueta
+
+            lives += event2.health;
+            lives = Mathf.Clamp(lives, 0f, 3f);
+            gems += event2.gems;
+            gems = Mathf.Clamp(gems, 0, 4);
+        }
+
+        if (evento.Tipo == eventType.CollectiblePicked)
+        {
+            CollectibleEvent event4 = (CollectibleEvent)evento; //desempaqueta
+            if (event4.tipo == CollectibleType.Corazones)
+            {
+                lives += event4.amount;
+                lives = Mathf.Clamp(lives, 0f, 3f);
+            }
+            if (event4.tipo == CollectibleType.Llaves)
+            {
+                keys += event4.amount;
+            }
+            if (event4.tipo == CollectibleType.Gema)
+            {
+                gems += event4.amount;
+            }
+        }
+        if (evento.Tipo == eventType.UseKey)
+        {
+            keys--;
+        }
+
+    }
 
     public void Save()
     {
@@ -36,6 +81,11 @@ public class SaveGameManager : MonoBehaviour
         data.playerLives = lives;
         data.playerGems = gems;
         data.playerKeys = keys;
+
+        Debug.Log("datos guardados:");
+        Debug.Log(lives);
+        Debug.Log(gems);
+        Debug.Log(keys);
 
         data.openablesState = new List<bool>();
         foreach (Openable o in openables)
@@ -52,9 +102,20 @@ public class SaveGameManager : MonoBehaviour
 
         player.position = data.playerPosition;
         player.eulerAngles = data.playerRotation;
-        lives = data.playerLives;
-        gems = data.playerGems;
-        keys = data.playerKeys;
+        //lives = data.playerLives;
+        //gems = data.playerGems;
+        //keys = data.playerKeys;
+
+        Debug.Log("datos leidos:");
+        Debug.Log(data.playerLives);
+        Debug.Log(data.playerGems);
+        Debug.Log(data.playerKeys);
+
+        CollectibleEvent collectibleEvent = new CollectibleEvent(CollectibleType.Llaves, data.playerKeys);
+        EventManager.instance.Publicar(collectibleEvent);
+
+        PlayerStatsEvent vidasRestar = new PlayerStatsEvent((data.playerLives - 3.0f), data.playerGems);
+        EventManager.instance.Publicar(vidasRestar);
 
         int count = Mathf.Min(openables.Length, data.openablesState.Count);
 
@@ -63,5 +124,15 @@ public class SaveGameManager : MonoBehaviour
             openables[i].SetState(data.openablesState[i]);
         }
     }
-
+    void OnDestroy()
+    {
+        if (EventManager.instance != null)
+        {
+            EventManager.instance.Desuscribir(eventType.PlayerStatsUpdated, this);
+            EventManager.instance.Desuscribir(eventType.CollectiblePicked, this);
+            EventManager.instance.Desuscribir(eventType.UseKey, this);
+            EventManager.instance.Desuscribir(eventType.PlayerDied, this);
+            EventManager.instance.Desuscribir(eventType.GameSaved, this);
+        }
+    }
 }
