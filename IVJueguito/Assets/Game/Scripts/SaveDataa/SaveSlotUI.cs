@@ -11,6 +11,10 @@ public class SaveSlotUI : MonoBehaviour
     public TMP_Text gemsText;
     public TMP_Text keysText;
 
+    void Start()
+    {
+        Refresh();
+    }
     public void Refresh()
     {
         SaveManager.instance.SetSlot(slotIndex);
@@ -33,7 +37,7 @@ public class SaveSlotUI : MonoBehaviour
     public void OnClickPlay() //al hacer clic
     {
         GameSession.selectedSlot = slotIndex;
-        UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Game Scene");
     }
     public void OnClickDelete()
     {

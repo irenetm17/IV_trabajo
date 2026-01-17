@@ -15,7 +15,8 @@ public enum eventType //lista de tipos de evento. Fuera de la clase para poder u
     DamageTaken,
     PlayerCanMove,
     UseKey,
-    DoorOpened
+    DoorOpened,
+    GameSaved
 }
 
 public class EventManager : MonoBehaviour
