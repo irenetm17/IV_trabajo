@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour, IEnemy, IObserver
     [SerializeField] float patrolRadius;
     public Animator animator;
 
-    private Transform playerTransform;
+    protected Transform playerTransform;
 
     [SerializeField] private EnemyType tipoParaTest;
 

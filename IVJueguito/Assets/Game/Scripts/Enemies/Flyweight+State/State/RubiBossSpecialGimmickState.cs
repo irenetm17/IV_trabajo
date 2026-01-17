@@ -20,7 +20,6 @@ public class RubiBossSpecialGimmickState : EnemyState
         if (boss == null) return;
 
         enemy.stateTimer += deltaTime;
-        float dist = enemy.DistanceWithPlayer();
 
         boss.pushPlayer(windForce, windRadius);
 

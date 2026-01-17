@@ -1,3 +1,4 @@
+using MoreMountains.Feedbacks;
 using UnityEngine;
 
 public class MiniBoss : Enemy
@@ -8,8 +9,14 @@ public class MiniBoss : Enemy
     [HideInInspector] public bool activateParticles = true;
     [SerializeField] ParticleSystem windArea;
     [SerializeField] ParticleSystem stunned;
-    public ParticleSystem explosion;
-        public MiniBossFlyweight MiniBossData
+    //public ParticleSystem explosion;
+    public SlimeSpawner sp = null;
+
+    // FEEDBACKS
+    [SerializeField] private MMFeedbacks MMF_Explosion;
+    [SerializeField] private MMFeedbacks MMF_Wind;
+
+    public MiniBossFlyweight MiniBossData
         {
             get { return (MiniBossFlyweight)flyweightData; }
         }
@@ -19,6 +26,7 @@ public class MiniBoss : Enemy
             if(activateParticles)
             {
                 windArea.Play();
+                MMF_Wind.PlayFeedbacks();
                 activateParticles = false;
                 Debug.Log("Efecto de viento encendido");
             }
@@ -41,6 +49,34 @@ public class MiniBoss : Enemy
         }
     }
 
+    public void SpawnSlimes()
+    {
+        Vector3 offset = new Vector3(10, 0, 0);
+
+        Vector3 p1 = playerTransform.position + offset; 
+        Vector3 p2 = playerTransform.position - offset;
+        if (sp != null)
+        {
+            sp.SpawnSlimes(p1);
+            sp.SpawnSlimes(p2);
+        }
+    }
+
+    public void Impulse(float force)
+    {
+        AudioService.instance.PlaySFX("GolpeGolem");
+
+        GameObject player = GameObject.FindWithTag("Player");
+
+        Rigidbody rb = player.GetComponent<Rigidbody>();
+
+        Vector3 dir = (player.transform.position - transform.position).normalized;
+        dir.y = 0;
+
+        //player.transform.Translate(dir * force * Time.deltaTime, Space.World);
+        rb.linearVelocity += dir * force * Time.deltaTime;
+        rb.AddForce(dir * force, ForceMode.Impulse);
+    }
     public void StopWind()
     {
         windArea.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
@@ -48,33 +84,34 @@ public class MiniBoss : Enemy
         Debug.Log("Efecto apagado");
     }
     public void StunEffect()
-        {
+    {
 
-            stunned.Play();
-        
-            Debug.Log("Efecto de stun encendido");
-        }
+        stunned.Play();
+    
+        Debug.Log("Efecto de stun encendido");
+    }
 
-        public void SpecialAttack()
-        {
-        
-            explosion.Play();
-        
-            Debug.Log("Efecto de explosión encendido");
+    public void SpecialAttack()
+    {
 
-        }
+        MMF_Explosion.PlayFeedbacks();
+
+
+        Debug.Log("Efecto de explosión encendido");
+
+    }
 
     protected override void Update()
     {
         base.Update();
 
-        if (currentHp <= 15 && special1Done == false)
+        if (currentHp <= 20 && special1Done == false)
         {
             this.ChangeState(this.MiniBossData.specialGimmickBossState);
             special1Done = true;
         }
 
-        if (currentHp <= 5 && special2Done == false)
+        if (currentHp <= 10 && special2Done == false)
         {
             this.ChangeState(this.MiniBossData.specialGimmickBossState);
             special2Done = true;
