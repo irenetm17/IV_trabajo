@@ -1,3 +1,4 @@
+using MoreMountains.Feedbacks;
 using UnityEngine;
 
 public class MiniBoss : Enemy
@@ -8,8 +9,13 @@ public class MiniBoss : Enemy
     [HideInInspector] public bool activateParticles = true;
     [SerializeField] ParticleSystem windArea;
     [SerializeField] ParticleSystem stunned;
-    public ParticleSystem explosion;
-    public SlimeSpawner sp;
+    //public ParticleSystem explosion;
+    public SlimeSpawner sp = null;
+
+    // FEEDBACKS
+    [SerializeField] private MMFeedbacks MMF_Explosion;
+    [SerializeField] private MMFeedbacks MMF_Wind;
+
     public MiniBossFlyweight MiniBossData
         {
             get { return (MiniBossFlyweight)flyweightData; }
@@ -20,6 +26,7 @@ public class MiniBoss : Enemy
             if(activateParticles)
             {
                 windArea.Play();
+                MMF_Wind.PlayFeedbacks();
                 activateParticles = false;
                 Debug.Log("Efecto de viento encendido");
             }
@@ -47,10 +54,12 @@ public class MiniBoss : Enemy
         Vector3 offset = new Vector3(10, 0, 0);
 
         Vector3 p1 = playerTransform.position + offset; 
-        Vector3 p2 = playerTransform.position - offset; 
-
-        sp.SpawnSlimes(p1);
-        sp.SpawnSlimes(p2);
+        Vector3 p2 = playerTransform.position - offset;
+        if (sp != null)
+        {
+            sp.SpawnSlimes(p1);
+            sp.SpawnSlimes(p2);
+        }
     }
 
     public void Impulse(float force)
@@ -75,21 +84,22 @@ public class MiniBoss : Enemy
         Debug.Log("Efecto apagado");
     }
     public void StunEffect()
-        {
+    {
 
-            stunned.Play();
-        
-            Debug.Log("Efecto de stun encendido");
-        }
+        stunned.Play();
+    
+        Debug.Log("Efecto de stun encendido");
+    }
 
-        public void SpecialAttack()
-        {
-        
-            explosion.Play();
-        
-            Debug.Log("Efecto de explosión encendido");
+    public void SpecialAttack()
+    {
 
-        }
+        MMF_Explosion.PlayFeedbacks();
+
+
+        Debug.Log("Efecto de explosión encendido");
+
+    }
 
     protected override void Update()
     {
