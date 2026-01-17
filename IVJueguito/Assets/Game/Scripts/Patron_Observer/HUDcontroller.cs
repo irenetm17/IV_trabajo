@@ -32,6 +32,7 @@ public class HUDcontroller : MonoBehaviour, IObserver
     [SerializeField] private GameObject panelPausa;
 
     [SerializeField] private GameObject PanelMuerte;
+    [SerializeField] private Slider volumen;
 
     public void OnEvent(IEvent evento)
     {
@@ -205,6 +206,13 @@ public class HUDcontroller : MonoBehaviour, IObserver
         EventManager.instance.Publicar(pausita);
     }
 
+    public void UpdateVolume(float volumen)
+    {
+        if(volumen <= 0f) volumen = 0.0001f;
+        VolumeEvent eventoVolumen = new VolumeEvent(volumen);
+        EventManager.instance.Publicar(eventoVolumen);
+    }
+
     void Start()
     {
         //currentHealth = maxHealth;
@@ -222,6 +230,13 @@ public class HUDcontroller : MonoBehaviour, IObserver
         BotonDespausa.SetActive(false);
         panelPausa.SetActive(false);
         PanelMuerte.SetActive(false);
+
+        if (volumen != null)
+        {
+            volumen.value = 1f;
+            volumen.onValueChanged.AddListener(UpdateVolume);
+        }
+
     }
 
     void OnDestroy()
