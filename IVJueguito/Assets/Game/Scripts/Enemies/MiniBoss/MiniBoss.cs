@@ -44,16 +44,30 @@ public class MiniBoss : Enemy
 
     public void SpawnSlimes()
     {
-        public Vector3 offset = new Vector3(0, 5, 0);
+        Vector3 offset = new Vector3(10, 0, 0);
 
-        Transform t1 = this.playerTransform.forward; 
-        Transform t2; 
-        Transform t3;
-        sp.SpawnSlimes(t1);
-        sp.SpawnSlimes(t2);
-        sp.SpawnSlimes(t3);
+        Vector3 p1 = playerTransform.position + offset; 
+        Vector3 p2 = playerTransform.position - offset; 
+
+        sp.SpawnSlimes(p1);
+        sp.SpawnSlimes(p2);
     }
 
+    public void Impulse(float force)
+    {
+        AudioService.instance.PlaySFX("GolpeGolem");
+
+        GameObject player = GameObject.FindWithTag("Player");
+
+        Rigidbody rb = player.GetComponent<Rigidbody>();
+
+        Vector3 dir = (player.transform.position - transform.position).normalized;
+        dir.y = 0;
+
+        //player.transform.Translate(dir * force * Time.deltaTime, Space.World);
+        rb.linearVelocity += dir * force * Time.deltaTime;
+        rb.AddForce(dir * force, ForceMode.Impulse);
+    }
     public void StopWind()
     {
         windArea.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
@@ -81,13 +95,13 @@ public class MiniBoss : Enemy
     {
         base.Update();
 
-        if (currentHp <= 15 && special1Done == false)
+        if (currentHp <= 20 && special1Done == false)
         {
             this.ChangeState(this.MiniBossData.specialGimmickBossState);
             special1Done = true;
         }
 
-        if (currentHp <= 5 && special2Done == false)
+        if (currentHp <= 10 && special2Done == false)
         {
             this.ChangeState(this.MiniBossData.specialGimmickBossState);
             special2Done = true;
