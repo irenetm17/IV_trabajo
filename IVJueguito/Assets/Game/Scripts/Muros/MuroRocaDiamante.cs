@@ -18,6 +18,7 @@ public class MuroRocaDiamante : MonoBehaviour
     {
         // Desactivar collider
         _colliderMuro.enabled = false;
+        SimpleEvent simpleEvent = new SimpleEvent(eventType.UseKey);
 
         for (int i = 0;  i < _rocas.Length; i++)
         {

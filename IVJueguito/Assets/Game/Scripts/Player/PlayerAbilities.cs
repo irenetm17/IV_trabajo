@@ -21,6 +21,8 @@ public class PlayerAbilities : MonoBehaviour, IObserver
     [SerializeField] private int gemas = 0;//serializable para pruebas
 
     private Animator animator;
+    [SerializeField] private float damageFlashDuration = 0.4f; // duración total del flash (rojo y vuelta)
+    private Coroutine turningCoroutine;
 
     [Header("DIAMANTE")]
     [SerializeField] private GameObject diam;
@@ -55,7 +57,14 @@ public class PlayerAbilities : MonoBehaviour, IObserver
         {
             PlayerStatsEvent event2 = (PlayerStatsEvent)evento; //desempaqueta
 
-            if(event2.gems != 0)
+            if(event2.health < 0)
+            {
+                // Iniciar el flash rojo cuando recibes daño
+                if (turningCoroutine != null) StopCoroutine(turningCoroutine);
+                turningCoroutine = StartCoroutine(TurningRedRoutine());
+            }
+
+            if (event2.gems != 0)
             {
                 gemas += event2.gems;
 
@@ -83,6 +92,51 @@ public class PlayerAbilities : MonoBehaviour, IObserver
         {
             canMove = !canMove;
         }
+    }
+    IEnumerator TurningRedRoutine()
+    {
+        SpriteRenderer sp = GetComponentInChildren<SpriteRenderer>();
+        Color original = sp.color;
+        Color red = Color.red;
+
+        // Si duration es cero o negativa, aplicar instante
+        if (damageFlashDuration <= 0f)
+        {
+            sp.color = red;
+            yield return null;
+            sp.color = original;
+            turningCoroutine = null;
+            yield break;
+        }
+
+        float half = damageFlashDuration * 0.5f;
+        float t = 0f;
+
+        // Fade hacia rojo
+        while (t < half)
+        {
+            t += Time.deltaTime;
+            float p = Mathf.Clamp01(t / half);
+            sp.color = Color.Lerp(original, red, p);
+            yield return null;
+        }
+        sp.color = red;
+
+        // Pequeña pausa
+        yield return null;
+        yield return null;
+        // Vuelta a color original
+        t = 0f;
+        while (t < half)
+        {
+            t += Time.deltaTime;
+            float p = Mathf.Clamp01(t / half);
+            sp.color = Color.Lerp(red, original, p);
+            yield return null;
+        }
+        sp.color = original;
+
+        turningCoroutine = null;
     }
     void OnDestroy()
     {
@@ -160,6 +214,7 @@ public class PlayerAbilities : MonoBehaviour, IObserver
         Debug.Log("AbilityDiamond ejecutada");
         diam.SetActive(true);
         animator.SetBool("attacking", true);
+        AudioService.instance.PlaySFX("UsarDiamante");
         StartCoroutine(Wait(0.5f));
     }
 
@@ -170,6 +225,7 @@ public class PlayerAbilities : MonoBehaviour, IObserver
         );
         bool izq = (Mouse.current.position.ReadValue().x < (Screen.width * 0.5f));
 
+        AudioService.instance.PlaySFX("UsarRubi");
         if (Physics.Raycast(ray, out RaycastHit hit, 500f, ground))
         {
             Vector3 targetPoint = hit.point;
@@ -196,6 +252,8 @@ public class PlayerAbilities : MonoBehaviour, IObserver
 
     void AbilitySapphire()
     {
+
+        AudioService.instance.PlaySFX("UsarHielo");
         StartCoroutine(SapphireRoutine());
     }
     IEnumerator SapphireRoutine()
@@ -227,6 +285,8 @@ public class PlayerAbilities : MonoBehaviour, IObserver
 
     void AbilityEmerald()
     {
+
+        AudioService.instance.PlaySFX("UsarEsmeralda");
         StartCoroutine(EmeraldRoutine());
     }
     IEnumerator EmeraldRoutine()

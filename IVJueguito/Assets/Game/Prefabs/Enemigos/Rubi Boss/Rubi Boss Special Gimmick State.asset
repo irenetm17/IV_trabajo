@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Rubi Boss Special Gimmick State
   m_EditorClassIdentifier: Assembly-CSharp::RubiBossSpecialGimmickState
   chargeTime: 5
-  windRadius: 20
-  windForce: 20
+  windRadius: 30
+  windForce: 500

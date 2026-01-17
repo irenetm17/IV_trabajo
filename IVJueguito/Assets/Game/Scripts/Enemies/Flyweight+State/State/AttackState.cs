@@ -41,7 +41,7 @@ public class AttackState : EnemyState
     }
     public override void Exit(Enemy enemy)
     {
-        //enemy.animator.SetBool("nearPlayer", true);
+        enemy.animator.SetBool("nearPlayer", false);
     }
 }
 
