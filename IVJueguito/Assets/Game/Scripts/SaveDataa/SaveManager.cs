@@ -42,4 +42,22 @@ public class SaveManager : MonoBehaviour
         Debug.Log("Juego cargado");
         return data;
     }
+
+    public void SetSlot(int slot)
+    {
+        savePath = Application.persistentDataPath + "/save_slot_" + slot + ".json";
+    }
+
+    public bool HasSave()
+    {
+        return File.Exists(savePath);
+    }
+
+    public void DeleteSave()
+    {
+        if (File.Exists(savePath))
+        {
+            File.Delete(savePath);
+        }
+    }
 }
