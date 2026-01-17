@@ -28798,7 +28798,6 @@ MonoBehaviour:
   - {fileID: 30665203}
   - {fileID: 1982250687}
   maxHealth: 3
-  currentHealth: 3
   keys:
   - {fileID: 255115199}
   - {fileID: 1370245169}
@@ -28808,6 +28807,7 @@ MonoBehaviour:
   BotonPausa: {fileID: 107995433}
   BotonDespausa: {fileID: 1837789287}
   panelPausa: {fileID: 354071636}
+  PanelMuerte: {fileID: 0}
 --- !u!4 &1607153505 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 158924213009835095, guid: e6e31956c1388ad4fa633e72547783ff, type: 3}
@@ -39375,6 +39375,7 @@ MonoBehaviour:
   ability2: {fileID: 5492574780323536035, guid: db54bd73f0ac6ff4a8a4e4826782e4b4, type: 3}
   ability3: {fileID: 3217371199949232416, guid: db54bd73f0ac6ff4a8a4e4826782e4b4, type: 3}
   gemas: 0
+  damageFlashDuration: 0.4
   diam: {fileID: 4831768372545754199}
   fireballPrefab: {fileID: 7847159357427887921, guid: 12e35f47460a0e948bd8b3f3c695a356, type: 3}
   fireballSpawnPoint: {fileID: 1282163240846868057}

@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using Unity.VisualScripting;
+using MoreMountains.Feedbacks;
 
 
 public class PlayerAbilities : MonoBehaviour, IObserver
@@ -42,6 +43,12 @@ public class PlayerAbilities : MonoBehaviour, IObserver
     [SerializeField] private SpriteRenderer emeraldSprite;
     [SerializeField] private float emeraldFadeTime = 0.4f;
     [SerializeField] private float emeraldActiveTime = 1.5f;
+
+    [Header("ESMERALDA")]
+    [SerializeField] private MMFeedbacks diamanteMMF;
+    [SerializeField] private MMFeedbacks rubiMMF;
+    [SerializeField] private MMFeedbacks esmeraldaMMF;
+    [SerializeField] private MMFeedbacks zafiroMMF;
 
     void Start()
     {
@@ -167,18 +174,22 @@ public class PlayerAbilities : MonoBehaviour, IObserver
         if (Mouse.current.leftButton.IsPressed()) // Lo del raton de las narices
         {
             TryUseAbility(0);
+            diamanteMMF.PlayFeedbacks();
         }
         if (Mouse.current.rightButton.IsPressed())
         {
             TryUseAbility(1);
+            rubiMMF.PlayFeedbacks();
         }
         if (ability2.action.WasPressedThisFrame())
         {
             TryUseAbility(2);
+            zafiroMMF.PlayFeedbacks();
         }
         if (ability3.action.WasPressedThisFrame())
         {
             TryUseAbility(3);
+            esmeraldaMMF.PlayFeedbacks();
         }
     }
     void UpdateCooldownUI()
