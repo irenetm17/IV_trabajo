@@ -14209,7 +14209,7 @@ MonoBehaviour:
           m_PreInfinity: 2
           m_PostInfinity: 2
           m_RotationOrder: 4
-        RemapIntensityZero: -0.407
+        RemapIntensityZero: 0
         RemapIntensityOne: 0.04
     - rid: 1978622126119453061
       type: {class: MMF_ChromaticAberration_URP, ns: MoreMountains.FeedbacksForThirdParty, asm: MoreMountains.Tools}
