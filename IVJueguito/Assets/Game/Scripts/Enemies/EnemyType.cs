@@ -6,5 +6,6 @@ public enum EnemyType
    slimeIce,
    slimeLava,
    slimeCave,
-   RubiMiniBoss
+   RubiMiniBoss,
+   ZafireMiniBoss
 }

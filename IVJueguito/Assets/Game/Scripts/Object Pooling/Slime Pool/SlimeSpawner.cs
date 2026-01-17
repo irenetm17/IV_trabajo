@@ -49,11 +49,11 @@ public class SlimeSpawner : MonoBehaviour
         {
             for (int i = 0; i < _slimeSpawnersT.Length; i++)
             {
-
-                float dist = Vector3.Distance(_player.position, _slimeSpawnersT[i].position);
+                Vector3 spawnPos = _slimeSpawnersT[i].position;
+                float dist = Vector3.Distance(_player.position, spawnPos);
                 if (dist <= _spawnDistanceFromPlayer)
                 {
-                    SpawnSlimes(_slimeSpawnersT[i]);
+                    SpawnSlimes(spawnPos);
                     _spawnTimer = 0;
                     break;
                 }
@@ -61,7 +61,8 @@ public class SlimeSpawner : MonoBehaviour
         }
     }
 
-    void SpawnSlimes(Transform spawnPos)
+
+    public void SpawnSlimes(Vector3 spawnPos)
     {
         int numSlimesSpawn = Random.Range(_minSlimesSpawn,_maxSlimesSpawn); // Se calcula un numero random de spawn de slimes
 
@@ -71,7 +72,7 @@ public class SlimeSpawner : MonoBehaviour
             Vector3 randomSpreadSpawn = new Vector3(
                 Random.Range(_minRandomSpreadSpawn, _maxRandomSpreadSpawn),0,Random.Range(_minRandomSpreadSpawn, _maxRandomSpreadSpawn));
 
-            Vector3 spawnPosition = spawnPos.position + randomSpreadSpawn;
+            Vector3 spawnPosition = spawnPos + randomSpreadSpawn;
 
             //Instantiate(_slimeTEMP, spawnPosition, Quaternion.identity);
 
