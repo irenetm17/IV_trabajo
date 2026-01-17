@@ -214,6 +214,7 @@ MonoBehaviour:
   - {fileID: 294428023654826349}
   - {fileID: -1363035502316739462}
   - {fileID: 5460758980959056143}
+  - {fileID: 8095345836762742831}
 --- !u!114 &294428023654826349
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -575,3 +576,19 @@ MonoBehaviour:
   clamp:
     m_OverrideState: 0
     m_Value: 0.05
+--- !u!114 &8095345836762742831
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81180773991d8724ab7f2d216912b564, type: 3}
+  m_Name: ChromaticAberration
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.ChromaticAberration
+  active: 1
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0
