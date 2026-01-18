@@ -202,7 +202,7 @@ public class Enemy : Entity, IEnemy, IObserver
             Vector3 scale = transform.localScale;
             scale.x -= 0.1f;
             transform.localScale = scale;
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.2f);
         }
         Debug.Log("Murio");
         isAlive = false;

@@ -5,7 +5,7 @@ public enum EnemyType
    slimeForest,
    slimeIce,
    slimeLava,
-   slimeCave,
    RubiMiniBoss,
-   ZafireMiniBoss
+   ZafireMiniBoss,
+   EmeraldMiniBoss
 }

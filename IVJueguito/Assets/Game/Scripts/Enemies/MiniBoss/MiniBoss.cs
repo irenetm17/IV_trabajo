@@ -14,6 +14,7 @@ public class MiniBoss : Enemy
 
     // FEEDBACKS
     [SerializeField] private MMFeedbacks MMF_Explosion;
+    [SerializeField] private MMFeedbacks MMF_PushBack;
     [SerializeField] private MMFeedbacks MMF_Wind;
 
     public MiniBossFlyweight MiniBossData
@@ -51,7 +52,7 @@ public class MiniBoss : Enemy
 
     public void SpawnSlimes()
     {
-        Vector3 offset = new Vector3(10, 0, 0);
+        Vector3 offset = new Vector3(20, 0, 0);
 
         Vector3 p1 = playerTransform.position + offset; 
         Vector3 p2 = playerTransform.position - offset;
@@ -71,9 +72,7 @@ public class MiniBoss : Enemy
         Rigidbody rb = player.GetComponent<Rigidbody>();
 
         Vector3 dir = (player.transform.position - transform.position).normalized;
-        dir.y = 0;
 
-        //player.transform.Translate(dir * force * Time.deltaTime, Space.World);
         rb.linearVelocity += dir * force * Time.deltaTime;
         rb.AddForce(dir * force, ForceMode.Impulse);
     }
@@ -95,6 +94,16 @@ public class MiniBoss : Enemy
     {
 
         MMF_Explosion.PlayFeedbacks();
+
+
+        Debug.Log("Efecto de explosión encendido");
+
+    }
+
+    public void pushBack()
+    {
+
+        MMF_PushBack.PlayFeedbacks();
 
 
         Debug.Log("Efecto de explosión encendido");
