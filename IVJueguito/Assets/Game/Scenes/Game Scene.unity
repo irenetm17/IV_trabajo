@@ -465,6 +465,10 @@ PrefabInstance:
       propertyPath: currentHealth
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4831768372541796379, guid: 0db96d67029de8944b83baf60f8d560f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6002036698183785612, guid: 0db96d67029de8944b83baf60f8d560f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

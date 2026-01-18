@@ -14,13 +14,16 @@ public class PlayerMovement : Entity, IObserver
     public bool CanMove => canMove;
     public InputActionReference move;
     private Animator animator;
-    private Transform hijo;
+    private SpriteRenderer spriteRenderer;
+
+
+    public Vector3 LastMoveDirectionWorld { get; private set; }
 
     void Start()
     {
         EventManager.instance.Subscribir(eventType.PlayerCanMove, this);
         animator = GetComponentInChildren<Animator>();
-        hijo = transform.GetChild(0);
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 
     }
     public void OnEvent(IEvent evento)
@@ -61,12 +64,13 @@ public class PlayerMovement : Entity, IObserver
             bool left = Keyboard.current.aKey.isPressed;
             if (right)
             {
-                hijo.localScale = new Vector3(Mathf.Abs(hijo.localScale.x) * -1, hijo.localScale.y, hijo.localScale.z);
+                spriteRenderer.flipX = true;
             }
-            if(left)
+            else if (left)
             {
-                hijo.localScale = new Vector3(Mathf.Abs(hijo.localScale.x), hijo.localScale.y, hijo.localScale.z);
+                spriteRenderer.flipX = false;
             }
+
             if (animator != null)
             {
                 animator.SetBool("front", front);
@@ -103,6 +107,12 @@ public class PlayerMovement : Entity, IObserver
         {
             animator.SetFloat("speed", 0f);
         }
+
+        if (_moveDirection != Vector2.zero)
+        {
+            LastMoveDirectionWorld = moveDir.normalized;
+        }
+
     }
 
 
