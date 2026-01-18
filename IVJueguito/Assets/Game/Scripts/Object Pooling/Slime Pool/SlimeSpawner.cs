@@ -19,7 +19,7 @@ public class SlimeSpawner : MonoBehaviour
 
     // CONTROL DEL SPAWN
     [SerializeField]
-    private float _spawnDistanceFromPlayer = 20;
+    private float _spawnDistanceFromPlayer = 30;
 
     [SerializeField]
     private float _minRandomSpreadSpawn = 1;

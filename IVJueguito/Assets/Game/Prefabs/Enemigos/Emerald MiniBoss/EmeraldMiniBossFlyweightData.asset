@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e63dbb45488c46d4c8222fa0287da850, type: 3}
-  m_Name: RubiBossFlyweightData
+  m_Name: EmeraldMiniBossFlyweightData
   m_EditorClassIdentifier: Assembly-CSharp::MiniBossFlyweight
-  typeID: 3
+  typeID: 5
   maxHP: 30
   speed: 10
   damage: 0.5
@@ -24,6 +24,6 @@ MonoBehaviour:
   chaseState: {fileID: 11400000, guid: c4941b0633ebca944a531f92f1628f9d, type: 2}
   attackState: {fileID: 11400000, guid: 083afa618287cdb489956dc8f498b4da, type: 2}
   dieState: {fileID: 11400000, guid: 91a2967ea66ca454481c76a61b98d0ee, type: 2}
-  specialGimmickBossState: {fileID: 11400000, guid: b2bcf91983cd49b43a00a0f3770fa8fc, type: 2}
+  specialGimmickBossState: {fileID: 11400000, guid: 9a18b96fb84f99149a42050d7fbad687, type: 2}
   specialAttackBossState: {fileID: 11400000, guid: eec41f9338810dd4896b9dbf5c15f526, type: 2}
   stunBossState: {fileID: 11400000, guid: 8dc0f701274fe274b869d23c2760d387, type: 2}
