@@ -81,11 +81,11 @@ public class CofreInteractuar : Openable
         EventManager.instance.Publicar(muevete);
     }
 
-    public override void SetState(bool open)
+    public override void SetState(OpenableState newState)
     {
-        isOpen = open;
+        state = newState;
 
-        if (open)
+        if (state == OpenableState.Open)
         {
             interactuado = true;
             animator.SetBool("Abrir", true);

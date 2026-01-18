@@ -74,6 +74,7 @@ public class PlayerAbilities : MonoBehaviour, IObserver
             if (event2.gems != 0)
             {
                 gemas += event2.gems;
+                gemas = Mathf.Clamp(gemas, 0, 4);
 
                 if (gemas > 0 && gemas <=4)
                 {
@@ -89,6 +90,7 @@ public class PlayerAbilities : MonoBehaviour, IObserver
             if(event4.tipo == CollectibleType.Gema)
             {
                 gemas += event4.amount;
+                gemas = Mathf.Clamp(gemas, 0, 4);
                 if (gemas > 0)
                 {
                     bloqueadosImages[gemas - 1].gameObject.SetActive(false); //desbloquea la habilidad correspondiente
@@ -104,6 +106,7 @@ public class PlayerAbilities : MonoBehaviour, IObserver
     IEnumerator TurningRedRoutine()
     {
         SpriteRenderer sp = GetComponentInChildren<SpriteRenderer>();
+        sp.color = Color.white;
         Color original = sp.color;
         Color red = Color.red;
 

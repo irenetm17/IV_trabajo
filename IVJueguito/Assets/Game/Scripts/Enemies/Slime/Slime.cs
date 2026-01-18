@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEditor.PlayerSettings;
 
 public class Slime : Enemy, IPoolObject  // Tambien implementará el Enemy
 {
@@ -31,13 +32,16 @@ public class Slime : Enemy, IPoolObject  // Tambien implementará el Enemy
 
     public void ResetObject()
     {
-        //Variables como health, reset
-        Initialize(tipoParaTest);
+        transform.rotation = Quaternion.identity; 
 
-        // Estado
-        //ChangeState(slimeTemp.flyweightData.idleState);
-        //isAlive = true;
-        
+        if (animator != null)
+        {
+            animator.Rebind(); 
+            animator.Update(0f);
+        }
+       
+        transform.localScale = Vector3.one;
+        Initialize(tipoParaTest);
 
         //Mover al origen
         this.DisplaceTo(Vector3.zero);

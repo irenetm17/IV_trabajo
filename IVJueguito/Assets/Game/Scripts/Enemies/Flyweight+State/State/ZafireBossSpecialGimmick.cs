@@ -3,7 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "States/ZafireSpecial")]
 public class ZafireBossSpecialGimmick : EnemyState
 {
-    [SerializeField] float delayTime = 1f;
+    [SerializeField] float delayTime = 0.5f;
     [SerializeField] float impulseForce = 100f;
     public override void Enter(Enemy enemy)
     {
@@ -13,12 +13,13 @@ public class ZafireBossSpecialGimmick : EnemyState
 
         enemy.StopMoving();
         enemy.stateTimer = 0;
+        boss.pushBack();
         boss.Impulse(impulseForce);
     }
     public override void Execute(Enemy enemy, float deltaTime)
     {
         enemy.stateTimer += deltaTime;
-        if (enemy.stateTimer > 0)
+        if (enemy.stateTimer > delayTime)
         {
             enemy.ChangeState(enemy.flyweightData.idleState);
         }

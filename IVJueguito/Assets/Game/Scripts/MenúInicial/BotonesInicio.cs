@@ -14,6 +14,8 @@ public class BotonesInicio : MonoBehaviour
             panelCreditos.SetActive(false);
         if(menuInicial != null)
             menuInicial.SetActive(true);
+        if(menuSeleccion != null)
+            menuSeleccion.SetActive(false);
     }
     public void IniciarJuego()
     {
