@@ -10,5 +10,5 @@ public class SaveData
     public int playerGems;
     public int playerKeys;
 
-    public List<bool> openablesState;
+    public List<OpenableState> openablesState;
 }

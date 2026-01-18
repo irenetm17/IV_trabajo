@@ -87,10 +87,10 @@ public class SaveGameManager : MonoBehaviour, IObserver
         Debug.Log(gems);
         Debug.Log(keys);
 
-        data.openablesState = new List<bool>();
+        data.openablesState = new List<OpenableState>();
         foreach (Openable o in openables)
         {
-            data.openablesState.Add(o.IsOpen);
+            data.openablesState.Add(o.State);
         }
         SaveManager.instance.SaveGame(data);
     }
