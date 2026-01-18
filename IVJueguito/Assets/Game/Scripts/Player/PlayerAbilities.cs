@@ -24,9 +24,12 @@ public class PlayerAbilities : MonoBehaviour, IObserver
     private Animator animator;
     [SerializeField] private float damageFlashDuration = 0.4f; // duración total del flash (rojo y vuelta)
     private Coroutine turningCoroutine;
+    private PlayerMovement playerMovement;
 
     [Header("DIAMANTE")]
     [SerializeField] private GameObject diam;
+    [SerializeField] private Transform diamondPivot;
+    [SerializeField] private GameObject diamondHitbox;
 
     [Header("RUBI")]
     [SerializeField] private GameObject fireballPrefab;
@@ -44,7 +47,7 @@ public class PlayerAbilities : MonoBehaviour, IObserver
     [SerializeField] private float emeraldFadeTime = 0.4f;
     [SerializeField] private float emeraldActiveTime = 1.5f;
 
-    [Header("ESMERALDA")]
+    [Header("MMF")]
     [SerializeField] private MMFeedbacks diamanteMMF;
     [SerializeField] private MMFeedbacks rubiMMF;
     [SerializeField] private MMFeedbacks esmeraldaMMF;
@@ -56,6 +59,7 @@ public class PlayerAbilities : MonoBehaviour, IObserver
         EventManager.instance.Subscribir(eventType.CollectiblePicked, this);
         EventManager.instance.Subscribir(eventType.PlayerCanMove, this);
 
+        playerMovement = GetComponent<PlayerMovement>();
         animator = GetComponentInChildren<Animator>();
     }
     public void OnEvent(IEvent evento)
@@ -223,7 +227,7 @@ public class PlayerAbilities : MonoBehaviour, IObserver
             case 3: AbilityEmerald(); break;
         }
     }
-
+    /*
     void AbilityDiamond()
     {
         Debug.Log("AbilityDiamond ejecutada");
@@ -232,7 +236,31 @@ public class PlayerAbilities : MonoBehaviour, IObserver
         AudioService.instance.PlaySFX("UsarDiamante");
         StartCoroutine(Wait(0.5f));
     }
+    IEnumerator Wait(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        diam.SetActive(false);
+        animator.SetBool("attacking", false);
+    }
+    */
+    void AbilityDiamond()
+    {
+        Vector3 dir = playerMovement.LastMoveDirectionWorld;
 
+        if (dir == Vector3.zero)
+            dir = transform.forward;
+
+        Quaternion lookRot = Quaternion.LookRotation(dir, Vector3.up);
+        Quaternion offset = Quaternion.Euler(0f, -90f, 0f);
+
+        diamondPivot.rotation = lookRot * offset;
+
+        animator.SetTrigger("attackDiamond");
+        AudioService.instance.PlaySFX("UsarDiamante");
+
+    }
+
+    /*
     void AbilityRuby()
     {
         Ray ray = Camera.main.ScreenPointToRay(
@@ -263,6 +291,35 @@ public class PlayerAbilities : MonoBehaviour, IObserver
             Ruby ruby = fireball.GetComponent<Ruby>();
             ruby.Init(direction);
         }
+    }*/
+    void AbilityRuby()
+    {
+        Vector3 direction = playerMovement.LastMoveDirectionWorld;
+
+        // Si no se ha movido nunca (por seguridad)
+        if (direction == Vector3.zero)
+        {
+            direction = transform.forward;
+        }
+
+        AudioService.instance.PlaySFX("UsarRubi");
+
+        GameObject fireball = Instantiate(
+            fireballPrefab,
+            fireballSpawnPoint.position,
+            Quaternion.identity
+        );
+
+        // Voltear sprite según dirección
+        float sign = Mathf.Sign(Vector3.Dot(direction, transform.right));
+        fireball.transform.localScale = new Vector3(
+            sign < 0 ? 3f : -3f,
+            3f,
+            sign < 0 ? 3f : -3f
+        );
+
+        Ruby ruby = fireball.GetComponent<Ruby>();
+        ruby.Init(direction.normalized);
     }
 
     void AbilitySapphire()
@@ -332,10 +389,4 @@ public class PlayerAbilities : MonoBehaviour, IObserver
     }
 
 
-    IEnumerator Wait(float duration)
-    {
-        yield return new WaitForSeconds(duration);
-        diam.SetActive(false);
-        animator.SetBool("attacking", false);
-    }
 }
