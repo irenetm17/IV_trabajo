@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Unity.VisualScripting;
 
-public class LlaveInteractuar : MonoBehaviour, IObserver
+public class LlaveInteractuar : Openable, IObserver
 {
     [SerializeField] private float distanceToInteract = 3f;
     public InputActionReference input;
@@ -115,6 +115,29 @@ public class LlaveInteractuar : MonoBehaviour, IObserver
     public void CloseDoor()
     {
         animator.SetBool("AbrirPuerta", false);
+    }
+
+    public override void SetState(OpenableState newState)
+    {
+        state = newState;
+
+        switch (state)
+        {
+            case OpenableState.Closed:
+                DoorOpenedEvent close = new DoorOpenedEvent(this.gameObject.GetComponent<PuertaAutomatica>(), false);
+                EventManager.instance.Publicar(close);
+                break;
+
+            case OpenableState.Unlockable:
+                // puerta cerrada pero usable
+                // mostrar icono llave, texto, etc.
+                break;
+
+            case OpenableState.Open:
+                DoorOpenedEvent open = new DoorOpenedEvent(this.gameObject.GetComponent<PuertaAutomatica>(), true);
+                EventManager.instance.Publicar(open);
+                break;
+        }
     }
 
 }

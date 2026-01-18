@@ -1,10 +1,19 @@
 using UnityEngine;
 
+public enum OpenableState
+{
+    Closed,     // cerrada, no usable
+    Unlockable, // cerrada pero se puede abrir (tienes llave)
+    Open        // abierta
+}
+
 public abstract class Openable : MonoBehaviour
 {
-    [SerializeField] protected bool isOpen;
+    [SerializeField] protected OpenableState state;
 
-    public bool IsOpen => isOpen;
+    public OpenableState State => state;
 
-    public abstract void SetState(bool open);
+    public bool IsOpen => state == OpenableState.Open;
+
+    public abstract void SetState(OpenableState newState);
 }

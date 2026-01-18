@@ -38,11 +38,11 @@ public class PuertaAutomatica : Openable, IObserver
             EventManager.instance.Desuscribir(eventType.DoorOpened, this);
         }
     }
-    public override void SetState(bool open)
+    public override void SetState(OpenableState newState)
     {
-        isOpen = open;
+        state = newState;
 
-        if (open)
+        if (state == OpenableState.Open)
             AbrirPuerta();
         else
             CerrarPuerta();
