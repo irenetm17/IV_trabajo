@@ -33280,6 +33280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42f114b58873bb04b992d8ae0e12561b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioEventHandler
+  audioMixer: {fileID: 0}
 --- !u!4 &2037560003
 Transform:
   m_ObjectHideFlags: 0
