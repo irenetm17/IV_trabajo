@@ -30,7 +30,8 @@ public class PlayerMovement : Entity, IObserver
     {
         if (evento.Tipo == eventType.PlayerCanMove)
         {
-            canMove = !canMove;
+            PlayerCanMoveEvent event2 = (PlayerCanMoveEvent)evento;
+            canMove = event2.canMove;
         }
     }
     void OnDestroy()
@@ -53,6 +54,9 @@ public class PlayerMovement : Entity, IObserver
         if (!canMove)
         {
             animator.SetFloat("speed", 0f);
+            animator.SetBool("front", false);
+            animator.SetBool("back", false);
+            animator.SetBool("lateral", false);
             return;
         }
         // Detectar tecla mantenida en lugar de solo la pulsación del frame
@@ -85,7 +89,11 @@ public class PlayerMovement : Entity, IObserver
 
     private void FixedUpdate()
     {
-        if (!canMove) return;
+        if (!canMove)
+        {
+            _rb.linearVelocity = Vector3.zero;
+            return;
+        }
         Vector3 forward = cam.transform.forward;
         Vector3 right = cam.transform.right;
 
