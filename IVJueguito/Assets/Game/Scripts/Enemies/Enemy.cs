@@ -14,6 +14,7 @@ public class Enemy : Entity, IEnemy, IObserver
 
     private Vector3 spawnPosition;
     [SerializeField] float patrolRadius;
+    [SerializeField] Slider healthSlider;
     public Animator animator;
 
     protected Transform playerTransform;
@@ -67,8 +68,9 @@ public class Enemy : Entity, IEnemy, IObserver
 
     void Start()
     {
-
+        healthSlider = GetComponentInChildren<Slider>();
         animator = GetComponentInChildren<Animator>();
+        healthSlider.highValue = currentHp;
         Initialize(tipoParaTest);
         EventManager.instance.Subscribir(eventType.DamageTaken, this);
     }
@@ -101,6 +103,7 @@ public class Enemy : Entity, IEnemy, IObserver
         if (!isAlive) return;
 
         stateMachine.Update(this, Time.deltaTime);
+        healthSlider.value = currentHp;
     }
     public void ChangeState(EnemyState newState)
     {
