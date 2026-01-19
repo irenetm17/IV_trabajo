@@ -136,7 +136,7 @@ public class HUDcontroller : MonoBehaviour, IObserver
     #region DIALOGOS
     private void StartDialogue(string[] array)
     {
-        SimpleEvent quieto = new SimpleEvent(eventType.PlayerCanMove);
+        PlayerCanMoveEvent quieto = new PlayerCanMoveEvent(false);
         EventManager.instance.Publicar(quieto);
 
         arrayTextosDialogos = array;
@@ -160,7 +160,7 @@ public class HUDcontroller : MonoBehaviour, IObserver
         }
 
         yield return new WaitForSeconds(3.5f);
-        if (textoDialogo.text == arrayTextosDialogos[lineIndex])
+        if (lineIndex < arrayTextosDialogos.Length - 1)
         {
             ActivarCartel();
         }
@@ -177,7 +177,8 @@ public class HUDcontroller : MonoBehaviour, IObserver
             didDialogueStart = false;
             dialoguePanel.SetActive(false);
 
-            SimpleEvent muevete = new SimpleEvent(eventType.PlayerCanMove);
+
+            PlayerCanMoveEvent muevete = new PlayerCanMoveEvent(true);
             EventManager.instance.Publicar(muevete);
         }
     }

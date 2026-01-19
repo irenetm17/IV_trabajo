@@ -46,7 +46,7 @@ public class CofreInteractuar : Openable
     void Cofre()
     {
         interactuado = true;//Esto marca que se ha abierto el cofre y no se va a abrir mas
-        SimpleEvent quieto = new SimpleEvent(eventType.PlayerCanMove);
+        PlayerCanMoveEvent quieto = new PlayerCanMoveEvent(false);
         EventManager.instance.Publicar(quieto);
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -77,7 +77,7 @@ public class CofreInteractuar : Openable
         yield return new WaitForSeconds(3);
         imagenDelCofre.gameObject.SetActive(false);
 
-        SimpleEvent muevete = new SimpleEvent(eventType.PlayerCanMove);
+        PlayerCanMoveEvent muevete = new PlayerCanMoveEvent(true);
         EventManager.instance.Publicar(muevete);
     }
 

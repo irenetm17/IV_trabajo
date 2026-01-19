@@ -7,11 +7,13 @@ public class PuertaAutomatica : Openable, IObserver
     [SerializeField] private GameObject Light;
     [SerializeField] private Material GreenLight;
     [SerializeField] private Material RedLight;
+    private HablarInteractuar hablar;
 
     void Start()
     {
         EventManager.instance.Subscribir(eventType.DoorOpened, this);
         animator = GetComponent<Animator>();
+        hablar = GetComponent<HablarInteractuar>();
     }
 
     public void OnEvent(IEvent evento)
@@ -52,11 +54,19 @@ public class PuertaAutomatica : Openable, IObserver
     {
         animator.SetBool("AbrirPuerta", true);
         Light.GetComponent<Renderer>().material = GreenLight;
+        if(hablar != null)
+        {
+            hablar.enabled = false;
+        }
     }
 
     public void CerrarPuerta()
     {
         animator.SetBool("AbrirPuerta", false);
         Light.GetComponent<Renderer>().material = RedLight;
+        if (hablar != null)
+        {
+            hablar.enabled = true;
+        }
     }
 }
