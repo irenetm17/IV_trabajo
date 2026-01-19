@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DialogueStartedEvent : MonoBehaviour, IEvent
+public class DialogueStartedEvent : IEvent
 {
     public eventType Tipo
     {
