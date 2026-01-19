@@ -201,6 +201,7 @@ MonoBehaviour:
   stateTimer: 0
   deathParticle: {fileID: 1212169821312560684}
   parentSlimePool: {fileID: 0}
+  _heartGO: {fileID: 3660398340007383453, guid: b86eeb5a8e8b2ab43a940eb472bcd5c4, type: 3}
 --- !u!136 &4986003537158743270
 CapsuleCollider:
   m_ObjectHideFlags: 0
