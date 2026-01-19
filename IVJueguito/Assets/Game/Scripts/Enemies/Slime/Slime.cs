@@ -5,12 +5,23 @@ public class Slime : Enemy, IPoolObject  // Tambien implementará el Enemy
 {
     public SlimePool parentSlimePool;
 
+    [SerializeField] private GameObject _heartGO;
 
 
     public override void KillEnemy()
     {
 
         AudioService.instance.PlaySFX("MuerteEnemigo");
+
+        int randomHeart = Random.Range(1,6);
+        Debug.Log("Heart Num: "+randomHeart);
+
+        if(randomHeart == 3)
+        {
+            Debug.Log("Heart Spawn");
+            Instantiate(_heartGO,transform.position,Quaternion.identity);
+        }
+
         // Si tenemos una pool asignada, volvemos a ella
         if (parentSlimePool != null)
         {
