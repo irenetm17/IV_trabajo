@@ -11,6 +11,7 @@ public class HablarInteractuar : MonoBehaviour
     [SerializeField] private GameObject F;
     [Header("HABLAR")]
     [SerializeField] public string[] arrayTextos;
+    public bool puedeHablar = true;
 
     private PlayerMovement player;
     private float distance;
@@ -23,23 +24,26 @@ public class HablarInteractuar : MonoBehaviour
 
     void Update()
     {
-        distance = Vector3.Distance(player.transform.position, transform.position);
-        if ((distance <= distanceToInteract) && (player.CanMove) && (!interactuado))
+        if (puedeHablar==true)
         {
-            F.SetActive(true);
-            if (input.action.WasPerformedThisFrame())
+            distance = Vector3.Distance(player.transform.position, transform.position);
+            if ((distance <= distanceToInteract) && (player.CanMove) && (!interactuado))
             {
-                Hablar();
-            }
+                F.SetActive(true);
+                if (input.action.WasPerformedThisFrame())
+                {
+                    Hablar();
+                }
 
-        }
-        else
-        {
-            F.SetActive(false);
+            }
+            else
+            {
+                F.SetActive(false);
+            }
         }
     }
 
-    void Hablar()
+    public void Hablar()
     {
         DialogueStartedEvent dialogoEvento = new DialogueStartedEvent(arrayTextos);
         EventManager.instance.Publicar(dialogoEvento);

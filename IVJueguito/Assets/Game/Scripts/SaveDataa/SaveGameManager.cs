@@ -102,9 +102,6 @@ public class SaveGameManager : MonoBehaviour, IObserver
 
         player.position = data.playerPosition;
         player.eulerAngles = data.playerRotation;
-        //lives = data.playerLives;
-        //gems = data.playerGems;
-        //keys = data.playerKeys;
 
         Debug.Log("datos leidos:");
         Debug.Log(data.playerLives);

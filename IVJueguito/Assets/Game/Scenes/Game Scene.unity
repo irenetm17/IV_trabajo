@@ -1173,6 +1173,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29f3338b202a93c4887f5f19395e4418, type: 3}
+--- !u!114 &54004793 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6692172322501054964, guid: 29f3338b202a93c4887f5f19395e4418, type: 3}
+  m_PrefabInstance: {fileID: 54004792}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76e689b8c4bcf2141b96ec51bdb25c81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PuertaAutomatica
 --- !u!1001 &54086829
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1580,6 +1591,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4771474175944354635, guid: 651e0a671ae21d149ba866c29bedeaca, type: 3}
   m_PrefabInstance: {fileID: 63553149}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &64108728 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1163268774256314021, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+  m_PrefabInstance: {fileID: 894297109}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &64329555
 GameObject:
@@ -2045,6 +2061,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6e31956c1388ad4fa633e72547783ff, type: 3}
+--- !u!1 &94550268 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4521449246261405657, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+  m_PrefabInstance: {fileID: 1970174868}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &97143603 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 158924213009835095, guid: e6e31956c1388ad4fa633e72547783ff, type: 3}
@@ -2970,6 +2991,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4377253562344611308, guid: f36d3d9eabd17f84c870540601893303, type: 3}
   m_PrefabInstance: {fileID: 127052867}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &128796985 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4521449246261405657, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+  m_PrefabInstance: {fileID: 894297109}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &132874924
 PrefabInstance:
@@ -5219,6 +5245,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 158924213009835095, guid: e6e31956c1388ad4fa633e72547783ff, type: 3}
   m_PrefabInstance: {fileID: 1775365796}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &210391749 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4521449246261405657, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+  m_PrefabInstance: {fileID: 1552945253}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &217070897
 GameObject:
@@ -10071,6 +10102,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3016751377244169977, guid: 29f3338b202a93c4887f5f19395e4418, type: 3}
   m_PrefabInstance: {fileID: 416347734}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &416347736 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6692172322501054964, guid: 29f3338b202a93c4887f5f19395e4418, type: 3}
+  m_PrefabInstance: {fileID: 416347734}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76e689b8c4bcf2141b96ec51bdb25c81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PuertaAutomatica
 --- !u!1001 &416783679
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13935,6 +13977,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6e31956c1388ad4fa633e72547783ff, type: 3}
+--- !u!1 &645308825 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1163268774256314021, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+  m_PrefabInstance: {fileID: 1260082543}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &646748223
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15261,6 +15308,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6e31956c1388ad4fa633e72547783ff, type: 3}
+--- !u!1 &733413895 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1163268774256314021, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+  m_PrefabInstance: {fileID: 1970174868}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &737746912
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18848,7 +18900,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1163268774256314021, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1327997127}
+    - targetCorrespondingSourceObject: {fileID: 1163268774256314021, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1327997128}
   m_SourcePrefab: {fileID: 100100000, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
 --- !u!1001 &895329742
 PrefabInstance:
@@ -19978,6 +20036,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6e31956c1388ad4fa633e72547783ff, type: 3}
+--- !u!1 &959511235 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1163268774256314021, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+  m_PrefabInstance: {fileID: 1552945253}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &959705023 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 3140310989114198354, guid: 633daf23d242c0b409b245334e5500db, type: 3}
@@ -21508,6 +21571,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1976818990355995679, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
   m_PrefabInstance: {fileID: 1552945253}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1020931012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959511235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1db5ffec43802114cb252ae45610a04e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HablarInteractuar
+  distanceToInteract: 0
+  input: {fileID: 0}
+  F: {fileID: 210391749}
+  arrayTextos:
+  - Has encontrado el Diamante.
+  - Ahora te sientes capaz de controlar un arma.
+  puedeHablar: 0
 --- !u!1001 &1033961046
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22816,6 +22898,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2291676726437887591, guid: 779e60e6f0d9aa84ba90ef935ba4f6c9, type: 3}
   m_PrefabInstance: {fileID: 1078624971}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1078624973 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8864869937697887903, guid: 779e60e6f0d9aa84ba90ef935ba4f6c9, type: 3}
+  m_PrefabInstance: {fileID: 1078624971}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76e689b8c4bcf2141b96ec51bdb25c81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PuertaAutomatica
 --- !u!4 &1078848615 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 158924213009835095, guid: e6e31956c1388ad4fa633e72547783ff, type: 3}
@@ -23707,6 +23800,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5032024098280534601, guid: fb5dd819254d5b34bb86b09fa3ecc5c7, type: 3}
   m_PrefabInstance: {fileID: 1124412624}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1125898332 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4521449246261405657, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+  m_PrefabInstance: {fileID: 1260082543}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1127824145
 PrefabInstance:
@@ -25296,6 +25394,7 @@ MonoBehaviour:
   - Veo que posees ya el diamante, invocador de armas. Intenta desbloquear tu camino
     con tus nuevos poderes.
   - Ven a verme cuando te sientas perdido, los viejos somos conocidos por ser sabios.
+  puedeHablar: 1
 --- !u!114 &1205552230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26613,13 +26712,54 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1163268774256314021, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1260082545}
+    - targetCorrespondingSourceObject: {fileID: 1163268774256314021, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1260082546}
   m_SourcePrefab: {fileID: 100100000, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
 --- !u!4 &1260082544 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1976818990355995679, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
   m_PrefabInstance: {fileID: 1260082543}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1260082545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645308825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1db5ffec43802114cb252ae45610a04e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HablarInteractuar
+  distanceToInteract: 0
+  input: {fileID: 0}
+  F: {fileID: 1125898332}
+  arrayTextos:
+  - Has encontrado el Rubi.
+  - El fuego corre por tu sangre y se materializa.
+  puedeHablar: 0
+--- !u!114 &1260082546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645308825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d065a55f13025049a45fdafda98d382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AbrirPuertas
+  puertasLista:
+  - {fileID: 3074863807783788402}
+  - {fileID: 6953277539164211987}
+  puertasAbrir: 0001
 --- !u!1001 &1269005814
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28109,6 +28249,41 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1976818990355995679, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
   m_PrefabInstance: {fileID: 894297109}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1327997127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64108728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1db5ffec43802114cb252ae45610a04e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HablarInteractuar
+  distanceToInteract: 0
+  input: {fileID: 0}
+  F: {fileID: 128796985}
+  arrayTextos:
+  - Has encontrado el Zafiro.
+  - "Un aire g\xE9lido te rodea."
+  puedeHablar: 0
+--- !u!114 &1327997128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64108728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d065a55f13025049a45fdafda98d382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AbrirPuertas
+  puertasLista:
+  - {fileID: 54004793}
+  - {fileID: 1429576667}
+  puertasAbrir: 0001
 --- !u!4 &1329424003 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 158924213009835095, guid: e6e31956c1388ad4fa633e72547783ff, type: 3}
@@ -30105,6 +30280,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2291676726437887591, guid: 779e60e6f0d9aa84ba90ef935ba4f6c9, type: 3}
   m_PrefabInstance: {fileID: 1429576665}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1429576667 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8864869937697887903, guid: 779e60e6f0d9aa84ba90ef935ba4f6c9, type: 3}
+  m_PrefabInstance: {fileID: 1429576665}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76e689b8c4bcf2141b96ec51bdb25c81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PuertaAutomatica
 --- !u!1001 &1433018794
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32349,6 +32535,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8528142154326951237, guid: 651e0a671ae21d149ba866c29bedeaca, type: 3}
+      propertyPath: m_Size.z
+      value: 0.6014349
+      objectReference: {fileID: 0}
+    - target: {fileID: 8528142154326951237, guid: 651e0a671ae21d149ba866c29bedeaca, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8528142154326951237, guid: 651e0a671ae21d149ba866c29bedeaca, type: 3}
+      propertyPath: m_Center.z
+      value: 0.023843735
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -32707,7 +32905,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1163268774256314021, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1020931012}
   m_SourcePrefab: {fileID: 100100000, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
 --- !u!1001 &1553185985
 PrefabInstance:
@@ -40937,7 +41138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1943730028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41923,13 +42124,54 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1163268774256314021, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1970174870}
+    - targetCorrespondingSourceObject: {fileID: 1163268774256314021, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1970174871}
   m_SourcePrefab: {fileID: 100100000, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
 --- !u!4 &1970174869 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1976818990355995679, guid: 047c0654d2177dc408ac8183e5a5c370, type: 3}
   m_PrefabInstance: {fileID: 1970174868}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1970174870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733413895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1db5ffec43802114cb252ae45610a04e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HablarInteractuar
+  distanceToInteract: 0
+  input: {fileID: 0}
+  F: {fileID: 94550268}
+  arrayTextos:
+  - Has encontrado la Esmeralda.
+  - "Te sientes protegido por \xE9l, ning\xFAn proyectil te da\xF1ar\xE1."
+  puedeHablar: 0
+--- !u!114 &1970174871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733413895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d065a55f13025049a45fdafda98d382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AbrirPuertas
+  puertasLista:
+  - {fileID: 416347736}
+  - {fileID: 1078624973}
+  puertasAbrir: 0001
 --- !u!1001 &1972631799
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44181,6 +44423,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8528142154326951237, guid: 651e0a671ae21d149ba866c29bedeaca, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -45645,6 +45891,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29f3338b202a93c4887f5f19395e4418, type: 3}
+--- !u!114 &3074863807783788402 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6692172322501054964, guid: 29f3338b202a93c4887f5f19395e4418, type: 3}
+  m_PrefabInstance: {fileID: 3074863807783788401}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76e689b8c4bcf2141b96ec51bdb25c81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PuertaAutomatica
 --- !u!1001 &3106873202555289384
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46005,6 +46262,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 779e60e6f0d9aa84ba90ef935ba4f6c9, type: 3}
+--- !u!114 &6953277539164211987 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8864869937697887903, guid: 779e60e6f0d9aa84ba90ef935ba4f6c9, type: 3}
+  m_PrefabInstance: {fileID: 6953277539164211986}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76e689b8c4bcf2141b96ec51bdb25c81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PuertaAutomatica
 --- !u!4 &8515325091226436459 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3016751377244169977, guid: 29f3338b202a93c4887f5f19395e4418, type: 3}
