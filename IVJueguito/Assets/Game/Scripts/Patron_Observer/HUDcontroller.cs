@@ -271,6 +271,7 @@ public class HUDcontroller : MonoBehaviour, IObserver
     public void RestartLevel()
     {
         Time.timeScale = 1f;
+        AudioService.instance.PlaySFX("Boton");
         UnityEngine.SceneManagement.SceneManager.LoadScene("Game Scene");
     }
 }

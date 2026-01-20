@@ -12,6 +12,7 @@ public class MiniBoss : Enemy
     //[SerializeField] PuertaAutomatica puertaVinculada;
     public SlimeSpawner sp = null;
     private AbrirPuertas abrirPuertas;
+    public bool finalBoss = false;
 
     // FEEDBACKS
     [SerializeField] private MMFeedbacks MMF_Explosion;
@@ -33,6 +34,11 @@ public class MiniBoss : Enemy
         if (abrirPuertas != null)
         {
             abrirPuertas.AbrirCerrarPuertas();
+        }
+        if (finalBoss)
+        {
+            FinDelJuego finDelJuego = FindObjectOfType<FinDelJuego>();
+            finDelJuego.EndGame();
         }
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
