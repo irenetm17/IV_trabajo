@@ -1,5 +1,4 @@
 using UnityEngine;
-using static UnityEditor.PlayerSettings;
 
 public class Slime : Enemy, IPoolObject  // Tambien implementará el Enemy
 {

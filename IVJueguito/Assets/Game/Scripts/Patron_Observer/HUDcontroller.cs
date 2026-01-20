@@ -1,7 +1,5 @@
 using TMPro;
 using System.Collections;
-using Unity.VisualScripting;
-using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
