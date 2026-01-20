@@ -386,7 +386,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3.8637, y: 3.8637, z: 3.8637}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 6761367558185349069}
   m_Father: {fileID: 720340241617490526}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &9128765570611081517
@@ -1247,7 +1248,6 @@ Transform:
   - {fileID: 4025980520527243568}
   - {fileID: 776185886580178566}
   - {fileID: 6619808224282133641}
-  - {fileID: 6761367558185349069}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &7444851252132707061
@@ -1316,6 +1316,7 @@ MonoBehaviour:
   isAlive: 0
   flyweightData: {fileID: 11400000, guid: 4c5d763d770df6f42b08e02b1f6af8b6, type: 2}
   patrolRadius: 0
+  hpBar: {fileID: 0}
   animator: {fileID: 0}
   tipoParaTest: 4
   currentWayPoint: {x: 0, y: 0, z: 0}
@@ -1407,7 +1408,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 720340241617490526}
+    m_TransformParent: {fileID: 1891131662648725669}
     m_Modifications:
     - target: {fileID: 251424164471627240, guid: 50b6d4824e1bc8249871475d062c518c, type: 3}
       propertyPath: m_PresetInfoIsWorld
@@ -1455,11 +1456,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8351954781250972412, guid: 50b6d4824e1bc8249871475d062c518c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.1
+      value: 0.025881927
       objectReference: {fileID: 0}
     - target: {fileID: 8351954781250972412, guid: 50b6d4824e1bc8249871475d062c518c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.1
+      value: 0.025881927
+      objectReference: {fileID: 0}
+    - target: {fileID: 8351954781250972412, guid: 50b6d4824e1bc8249871475d062c518c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.25881928
       objectReference: {fileID: 0}
     - target: {fileID: 8351954781250972412, guid: 50b6d4824e1bc8249871475d062c518c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1491,11 +1496,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8351954781250972412, guid: 50b6d4824e1bc8249871475d062c518c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.02121989
+      value: 0.005491268
       objectReference: {fileID: 0}
     - target: {fileID: 8351954781250972412, guid: 50b6d4824e1bc8249871475d062c518c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 11.52
+      value: 2.981597
       objectReference: {fileID: 0}
     - target: {fileID: 8351954781250972412, guid: 50b6d4824e1bc8249871475d062c518c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

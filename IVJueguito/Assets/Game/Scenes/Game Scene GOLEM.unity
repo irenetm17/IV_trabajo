@@ -4724,6 +4724,10 @@ PrefabInstance:
       propertyPath: _slimePool
       value: 
       objectReference: {fileID: 879300033}
+    - target: {fileID: 3412813607452814621, guid: 1b00d4e8db28f7941b1b24b877b2ab76, type: 3}
+      propertyPath: flyweightData
+      value: 
+      objectReference: {fileID: 11400000, guid: 4c5d763d770df6f42b08e02b1f6af8b6, type: 2}
     - target: {fileID: 4996532326884467178, guid: 1b00d4e8db28f7941b1b24b877b2ab76, type: 3}
       propertyPath: m_Name
       value: ZafireBoss
@@ -4731,6 +4735,14 @@ PrefabInstance:
     - target: {fileID: 4996532326884467178, guid: 1b00d4e8db28f7941b1b24b877b2ab76, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6921813933854051015, guid: 1b00d4e8db28f7941b1b24b877b2ab76, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8922126113679732847, guid: 1b00d4e8db28f7941b1b24b877b2ab76, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8651,8 +8663,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6e00e3a7f6e6c444c9e8b27de96ebe88, type: 2}
   - {fileID: 11400000, guid: 88e5fa9647faa5845af7f577e7579030, type: 2}
   - {fileID: 11400000, guid: 1d26c60d1bdbb984192cbacbdfb7bbe8, type: 2}
-  - {fileID: 11400000, guid: 4c5d763d770df6f42b08e02b1f6af8b6, type: 2}
   - {fileID: 11400000, guid: 61451ce3e44d8a247b747663527e6998, type: 2}
+  - {fileID: 11400000, guid: 4c5d763d770df6f42b08e02b1f6af8b6, type: 2}
+  - {fileID: 11400000, guid: c8df1346ab6d7294689f472d2ce42cbf, type: 2}
 --- !u!4 &487892872
 Transform:
   m_ObjectHideFlags: 0
@@ -14065,6 +14078,10 @@ PrefabInstance:
       propertyPath: managedReferences[1978622154117218410].BoundParticleSystem
       value: 
       objectReference: {fileID: 246308239}
+    - target: {fileID: 8689857401346534332, guid: 1b2adf54b30635648aab1f32ae24eb15, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22640,6 +22657,10 @@ PrefabInstance:
     - target: {fileID: 4996532326884467178, guid: 79cdb27bc309f9746921121e227487b7, type: 3}
       propertyPath: m_Name
       value: EmeraldBoss
+      objectReference: {fileID: 0}
+    - target: {fileID: 7509572909487084384, guid: 79cdb27bc309f9746921121e227487b7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

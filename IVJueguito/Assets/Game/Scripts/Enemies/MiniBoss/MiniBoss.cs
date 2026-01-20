@@ -9,7 +9,7 @@ public class MiniBoss : Enemy
     [HideInInspector] public bool activateParticles = true;
     [SerializeField] ParticleSystem windArea;
     [SerializeField] ParticleSystem stunned;
-    //public ParticleSystem explosion;
+    //[SerializeField] PuertaAutomatica puertaVinculada;
     public SlimeSpawner sp = null;
 
     // FEEDBACKS
@@ -22,7 +22,13 @@ public class MiniBoss : Enemy
             get { return (MiniBossFlyweight)flyweightData; }
         }
 
-        public void pushPlayer(float force, float radius)
+    public override void KillEnemy()
+    {
+        //DoorOpenedEvent eventoAbrir = new DoorOpenedEvent(puertaVinculada, true);
+        //EventManager.instance.Publicar(eventoAbrir);
+    }
+
+    public void pushPlayer(float force, float radius)
         {
             if(activateParticles)
             {

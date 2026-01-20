@@ -2,7 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 using UnityEngine.VFX;
 
 public class Enemy : Entity, IEnemy, IObserver
@@ -14,7 +14,7 @@ public class Enemy : Entity, IEnemy, IObserver
 
     private Vector3 spawnPosition;
     [SerializeField] float patrolRadius;
-    [SerializeField] Slider healthSlider;
+    [SerializeField] Slider hpBar;
     public Animator animator;
 
     protected Transform playerTransform;
@@ -56,8 +56,12 @@ public class Enemy : Entity, IEnemy, IObserver
             playerTransform = playerObj.transform;
         }
 
-        
+        if (hpBar == null)
+        {
+            hpBar = GetComponentInChildren<Slider>(true);
+        }
 
+        hpBar.maxValue = currentHp;
         // Crear máquina de estados e iniciar en Idle
         stateMachine = new StateMachine();
         stateMachine.Initialize(flyweightData.idleState, this);
@@ -68,9 +72,8 @@ public class Enemy : Entity, IEnemy, IObserver
 
     void Start()
     {
-        healthSlider = GetComponentInChildren<Slider>();
+        hpBar = GetComponentInChildren<Slider>(true);
         animator = GetComponentInChildren<Animator>();
-        healthSlider.highValue = currentHp;
         Initialize(tipoParaTest);
         EventManager.instance.Subscribir(eventType.DamageTaken, this);
     }
@@ -103,7 +106,7 @@ public class Enemy : Entity, IEnemy, IObserver
         if (!isAlive) return;
 
         stateMachine.Update(this, Time.deltaTime);
-        healthSlider.value = currentHp;
+        hpBar.value = currentHp;
     }
     public void ChangeState(EnemyState newState)
     {
