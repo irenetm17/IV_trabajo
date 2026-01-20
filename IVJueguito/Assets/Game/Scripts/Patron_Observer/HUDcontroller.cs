@@ -102,6 +102,8 @@ public class HUDcontroller : MonoBehaviour, IObserver
         if (evento.Tipo == eventType.PlayerDied)
         {
             Time.timeScale = 0f;
+            PlayerCanMoveEvent quieto = new PlayerCanMoveEvent(false);
+            EventManager.instance.Publicar(quieto);
             PanelMuerte.SetActive(true);
             panelPausa.SetActive(false);
             BotonDespausa.SetActive(false);

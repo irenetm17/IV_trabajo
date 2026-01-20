@@ -70,7 +70,7 @@ public class Enemy : Entity, IEnemy, IObserver
 
     
 
-    void Start()
+    public virtual void Start()
     {
         hpBar = GetComponentInChildren<Slider>(true);
         animator = GetComponentInChildren<Animator>();
