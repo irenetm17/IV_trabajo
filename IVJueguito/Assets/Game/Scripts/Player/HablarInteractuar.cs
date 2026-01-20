@@ -10,7 +10,7 @@ public class HablarInteractuar : MonoBehaviour
 
     [SerializeField] private GameObject F;
     [Header("HABLAR")]
-    [SerializeField] private string[] arrayTextos;
+    [SerializeField] public string[] arrayTextos;
 
     private PlayerMovement player;
     private float distance;

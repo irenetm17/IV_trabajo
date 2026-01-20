@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4882956472541163051}
   - component: {fileID: 6515650952820958451}
   - component: {fileID: 8444800689484922375}
+  - component: {fileID: 5126011178256160390}
   m_Layer: 0
   m_Name: CofreConCosas
   m_TagString: Untagged
@@ -102,11 +103,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5984f9a815a3364cb770924ddfd469e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CofreInteractuar
+  state: 0
   distanceToInteract: 8
   input: {fileID: -315738367720775465, guid: db54bd73f0ac6ff4a8a4e4826782e4b4, type: 3}
   F: {fileID: 4521449246261405657}
   cosaDelCofre: 0
   imagenDelCofre: {fileID: 4862039068482315585}
+--- !u!65 &5126011178256160390
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163268774256314021}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5.3473067, y: 4.270688, z: 6.009283}
+  m_Center: {x: 0.8724386, y: 2.0070128, z: -0.049426317}
 --- !u!1 &2673627469398964248
 GameObject:
   m_ObjectHideFlags: 0

@@ -77,7 +77,7 @@ public class LlaveInteractuar : Openable, IObserver
         {
             interactuado = true;//Esto marca que se ha abierto la puerta y no se va a abrir mas
             //Esto es para parar al jugador mientras se abre la puerta
-            SimpleEvent quieto = new SimpleEvent(eventType.PlayerCanMove);
+            PlayerCanMoveEvent quieto = new PlayerCanMoveEvent(false); 
             EventManager.instance.Publicar(quieto);
             EventManager.instance.Publicar(new SimpleEvent(eventType.UseKey)); //Publica el evento de usar llave
 
@@ -90,7 +90,7 @@ public class LlaveInteractuar : Openable, IObserver
             //OpenDoor();
 
             //Despues de abrir la puerta, usaremos esto para volver a dejar al jugador moverse
-            SimpleEvent muevete = new SimpleEvent(eventType.PlayerCanMove);
+            PlayerCanMoveEvent muevete = new PlayerCanMoveEvent(true);
             EventManager.instance.Publicar(muevete);
             Debug.LogWarning("Puerta abierta");
         }
@@ -98,6 +98,8 @@ public class LlaveInteractuar : Openable, IObserver
         {
             if(arrayTextos != null && arrayTextos.Length > 0)
             {
+                PlayerCanMoveEvent quieto = new PlayerCanMoveEvent(false);
+                EventManager.instance.Publicar(quieto);
                 DialogueStartedEvent dialogoEvento = new DialogueStartedEvent(arrayTextos);
                 EventManager.instance.Publicar(dialogoEvento);
             }
