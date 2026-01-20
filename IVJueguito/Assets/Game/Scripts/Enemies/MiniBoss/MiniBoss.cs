@@ -37,12 +37,13 @@ public class MiniBoss : Enemy
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         Instantiate(_heartGO, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 
     public override void Start()
     {
         base.Start();
-        abrirPuertas = FindObjectOfType<AbrirPuertas>();
+        abrirPuertas = GetComponent<AbrirPuertas>();
     }
 
     public void pushPlayer(float force, float radius)
@@ -137,13 +138,13 @@ public class MiniBoss : Enemy
     {
         base.Update();
 
-        if (currentHp <= 20 && special1Done == false)
+        if (currentHp <= 10 && special1Done == false)
         {
             this.ChangeState(this.MiniBossData.specialGimmickBossState);
             special1Done = true;
         }
 
-        if (currentHp <= 10 && special2Done == false)
+        if (currentHp <= 5 && special2Done == false)
         {
             this.ChangeState(this.MiniBossData.specialGimmickBossState);
             special2Done = true;

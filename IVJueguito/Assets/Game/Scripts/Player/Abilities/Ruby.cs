@@ -79,16 +79,12 @@ public class Ruby : MonoBehaviour
                 return;
             }
 
-            if (!collision.CompareTag("Ground")) //Si choca con el suelo no se destruye
+            if (!collision.gameObject.CompareTag("Ground")) //Si choca con el suelo no se destruye
             {
                 Destroy(gameObject);
-                return;
             }
 
-
         }
-
-
 
     }
 }

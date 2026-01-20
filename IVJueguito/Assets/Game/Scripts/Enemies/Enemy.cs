@@ -34,6 +34,7 @@ public class Enemy : Entity, IEnemy, IObserver
 
     // ANimaciones Feedback
     [SerializeField] private ParticleSystem deathParticle;
+    private PlayerAbilities playerAbilities;
 
     public void Initialize(EnemyType type)
     {
@@ -76,6 +77,7 @@ public class Enemy : Entity, IEnemy, IObserver
         animator = GetComponentInChildren<Animator>();
         Initialize(tipoParaTest);
         EventManager.instance.Subscribir(eventType.DamageTaken, this);
+        playerAbilities = GameObject.FindWithTag("Player").GetComponent<PlayerAbilities>();
     }
 
 
@@ -141,8 +143,9 @@ public class Enemy : Entity, IEnemy, IObserver
 
     public void DamageTarget(float damageDealt)
     {
-        PlayerStatsEvent vidasRestar = new PlayerStatsEvent(-damageDealt, 0);
-        EventManager.instance.Publicar(vidasRestar);
+        playerAbilities.HurtPlayer(damageDealt);
+        //PlayerStatsEvent vidasRestar = new PlayerStatsEvent(-damageDealt, 0);
+        //EventManager.instance.Publicar(vidasRestar);
     }
 
     public virtual void KillEnemy()

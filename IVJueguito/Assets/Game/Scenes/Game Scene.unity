@@ -4901,7 +4901,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 195721113}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1602432516}
+        m_TargetAssemblyTypeName: HUDcontroller, Assembly-CSharp
+        m_MethodName: RestartLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &195721113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11878,6 +11890,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1d26c60d1bdbb984192cbacbdfb7bbe8, type: 2}
   - {fileID: 11400000, guid: 4c5d763d770df6f42b08e02b1f6af8b6, type: 2}
   - {fileID: 11400000, guid: 61451ce3e44d8a247b747663527e6998, type: 2}
+  - {fileID: 11400000, guid: c8df1346ab6d7294689f472d2ce42cbf, type: 2}
+  - {fileID: 11400000, guid: 86c32248bb4c3454f80b2c78c2ff7cca, type: 2}
 --- !u!4 &487892872
 Transform:
   m_ObjectHideFlags: 0
@@ -39964,7 +39978,7 @@ GameObject:
   - component: {fileID: 1837789289}
   - component: {fileID: 1837789288}
   m_Layer: 5
-  m_Name: Despausa
+  m_Name: BotonDespausa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40719,11 +40733,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 720340241617490526, guid: 8a1fabe1fc8e2304c82e93038a1839f4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 24.2
+      value: 13.7
       objectReference: {fileID: 0}
     - target: {fileID: 720340241617490526, guid: 8a1fabe1fc8e2304c82e93038a1839f4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1005.63416
+      value: 1067.7
       objectReference: {fileID: 0}
     - target: {fileID: 720340241617490526, guid: 8a1fabe1fc8e2304c82e93038a1839f4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -46951,9 +46965,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 295386871}
-        m_TargetAssemblyTypeName: BotonesInicio, Assembly-CSharp
-        m_MethodName: IniciarJuego
+      - m_Target: {fileID: 1602432516}
+        m_TargetAssemblyTypeName: HUDcontroller, Assembly-CSharp
+        m_MethodName: RestartLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
