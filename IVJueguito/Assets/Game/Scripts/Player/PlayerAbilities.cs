@@ -182,12 +182,12 @@ public class PlayerAbilities : MonoBehaviour, IObserver
     {
         UpdateCooldownUI();
         if (!canMove) return;
-        if (Mouse.current.leftButton.IsPressed()) // Lo del raton de las narices
+        if (Mouse.current.leftButton.wasPressedThisFrame) // Lo del raton de las narices
         {
             TryUseAbility(0);
             diamanteMMF.PlayFeedbacks();
         }
-        if (Mouse.current.rightButton.IsPressed())
+        if (Mouse.current.rightButton.wasPressedThisFrame)
         {
             TryUseAbility(1);
             rubiMMF.PlayFeedbacks();
