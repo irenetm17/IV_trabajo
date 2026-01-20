@@ -5,6 +5,7 @@ using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class HUDcontroller : MonoBehaviour, IObserver
 {
@@ -265,5 +266,11 @@ public class HUDcontroller : MonoBehaviour, IObserver
             EventManager.instance.Desuscribir(eventType.UseKey, this);
             EventManager.instance.Desuscribir(eventType.PlayerDied, this);
         }
+    }
+
+    public void RestartLevel()
+    {
+        Time.timeScale = 1f;
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Game Scene");
     }
 }

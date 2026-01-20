@@ -61,10 +61,11 @@ public class Ruby : MonoBehaviour
             if (enemy != null)
             {
                 // Bajar vida a enemigos
-                DamageTakenEvent pegarEnemigos = new DamageTakenEvent(enemy, 1.0f);
+                DamageTakenEvent pegarEnemigos = new DamageTakenEvent(enemy, 1.5f);
                 EventManager.instance.Publicar(pegarEnemigos);
 
                 Destroy(gameObject);
+                return;
             }
 
 
@@ -74,7 +75,16 @@ public class Ruby : MonoBehaviour
             if( muroHielo != null )
             {
                 muroHielo.DerretirMuro();
+                Destroy(gameObject);
+                return;
             }
+
+            if (!collision.CompareTag("Ground")) //Si choca con el suelo no se destruye
+            {
+                Destroy(gameObject);
+                return;
+            }
+
 
         }
 
