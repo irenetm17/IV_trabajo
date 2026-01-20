@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5287392927158368867}
   m_Layer: 0
   m_Name: Puerta Automatica
-  m_TagString: Untagged
+  m_TagString: Obstaculo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,6 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76e689b8c4bcf2141b96ec51bdb25c81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuertaAutomatica
+  state: 0
   Light: {fileID: 2099634068056046672}
   GreenLight: {fileID: 2100000, guid: 1dfcc781ce402754ab910960ff921db3, type: 2}
   RedLight: {fileID: 2100000, guid: 42803ac9281ae754da195b6fa126c100, type: 2}
@@ -125,6 +126,7 @@ MonoBehaviour:
   F: {fileID: 2376701994171352999}
   arrayTextos:
   - Quizas no es el momento de que esta puerta se abra.
+  puedeHablar: 1
 --- !u!1 &948086801109205549
 GameObject:
   m_ObjectHideFlags: 0

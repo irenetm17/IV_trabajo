@@ -464,7 +464,7 @@ GameObject:
   - component: {fileID: 6692172322501054964}
   m_Layer: 0
   m_Name: Puerta Cerradura
-  m_TagString: Untagged
+  m_TagString: Obstaculo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -554,6 +554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2205407951187c4e93cb1ac28404b68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LlaveInteractuar
+  state: 0
   distanceToInteract: 10
   input: {fileID: -315738367720775465, guid: db54bd73f0ac6ff4a8a4e4826782e4b4, type: 3}
   F: {fileID: 5803561925288276271}
@@ -571,6 +572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76e689b8c4bcf2141b96ec51bdb25c81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuertaAutomatica
+  state: 0
   Light: {fileID: 8251313524611243541}
   GreenLight: {fileID: 2100000, guid: 1dfcc781ce402754ab910960ff921db3, type: 2}
   RedLight: {fileID: 2100000, guid: 42803ac9281ae754da195b6fa126c100, type: 2}
