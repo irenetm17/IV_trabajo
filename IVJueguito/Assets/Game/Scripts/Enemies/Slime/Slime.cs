@@ -10,6 +10,8 @@ public class Slime : Enemy, IPoolObject  // Tambien implementará el Enemy
 
     public override void KillEnemy()
     {
+        Rigidbody rb = this.GetComponent<Rigidbody>();
+        rb.constraints = RigidbodyConstraints.FreezeAll;
 
         AudioService.instance.PlaySFX("MuerteEnemigo");
 
