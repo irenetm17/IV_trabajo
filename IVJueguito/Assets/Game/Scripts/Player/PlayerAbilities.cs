@@ -105,7 +105,8 @@ public class PlayerAbilities : MonoBehaviour, IObserver
 
         if (evento.Tipo == eventType.PlayerCanMove)
         {
-            canMove = !canMove;
+            PlayerCanMoveEvent event2 = (PlayerCanMoveEvent)evento;
+            canMove = event2.canMove;
         }
     }
     IEnumerator TurningRedRoutine()

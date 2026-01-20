@@ -17,6 +17,8 @@ public class CofreInteractuar : Openable
     private PlayerMovement player;
     private float distance;
     private bool interactuado = false;
+    private HablarInteractuar hablarScript;
+    private AbrirPuertas abrirPuertas;
 
     private Animator animator;
 
@@ -24,6 +26,8 @@ public class CofreInteractuar : Openable
     {
         player = FindObjectOfType<PlayerMovement>();
         animator = GetComponent<Animator>();
+        hablarScript = GetComponent<HablarInteractuar>();
+        abrirPuertas = GetComponent<AbrirPuertas>();
     }
 
     void Update()
@@ -41,6 +45,7 @@ public class CofreInteractuar : Openable
         {
             F.SetActive(false);
         }
+        
     }
 
     void Cofre()
@@ -49,12 +54,16 @@ public class CofreInteractuar : Openable
         PlayerCanMoveEvent quieto = new PlayerCanMoveEvent(false);
         EventManager.instance.Publicar(quieto);
 
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////
-        //Cesar aqui va lo del cofre abriendose, solo animacion
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////
-
         animator.SetBool("Abrir", true);
 
+        if (hablarScript != null)
+        {
+            hablarScript.Hablar();
+        }
+        if (abrirPuertas != null)
+        {
+            abrirPuertas.AbrirCerrarPuertas();
+        }
         StartCoroutine(MoveUp(10f));
     }
     public IEnumerator MoveUp(float speed)
@@ -77,8 +86,11 @@ public class CofreInteractuar : Openable
         yield return new WaitForSeconds(3);
         imagenDelCofre.gameObject.SetActive(false);
 
-        PlayerCanMoveEvent muevete = new PlayerCanMoveEvent(true);
-        EventManager.instance.Publicar(muevete);
+        if (hablarScript == null)
+        {
+            PlayerCanMoveEvent muevete = new PlayerCanMoveEvent(true);
+            EventManager.instance.Publicar(muevete);
+        }
     }
 
     public override void SetState(OpenableState newState)
