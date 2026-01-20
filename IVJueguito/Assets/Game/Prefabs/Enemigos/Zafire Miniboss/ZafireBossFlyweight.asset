@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: ZafireBossFlyweight
   m_EditorClassIdentifier: Assembly-CSharp::MiniBossFlyweight
   typeID: 4
-  maxHP: 30
-  speed: 7
-  damage: 0.5
+  maxHP: 20
+  speed: 8
+  damage: 0.3
   patrolRadius: 30
   detectPlayerRadius: 50
   reachPlayerRadius: 10

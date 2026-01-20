@@ -7,6 +7,8 @@ public class Proyectile : MonoBehaviour
 
     [SerializeField]
     private bool _damagePlayer = false;
+    [SerializeField]
+    private float dmg = 0.25f;
 
     void Start()
     {
@@ -38,7 +40,7 @@ public class Proyectile : MonoBehaviour
             if (_damagePlayer)
             {
                 // Hacer daño al jugador
-                PlayerStatsEvent vidasRestar = new PlayerStatsEvent(-0.5f, 0);
+                PlayerStatsEvent vidasRestar = new PlayerStatsEvent(-dmg, 0);
                 EventManager.instance.Publicar(vidasRestar);
             }
         }

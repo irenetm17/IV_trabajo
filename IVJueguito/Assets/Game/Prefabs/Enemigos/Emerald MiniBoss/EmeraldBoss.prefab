@@ -1220,6 +1220,7 @@ GameObject:
   - component: {fileID: 7444851252132707061}
   - component: {fileID: 5381006384538865031}
   - component: {fileID: 3412813607452814621}
+  - component: {fileID: 5318333479037172169}
   m_Layer: 0
   m_Name: EmeraldBoss
   m_TagString: Untagged
@@ -1238,7 +1239,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 262.19995, y: 1343.66, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1891131662648725669}
   - {fileID: 8847469651547123781}
@@ -1339,6 +1340,23 @@ MonoBehaviour:
   MMF_PushBack: {fileID: 8511420518441797036}
   MMF_Wind: {fileID: 240154162636651669}
   _heartGO: {fileID: 3660398340007383453, guid: b86eeb5a8e8b2ab43a940eb472bcd5c4, type: 3}
+--- !u!114 &5318333479037172169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4996532326884467178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d065a55f13025049a45fdafda98d382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AbrirPuertas
+  puertasLista:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  puertasAbrir: 010101
 --- !u!1001 &1173354350036795740
 PrefabInstance:
   m_ObjectHideFlags: 0
