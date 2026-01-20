@@ -6,6 +6,7 @@ TagManager:
   tags:
   - RayoLaser
   - TempanoHielo
+  - Ground
   layers:
   - Default
   - TransparentFX
