@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class FinDelJuego : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class FinDelJuego : MonoBehaviour
     [SerializeField] private float delayTexto = 0.5f;
     [SerializeField] private float delayObjetoFinal = 1.0f;
 
+    private bool _hasGameEnded = false;
+
     private void Awake()
     {
         textoFin.SetActive(false);
@@ -25,6 +28,17 @@ public class FinDelJuego : MonoBehaviour
         fadeImage.color = c;
     }
 
+    private void Update()
+    {
+        if (_hasGameEnded)
+        {
+            if(Mouse.current.leftButton.wasPressedThisFrame)
+            {
+                IrMenuPrincipal();
+            }
+        }
+    }
+
     public void EndGame()
     {
         StartCoroutine(FinDelJuegoCoroutine());
@@ -32,8 +46,10 @@ public class FinDelJuego : MonoBehaviour
 
     private IEnumerator FinDelJuegoCoroutine()
     {
+        Debug.Log("CORRUTINA Fin del juego");
         float t = 0f;
         Color c = fadeImage.color;
+        fadeImage.gameObject.SetActive(true);
 
         while (t < fadeDuration)
         {
@@ -51,6 +67,8 @@ public class FinDelJuego : MonoBehaviour
 
         yield return new WaitForSeconds(delayObjetoFinal);
         botonFinal.SetActive(true);
+
+        _hasGameEnded = true;
     }
 
     public void IrMenuPrincipal()

@@ -37,8 +37,9 @@ public class MiniBoss : Enemy
         }
         if (finalBoss)
         {
-            FinDelJuego finDelJuego = FindObjectOfType<FinDelJuego>();
+            FinDelJuego finDelJuego = Object.FindAnyObjectByType<FinDelJuego>();
             finDelJuego.EndGame();
+            Debug.Log("Fin del juego: "+finDelJuego);
         }
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

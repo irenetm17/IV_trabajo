@@ -81,8 +81,8 @@ MonoBehaviour:
   _slimePool: {fileID: 0}
   _slimeSpawnersT: []
   _slimeTEMP: {fileID: 8335818464000128432, guid: d1153cef4106a224ab29da8ae3ea7dbf, type: 3}
-  _maxSlimesSpawn: 2
-  _minSlimesSpawn: 1
+  _maxSlimesSpawn: 5
+  _minSlimesSpawn: 3
   _spawnDistanceFromPlayer: 20
   _minRandomSpreadSpawn: 1
   _maxRandomSpreadSpawn: 15
@@ -1220,7 +1220,6 @@ GameObject:
   - component: {fileID: 7444851252132707061}
   - component: {fileID: 5381006384538865031}
   - component: {fileID: 3412813607452814621}
-  - component: {fileID: 5318333479037172169}
   m_Layer: 0
   m_Name: FinalBoss
   m_TagString: Untagged
@@ -1336,27 +1335,11 @@ MonoBehaviour:
   windArea: {fileID: 7157476553155737516}
   stunned: {fileID: 7852483222911866130}
   sp: {fileID: 2444960565115356469}
+  finalBoss: 1
   MMF_Explosion: {fileID: 1578466570737444802}
   MMF_PushBack: {fileID: 8511420518441797036}
   MMF_Wind: {fileID: 240154162636651669}
   _heartGO: {fileID: 3660398340007383453, guid: b86eeb5a8e8b2ab43a940eb472bcd5c4, type: 3}
---- !u!114 &5318333479037172169
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4996532326884467178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d065a55f13025049a45fdafda98d382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AbrirPuertas
-  puertasLista:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  puertasAbrir: 010101
 --- !u!1001 &1173354350036795740
 PrefabInstance:
   m_ObjectHideFlags: 0

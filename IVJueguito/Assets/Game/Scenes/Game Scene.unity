@@ -28081,7 +28081,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1261449206}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 642509486}
+        m_TargetAssemblyTypeName: FinDelJuego, Assembly-CSharp
+        m_MethodName: IrMenuPrincipal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1261449206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39802,7 +39814,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1800517913
 RectTransform:
   m_ObjectHideFlags: 0
@@ -41425,32 +41437,15 @@ PrefabInstance:
       propertyPath: _slimePool
       value: 
       objectReference: {fileID: 1116368049}
-    - target: {fileID: 3412813607452814621, guid: 8a1fabe1fc8e2304c82e93038a1839f4, type: 3}
-      propertyPath: finalBoss
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4996532326884467178, guid: 8a1fabe1fc8e2304c82e93038a1839f4, type: 3}
       propertyPath: m_Name
       value: FinalBoss
-      objectReference: {fileID: 0}
-    - target: {fileID: 5318333479037172169, guid: 8a1fabe1fc8e2304c82e93038a1839f4, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5318333479037172169, guid: 8a1fabe1fc8e2304c82e93038a1839f4, type: 3}
-      propertyPath: puertasAbrir.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5318333479037172169, guid: 8a1fabe1fc8e2304c82e93038a1839f4, type: 3}
-      propertyPath: puertasLista.Array.size
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7509572909487084384, guid: 8a1fabe1fc8e2304c82e93038a1839f4, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5318333479037172169, guid: 8a1fabe1fc8e2304c82e93038a1839f4, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
