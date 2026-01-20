@@ -30,7 +30,7 @@ public class AttackState : EnemyState
                 {
                 if (enemy.stateTimer >= attackDelay)
                 {
-                    enemy.DamageTarget(enemy.flyweightData.damage);
+                    enemy.DamageTarget(enemy.dmg);
                     enemy.ChangeState(enemy.flyweightData.chaseState);
                 }
                     

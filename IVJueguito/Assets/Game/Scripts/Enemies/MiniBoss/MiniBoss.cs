@@ -30,7 +30,8 @@ public class MiniBoss : Enemy
     {
         //DoorOpenedEvent eventoAbrir = new DoorOpenedEvent(puertaVinculada, true);
         //EventManager.instance.Publicar(eventoAbrir);
-
+        Rigidbody rb = this.GetComponent<Rigidbody>();
+        rb.constraints = RigidbodyConstraints.FreezeAll;
         if (abrirPuertas != null)
         {
             abrirPuertas.AbrirCerrarPuertas();

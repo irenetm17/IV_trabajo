@@ -14,6 +14,7 @@ public class Enemy : Entity, IEnemy, IObserver
 
     private Vector3 spawnPosition;
     [SerializeField] float patrolRadius;
+    public float dmg;
     [SerializeField] Slider hpBar;
     public Animator animator;
 
@@ -42,6 +43,7 @@ public class Enemy : Entity, IEnemy, IObserver
 
         spawnPosition = transform.position;
         currentHp = flyweightData.maxHP;
+        dmg = flyweightData.damage;
         isAlive = true;
         patrolRadius = flyweightData.patrolRadius;
 
