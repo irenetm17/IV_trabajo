@@ -83,7 +83,7 @@ public class PlayerMovement : Entity, IObserver
                 animator.SetBool("lateral", left||right);
             }
         }
-        if (Keyboard.current.escapeKey.wasPressedThisFrame)
+        if (Keyboard.current.escapeKey.wasReleasedThisFrame)
         {
             SimpleEvent pausita = new SimpleEvent(eventType.GamePaused);
             EventManager.instance.Publicar(pausita);

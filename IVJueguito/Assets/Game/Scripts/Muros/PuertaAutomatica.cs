@@ -52,9 +52,11 @@ public class PuertaAutomatica : Openable, IObserver
 
     public void AbrirPuerta()
     {
+        animator = GetComponent<Animator>();
         animator.SetBool("AbrirPuerta", true);
         Light.GetComponent<Renderer>().material = GreenLight;
-        if(hablar != null)
+        hablar = GetComponent<HablarInteractuar>();
+        if (hablar != null)
         {
             hablar.enabled = false;
         }
@@ -62,8 +64,10 @@ public class PuertaAutomatica : Openable, IObserver
 
     public void CerrarPuerta()
     {
+        animator = GetComponent<Animator>();
         animator.SetBool("AbrirPuerta", false);
         Light.GetComponent<Renderer>().material = RedLight;
+        hablar = GetComponent<HablarInteractuar>();
         if (hablar != null)
         {
             hablar.enabled = true;
