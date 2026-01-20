@@ -1335,6 +1335,7 @@ MonoBehaviour:
   MMF_Explosion: {fileID: 1578466570737444802}
   MMF_PushBack: {fileID: 8511420518441797036}
   MMF_Wind: {fileID: 240154162636651669}
+  _heartGO: {fileID: 3660398340007383453, guid: b86eeb5a8e8b2ab43a940eb472bcd5c4, type: 3}
 --- !u!1001 &1173354350036795740
 PrefabInstance:
   m_ObjectHideFlags: 0

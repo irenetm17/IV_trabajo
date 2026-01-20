@@ -17,6 +17,8 @@ public class MiniBoss : Enemy
     [SerializeField] private MMFeedbacks MMF_PushBack;
     [SerializeField] private MMFeedbacks MMF_Wind;
 
+    [SerializeField] private GameObject _heartGO;
+
     public MiniBossFlyweight MiniBossData
         {
             get { return (MiniBossFlyweight)flyweightData; }
@@ -26,6 +28,7 @@ public class MiniBoss : Enemy
     {
         //DoorOpenedEvent eventoAbrir = new DoorOpenedEvent(puertaVinculada, true);
         //EventManager.instance.Publicar(eventoAbrir);
+        Instantiate(_heartGO, transform.position, Quaternion.identity);
     }
 
     public void pushPlayer(float force, float radius)
