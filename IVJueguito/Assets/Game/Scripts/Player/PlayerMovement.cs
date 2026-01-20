@@ -9,6 +9,7 @@ public class PlayerMovement : Entity, IObserver
 
     [SerializeField] private float _moveSpeed;
     [SerializeField] private Vector2 _moveDirection;
+    [SerializeField] private Transform circulito;
 
     private bool canMove = true;
     public bool CanMove => canMove;
@@ -120,6 +121,15 @@ public class PlayerMovement : Entity, IObserver
         {
             LastMoveDirectionWorld = moveDir.normalized;
         }
+
+        Vector3 dir = LastMoveDirectionWorld;
+        if (dir == Vector3.zero)
+            dir = transform.forward;
+
+        Quaternion lookRot = Quaternion.LookRotation(dir, Vector3.up);
+        Quaternion offset = Quaternion.Euler(90f, -90f, 0f);
+
+        circulito.rotation = lookRot * offset;
 
     }
 

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class SaveManager : MonoBehaviour
 {
-    public static SaveManager instance;
+    public static SaveManager instance { get; private set; }
 
     private string savePath;
 
@@ -22,7 +22,8 @@ public class SaveManager : MonoBehaviour
         }
     }
 
-    public void SaveGame(SaveData data)
+
+public void SaveGame(SaveData data)
     {
         string json = JsonUtility.ToJson(data, true);
         File.WriteAllText(savePath, json);
