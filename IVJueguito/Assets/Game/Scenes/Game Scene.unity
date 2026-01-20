@@ -19647,14 +19647,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 720340241617490526, guid: 79cdb27bc309f9746921121e227487b7, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4996532326884467178, guid: 79cdb27bc309f9746921121e227487b7, type: 3}
       propertyPath: m_Name
       value: EmeraldBoss
       objectReference: {fileID: 0}
+    - target: {fileID: 5318333479037172169, guid: 79cdb27bc309f9746921121e227487b7, type: 3}
+      propertyPath: 'puertasLista.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1078624973}
+    - target: {fileID: 5318333479037172169, guid: 79cdb27bc309f9746921121e227487b7, type: 3}
+      propertyPath: 'puertasLista.Array.data[1]'
+      value: 
+      objectReference: {fileID: 416347736}
+    - target: {fileID: 5318333479037172169, guid: 79cdb27bc309f9746921121e227487b7, type: 3}
+      propertyPath: 'puertasLista.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1866217481}
     - target: {fileID: 7509572909487084384, guid: 79cdb27bc309f9746921121e227487b7, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -19662,33 +19670,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4996532326884467178, guid: 79cdb27bc309f9746921121e227487b7, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 900955115}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79cdb27bc309f9746921121e227487b7, type: 3}
---- !u!1 &900955114 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4996532326884467178, guid: 79cdb27bc309f9746921121e227487b7, type: 3}
-  m_PrefabInstance: {fileID: 900955113}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &900955115
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 900955114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d065a55f13025049a45fdafda98d382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AbrirPuertas
-  puertasLista:
-  - {fileID: 1078624973}
-  - {fileID: 416347736}
-  - {fileID: 1866217481}
-  puertasAbrir: 010101
 --- !u!4 &902705195 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 158924213009835095, guid: e6e31956c1388ad4fa633e72547783ff, type: 3}
@@ -37720,6 +37703,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2336507093636637535, guid: 1b2adf54b30635648aab1f32ae24eb15, type: 3}
+      propertyPath: 'puertasLista.Array.data[0]'
+      value: 
+      objectReference: {fileID: 833068950}
+    - target: {fileID: 2336507093636637535, guid: 1b2adf54b30635648aab1f32ae24eb15, type: 3}
+      propertyPath: 'puertasLista.Array.data[1]'
+      value: 
+      objectReference: {fileID: 6953277539164211987}
+    - target: {fileID: 2336507093636637535, guid: 1b2adf54b30635648aab1f32ae24eb15, type: 3}
+      propertyPath: 'puertasLista.Array.data[2]'
+      value: 
+      objectReference: {fileID: 3074863807783788402}
     - target: {fileID: 4996532326884467178, guid: 1b2adf54b30635648aab1f32ae24eb15, type: 3}
       propertyPath: m_Name
       value: RubiMiniBoss
@@ -37731,33 +37726,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4996532326884467178, guid: 1b2adf54b30635648aab1f32ae24eb15, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1728317584}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b2adf54b30635648aab1f32ae24eb15, type: 3}
---- !u!1 &1728317583 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4996532326884467178, guid: 1b2adf54b30635648aab1f32ae24eb15, type: 3}
-  m_PrefabInstance: {fileID: 1728317582}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1728317584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1728317583}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d065a55f13025049a45fdafda98d382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AbrirPuertas
-  puertasLista:
-  - {fileID: 833068950}
-  - {fileID: 6953277539164211987}
-  - {fileID: 3074863807783788402}
-  puertasAbrir: 010101
 --- !u!1001 &1728480864
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39654,36 +39624,23 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7666369930144770779, guid: 1b00d4e8db28f7941b1b24b877b2ab76, type: 3}
+      propertyPath: 'puertasLista.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1429576667}
+    - target: {fileID: 7666369930144770779, guid: 1b00d4e8db28f7941b1b24b877b2ab76, type: 3}
+      propertyPath: 'puertasLista.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1010317835}
+    - target: {fileID: 7666369930144770779, guid: 1b00d4e8db28f7941b1b24b877b2ab76, type: 3}
+      propertyPath: 'puertasLista.Array.data[2]'
+      value: 
+      objectReference: {fileID: 54004793}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4996532326884467178, guid: 1b00d4e8db28f7941b1b24b877b2ab76, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1821084332}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b00d4e8db28f7941b1b24b877b2ab76, type: 3}
---- !u!1 &1821084331 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4996532326884467178, guid: 1b00d4e8db28f7941b1b24b877b2ab76, type: 3}
-  m_PrefabInstance: {fileID: 1821084330}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1821084332
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1821084331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d065a55f13025049a45fdafda98d382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AbrirPuertas
-  puertasLista:
-  - {fileID: 1429576667}
-  - {fileID: 1010317835}
-  - {fileID: 54004793}
-  puertasAbrir: 010101
 --- !u!1001 &1822990437
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40748,6 +40705,67 @@ Transform:
   m_Children: []
   m_Father: {fileID: 951819093}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1861424428
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 720340241617490526, guid: 8a1fabe1fc8e2304c82e93038a1839f4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 920.6245
+      objectReference: {fileID: 0}
+    - target: {fileID: 720340241617490526, guid: 8a1fabe1fc8e2304c82e93038a1839f4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 24.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 720340241617490526, guid: 8a1fabe1fc8e2304c82e93038a1839f4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1005.63416
+      objectReference: {fileID: 0}
+    - target: {fileID: 720340241617490526, guid: 8a1fabe1fc8e2304c82e93038a1839f4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 720340241617490526, guid: 8a1fabe1fc8e2304c82e93038a1839f4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 720340241617490526, guid: 8a1fabe1fc8e2304c82e93038a1839f4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 720340241617490526, guid: 8a1fabe1fc8e2304c82e93038a1839f4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 720340241617490526, guid: 8a1fabe1fc8e2304c82e93038a1839f4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 720340241617490526, guid: 8a1fabe1fc8e2304c82e93038a1839f4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 720340241617490526, guid: 8a1fabe1fc8e2304c82e93038a1839f4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996532326884467178, guid: 8a1fabe1fc8e2304c82e93038a1839f4, type: 3}
+      propertyPath: m_Name
+      value: FinalBoss
+      objectReference: {fileID: 0}
+    - target: {fileID: 7509572909487084384, guid: 8a1fabe1fc8e2304c82e93038a1839f4, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8a1fabe1fc8e2304c82e93038a1839f4, type: 3}
 --- !u!1001 &1861776085
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47946,3 +47964,4 @@ SceneRoots:
   - {fileID: 567728237}
   - {fileID: 288939574}
   - {fileID: 1064994310}
+  - {fileID: 1861424428}
