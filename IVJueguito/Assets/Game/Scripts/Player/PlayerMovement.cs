@@ -46,8 +46,8 @@ public class PlayerMovement : Entity, IObserver
     protected override void Awake()
     {
         base.Awake();
-        //Cursor.lockState = CursorLockMode.Locked;
-        //Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     private void Update()
@@ -82,6 +82,11 @@ public class PlayerMovement : Entity, IObserver
                 animator.SetBool("back", back);
                 animator.SetBool("lateral", left||right);
             }
+        }
+        if (Keyboard.current.escapeKey.wasPressedThisFrame)
+        {
+            SimpleEvent pausita = new SimpleEvent(eventType.GamePaused);
+            EventManager.instance.Publicar(pausita);
         }
 
 

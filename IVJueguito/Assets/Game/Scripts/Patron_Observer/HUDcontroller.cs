@@ -75,6 +75,9 @@ public class HUDcontroller : MonoBehaviour, IObserver
                 BotonDespausa.SetActive(true);
                 BotonPausa.SetActive(false);
                 panelPausa.SetActive(true);
+
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
             }
             else
             {
@@ -82,6 +85,9 @@ public class HUDcontroller : MonoBehaviour, IObserver
                 BotonPausa.SetActive(true);
                 BotonDespausa.SetActive(false);
                 panelPausa.SetActive(false);
+
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
             }
 
 
@@ -100,6 +106,8 @@ public class HUDcontroller : MonoBehaviour, IObserver
             panelPausa.SetActive(false);
             BotonDespausa.SetActive(false);
             BotonPausa.SetActive(false);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 
@@ -184,7 +192,7 @@ public class HUDcontroller : MonoBehaviour, IObserver
     }
     void Update()
     {
-        if (didDialogueStart && Mouse.current.leftButton.IsPressed() && (lineIndex < arrayTextosDialogos.Length))
+        if (didDialogueStart && Mouse.current.leftButton.wasPressedThisFrame && (lineIndex < arrayTextosDialogos.Length))
         {
             dialoguePanel.SetActive(true);
             if (textoDialogo.text == arrayTextosDialogos[lineIndex])
@@ -197,6 +205,10 @@ public class HUDcontroller : MonoBehaviour, IObserver
                 //StopCoroutine(ShowLine());
                 textoDialogo.text = arrayTextosDialogos[lineIndex];
             }
+        }
+        if (isPaused && Keyboard.current.escapeKey.wasPressedThisFrame)
+        {
+            PauseGame();
         }
     }
     #endregion
