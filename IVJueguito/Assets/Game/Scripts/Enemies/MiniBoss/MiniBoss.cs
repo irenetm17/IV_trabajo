@@ -11,6 +11,7 @@ public class MiniBoss : Enemy
     [SerializeField] ParticleSystem stunned;
     //[SerializeField] PuertaAutomatica puertaVinculada;
     public SlimeSpawner sp = null;
+    private AbrirPuertas abrirPuertas;
 
     // FEEDBACKS
     [SerializeField] private MMFeedbacks MMF_Explosion;
@@ -28,7 +29,20 @@ public class MiniBoss : Enemy
     {
         //DoorOpenedEvent eventoAbrir = new DoorOpenedEvent(puertaVinculada, true);
         //EventManager.instance.Publicar(eventoAbrir);
+
+        if (abrirPuertas != null)
+        {
+            abrirPuertas.AbrirCerrarPuertas();
+        }
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         Instantiate(_heartGO, transform.position, Quaternion.identity);
+    }
+
+    public override void Start()
+    {
+        base.Start();
+        abrirPuertas = FindObjectOfType<AbrirPuertas>();
     }
 
     public void pushPlayer(float force, float radius)

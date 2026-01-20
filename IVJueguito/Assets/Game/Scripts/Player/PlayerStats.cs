@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour, IObserver
 {
     [SerializeField] private float maxHealth = 3f;
-    [SerializeField] private float currentHealth = 1f;
+    [SerializeField] private float currentHealth = 3f;
     [SerializeField] private int numLlaves = 0;
 
     private Animator _animator;
