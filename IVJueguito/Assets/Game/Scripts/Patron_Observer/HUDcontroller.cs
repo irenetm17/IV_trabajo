@@ -184,7 +184,7 @@ public class HUDcontroller : MonoBehaviour, IObserver
     }
     void Update()
     {
-        if (didDialogueStart && Mouse.current.leftButton.IsPressed() && (lineIndex < arrayTextosDialogos.Length))
+        if (didDialogueStart && Mouse.current.leftButton.wasPressedThisFrame && (lineIndex < arrayTextosDialogos.Length))
         {
             dialoguePanel.SetActive(true);
             if (textoDialogo.text == arrayTextosDialogos[lineIndex])
