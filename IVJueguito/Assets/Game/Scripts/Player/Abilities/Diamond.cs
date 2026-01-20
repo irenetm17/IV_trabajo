@@ -10,7 +10,7 @@ public class Diamond : MonoBehaviour
         if (enemy != null)
         {
             // Bajar vida a enemigos
-            DamageTakenEvent pegarEnemigos = new DamageTakenEvent(enemy, 1.0f);
+            DamageTakenEvent pegarEnemigos = new DamageTakenEvent(enemy, 2.0f);
             EventManager.instance.Publicar(pegarEnemigos);
             //Debug.Log("Le hice pupa");
         }

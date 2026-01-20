@@ -46,6 +46,7 @@ public class PlayerAbilities : MonoBehaviour, IObserver
     [SerializeField] private SpriteRenderer emeraldSprite;
     [SerializeField] private float emeraldFadeTime = 0.4f;
     [SerializeField] private float emeraldActiveTime = 1.5f;
+    public bool inmune = false;
 
     [Header("MMF")]
     [SerializeField] private MMFeedbacks diamanteMMF;
@@ -367,8 +368,8 @@ public class PlayerAbilities : MonoBehaviour, IObserver
     {
         emeraldColider.SetActive(true);
         emeraldSprite.gameObject.SetActive(true);
+        inmune = true;
 
-        
         Color c = emeraldSprite.color;// Empezar invisible
         c.a = 0f;
         emeraldSprite.color = c;
@@ -388,6 +389,14 @@ public class PlayerAbilities : MonoBehaviour, IObserver
 
         emeraldColider.SetActive(false);
         emeraldSprite.gameObject.SetActive(false);
+        inmune = false;
+    }
+
+    public void HurtPlayer(float damage)
+    {
+        if(inmune==true) return;
+        PlayerStatsEvent playerStatsEvent = new PlayerStatsEvent(-damage, 0);
+        EventManager.instance.Publicar(playerStatsEvent);
     }
 
 
