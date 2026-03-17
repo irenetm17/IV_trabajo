@@ -120,6 +120,14 @@ public class SaveGameManager : MonoBehaviour, IObserver
         {
             openables[i].SetState(data.openablesState[i]);
         }
+        // Buscamos todas las puertas que necesiten llave en la escena y les actualizamos su contador interno
+        LlaveInteractuar[] puertasConLlave = FindObjectsOfType<LlaveInteractuar>();
+        foreach (var p in puertasConLlave)
+        {
+            // Esto es un "truco" para sincronizar el contador de llaves interno de cada script 
+            // con el valor global que acabamos de cargar.
+            p.SetLlavesInternas(data.playerKeys);
+        }
     }
     void OnDestroy()
     {

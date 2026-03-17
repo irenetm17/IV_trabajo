@@ -2,75 +2,66 @@ using UnityEngine;
 
 public class PuertaAutomatica : Openable, IObserver
 {
-
     private Animator animator;
     [SerializeField] private GameObject Light;
     [SerializeField] private Material GreenLight;
     [SerializeField] private Material RedLight;
     private HablarInteractuar hablar;
+    private LlaveInteractuar scriptLlave;
+
+    void Awake()
+    {
+        animator = GetComponent<Animator>();
+        hablar = GetComponent<HablarInteractuar>();
+        scriptLlave = GetComponent<LlaveInteractuar>();
+        EventManager.instance.Subscribir(eventType.DoorOpened, this);
+    }
 
     void Start()
     {
-        EventManager.instance.Subscribir(eventType.DoorOpened, this);
-        animator = GetComponent<Animator>();
-        hablar = GetComponent<HablarInteractuar>();
+        // Forzar estado visual correcto al cargar
+        if (state == OpenableState.Open) AbrirPuerta(); else CerrarPuerta();
     }
 
     public void OnEvent(IEvent evento)
     {
         if (evento.Tipo == eventType.DoorOpened)
         {
-            DoorOpenedEvent event4 = (DoorOpenedEvent)evento; //desempaqueta
-            if (event4.Target != this) return;
-            if (event4.Abrir)
-            {
-                AbrirPuerta();
-            }
-            else
-            {
-                CerrarPuerta();
-            }
-        }
+            DoorOpenedEvent e = (DoorOpenedEvent)evento;
+            if (e.Target != this) return;
 
-    }
-    void OnDestroy()
-    {
-        if (EventManager.instance != null)
-        {
-            EventManager.instance.Desuscribir(eventType.DoorOpened, this);
+            state = e.Abrir ? OpenableState.Open : OpenableState.Closed;
+            if (scriptLlave != null) scriptLlave.SincronizarEstadoExterno(state);
+
+            if (e.Abrir) AbrirPuerta(); else CerrarPuerta();
         }
     }
+
     public override void SetState(OpenableState newState)
     {
+        if (scriptLlave != null) return; // Si hay llave, ella manda
         state = newState;
-
-        if (state == OpenableState.Open)
-            AbrirPuerta();
-        else
-            CerrarPuerta();
+        if (state == OpenableState.Open) AbrirPuerta(); else CerrarPuerta();
     }
 
     public void AbrirPuerta()
     {
-        animator = GetComponent<Animator>();
+        if (animator == null) animator = GetComponent<Animator>();
         animator.SetBool("AbrirPuerta", true);
-        Light.GetComponent<Renderer>().material = GreenLight;
-        hablar = GetComponent<HablarInteractuar>();
-        if (hablar != null)
-        {
-            hablar.enabled = false;
-        }
+        if (Light != null) Light.GetComponent<Renderer>().material = GreenLight;
+        if (hablar != null) hablar.enabled = false;
     }
 
     public void CerrarPuerta()
     {
-        animator = GetComponent<Animator>();
+        if (animator == null) animator = GetComponent<Animator>();
         animator.SetBool("AbrirPuerta", false);
-        Light.GetComponent<Renderer>().material = RedLight;
-        hablar = GetComponent<HablarInteractuar>();
-        if (hablar != null)
-        {
-            hablar.enabled = true;
-        }
+        if (Light != null) Light.GetComponent<Renderer>().material = RedLight;
+        if (hablar != null) hablar.enabled = true;
+    }
+
+    void OnDestroy()
+    {
+        if (EventManager.instance != null) EventManager.instance.Desuscribir(eventType.DoorOpened, this);
     }
 }

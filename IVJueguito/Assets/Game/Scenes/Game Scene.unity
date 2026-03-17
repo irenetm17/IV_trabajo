@@ -47550,13 +47550,13 @@ MonoBehaviour:
   gems: 0
   keys: 0
   openables:
-  - {fileID: 805612052}
   - {fileID: 6953277539164211987}
   - {fileID: 833068950}
   - {fileID: 1866217481}
   - {fileID: 1078624973}
   - {fileID: 1010317835}
   - {fileID: 1429576667}
+  - {fileID: 805612052}
   - {fileID: 1260082548}
   - {fileID: 1020931014}
   - {fileID: 1687686897}
