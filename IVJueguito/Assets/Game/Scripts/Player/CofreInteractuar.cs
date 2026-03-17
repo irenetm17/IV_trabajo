@@ -22,7 +22,7 @@ public class CofreInteractuar : Openable
 
     private Animator animator;
 
-    void Start()
+    void Awake()
     {
         player = FindObjectOfType<PlayerMovement>();
         animator = GetComponent<Animator>();
@@ -52,6 +52,7 @@ public class CofreInteractuar : Openable
     {
         interactuado = true;//Esto marca que se ha abierto el cofre y no se va a abrir mas
         PlayerCanMoveEvent quieto = new PlayerCanMoveEvent(false);
+        state = OpenableState.Open;
         EventManager.instance.Publicar(quieto);
 
         animator.SetBool("Abrir", true);
