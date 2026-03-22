@@ -95,6 +95,15 @@ public class PlayerMovement : Entity, IObserver
 
     private void FixedUpdate()
     {
+        // --- SECCIÓN DE SEGURIDAD (ANTICAÍDA) ---
+        // Si el jugador baja de -1 (atravesó el suelo), lo subimos a 2
+        if (transform.position.y < -1f)
+        {
+            _rb.linearVelocity = Vector3.zero; // Frenamos el empuje del enemigo
+            transform.position = new Vector3(transform.position.x, 2f, transform.position.z);
+            Debug.LogWarning("Jugador rescatado del subsuelo");
+        }
+
         if (!canMove)
         {
             _rb.linearVelocity = Vector3.zero;
