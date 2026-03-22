@@ -1248,6 +1248,14 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6692172322501054964, guid: 29f3338b202a93c4887f5f19395e4418, type: 3}
+      propertyPath: input
+      value: 
+      objectReference: {fileID: -315738367720775465, guid: db54bd73f0ac6ff4a8a4e4826782e4b4, type: 3}
+    - target: {fileID: 6692172322501054964, guid: 29f3338b202a93c4887f5f19395e4418, type: 3}
+      propertyPath: distanceToInteract
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7135545097568473596, guid: 29f3338b202a93c4887f5f19395e4418, type: 3}
       propertyPath: m_Name
       value: Puerta Cerradura (1)
@@ -14374,6 +14382,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2376701994171352999, guid: 779e60e6f0d9aa84ba90ef935ba4f6c9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287392927158368867, guid: 779e60e6f0d9aa84ba90ef935ba4f6c9, type: 3}
+      propertyPath: distanceToInteract
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8864869937697887903, guid: 779e60e6f0d9aa84ba90ef935ba4f6c9, type: 3}
+      propertyPath: input
+      value: 
+      objectReference: {fileID: 4720987971770134752, guid: db54bd73f0ac6ff4a8a4e4826782e4b4, type: 3}
+    - target: {fileID: 8864869937697887903, guid: 779e60e6f0d9aa84ba90ef935ba4f6c9, type: 3}
+      propertyPath: distanceToInteract
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24892,17 +24916,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3016751377244169977, guid: 29f3338b202a93c4887f5f19395e4418, type: 3}
   m_PrefabInstance: {fileID: 54004792}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1036511019 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1708315378198902062, guid: 29f3338b202a93c4887f5f19395e4418, type: 3}
-  m_PrefabInstance: {fileID: 54004792}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2205407951187c4e93cb1ac28404b68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LlaveInteractuar
 --- !u!1001 &1036745711
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38739,17 +38752,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 158924213009835095, guid: e6e31956c1388ad4fa633e72547783ff, type: 3}
   m_PrefabInstance: {fileID: 151549088}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1595968277 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1708315378198902062, guid: 29f3338b202a93c4887f5f19395e4418, type: 3}
-  m_PrefabInstance: {fileID: 674716880}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2205407951187c4e93cb1ac28404b68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LlaveInteractuar
 --- !u!4 &1596787864 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 158924213009835095, guid: e6e31956c1388ad4fa633e72547783ff, type: 3}
@@ -43672,7 +43674,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1800517913
 RectTransform:
   m_ObjectHideFlags: 0
@@ -45131,17 +45133,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f45a7003dc592546b4e508f938130b8, type: 3}
---- !u!114 &1859292913 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1708315378198902062, guid: 29f3338b202a93c4887f5f19395e4418, type: 3}
-  m_PrefabInstance: {fileID: 416347734}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2205407951187c4e93cb1ac28404b68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LlaveInteractuar
 --- !u!1001 &1859765728
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45469,17 +45460,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3016751377244169977, guid: 29f3338b202a93c4887f5f19395e4418, type: 3}
   m_PrefabInstance: {fileID: 1864186446}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1864186449 stripped
+--- !u!114 &1864186448 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1708315378198902062, guid: 29f3338b202a93c4887f5f19395e4418, type: 3}
+  m_CorrespondingSourceObject: {fileID: 6692172322501054964, guid: 29f3338b202a93c4887f5f19395e4418, type: 3}
   m_PrefabInstance: {fileID: 1864186446}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2205407951187c4e93cb1ac28404b68, type: 3}
+  m_Script: {fileID: 11500000, guid: 76e689b8c4bcf2141b96ec51bdb25c81, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LlaveInteractuar
+  m_EditorClassIdentifier: Assembly-CSharp::PuertaAutomatica
 --- !u!114 &1866217481 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8864869937697887903, guid: 779e60e6f0d9aa84ba90ef935ba4f6c9, type: 3}
@@ -47567,11 +47558,11 @@ MonoBehaviour:
   - {fileID: 546683257}
   - {fileID: 823617803}
   - {fileID: 1970174873}
-  - {fileID: 8515325091226436460}
-  - {fileID: 1036511019}
-  - {fileID: 1859292913}
-  - {fileID: 1864186449}
-  - {fileID: 1595968277}
+  - {fileID: 3074863807783788402}
+  - {fileID: 54004793}
+  - {fileID: 416347736}
+  - {fileID: 1864186448}
+  - {fileID: 674716882}
 --- !u!4 &1943730029
 Transform:
   m_ObjectHideFlags: 0
@@ -52708,6 +52699,14 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6692172322501054964, guid: 29f3338b202a93c4887f5f19395e4418, type: 3}
+      propertyPath: input
+      value: 
+      objectReference: {fileID: -315738367720775465, guid: db54bd73f0ac6ff4a8a4e4826782e4b4, type: 3}
+    - target: {fileID: 6692172322501054964, guid: 29f3338b202a93c4887f5f19395e4418, type: 3}
+      propertyPath: distanceToInteract
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7135545097568473596, guid: 29f3338b202a93c4887f5f19395e4418, type: 3}
       propertyPath: m_Name
       value: Puerta Cerradura
@@ -53083,6 +53082,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8864869937697887903, guid: 779e60e6f0d9aa84ba90ef935ba4f6c9, type: 3}
+      propertyPath: inputF
+      value: 
+      objectReference: {fileID: -315738367720775465, guid: db54bd73f0ac6ff4a8a4e4826782e4b4, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -53104,17 +53107,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3016751377244169977, guid: 29f3338b202a93c4887f5f19395e4418, type: 3}
   m_PrefabInstance: {fileID: 3074863807783788401}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8515325091226436460 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1708315378198902062, guid: 29f3338b202a93c4887f5f19395e4418, type: 3}
-  m_PrefabInstance: {fileID: 3074863807783788401}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2205407951187c4e93cb1ac28404b68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LlaveInteractuar
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

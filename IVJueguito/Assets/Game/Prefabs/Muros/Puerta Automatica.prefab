@@ -106,9 +106,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuertaAutomatica
   state: 0
-  Light: {fileID: 2099634068056046672}
-  GreenLight: {fileID: 2100000, guid: 1dfcc781ce402754ab910960ff921db3, type: 2}
-  RedLight: {fileID: 2100000, guid: 42803ac9281ae754da195b6fa126c100, type: 2}
+  necesitaLlave: 0
+  distanceToInteract: 10
+  input: {fileID: -315738367720775465, guid: db54bd73f0ac6ff4a8a4e4826782e4b4, type: 3}
+  F: {fileID: 2376701994171352999}
+  luzObjeto: {fileID: 2099634068056046672}
+  matVerde: {fileID: 2100000, guid: 1dfcc781ce402754ab910960ff921db3, type: 2}
+  matRojo: {fileID: 2100000, guid: 42803ac9281ae754da195b6fa126c100, type: 2}
+  matNaranja: {fileID: 2100000, guid: 0355621f3e116e747bbe46c7dd9c98f7, type: 2}
 --- !u!114 &5287392927158368867
 MonoBehaviour:
   m_ObjectHideFlags: 0

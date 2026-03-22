@@ -32,25 +32,40 @@ public class FinDelJuego : MonoBehaviour
 
     private IEnumerator FinDelJuegoCoroutine()
     {
+        Debug.Log("Corrutina de fin iniciada. Duración: " + fadeDuration);
+
+        if (fadeImage == null)
+        {
+            Debug.LogError("¡No hay fadeImage asignada en el Inspector!");
+            yield break;
+        }
+
         float t = 0f;
         Color c = fadeImage.color;
 
+        // Usamos unscaledDeltaTime por si el juego está en pausa o con lag
         while (t < fadeDuration)
         {
-            t += Time.deltaTime;
-            c.a = Mathf.Lerp(0f, 1f, t / fadeDuration);
+            t += Time.unscaledDeltaTime;
+            float alpha = Mathf.Lerp(0f, 1f, t / fadeDuration);
+            c.a = alpha;
             fadeImage.color = c;
             yield return null;
         }
 
         c.a = 1f;
         fadeImage.color = c;
+        Debug.Log("Fade completado. Mostrando texto...");
 
-        yield return new WaitForSeconds(delayTexto);
-        textoFin.SetActive(true);
+        yield return new WaitForSecondsRealtime(delayTexto);
+        if (textoFin != null) textoFin.SetActive(true);
 
-        yield return new WaitForSeconds(delayObjetoFinal);
-        botonFinal.SetActive(true);
+        yield return new WaitForSecondsRealtime(delayObjetoFinal);
+        if (botonFinal != null) botonFinal.SetActive(true);
+
+        // Habilitamos el ratón por si estaba bloqueado
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     public void IrMenuPrincipal()

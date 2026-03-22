@@ -28,23 +28,41 @@ public class MiniBoss : Enemy
 
     public override void KillEnemy()
     {
-        //DoorOpenedEvent eventoAbrir = new DoorOpenedEvent(puertaVinculada, true);
-        //EventManager.instance.Publicar(eventoAbrir);
+        // 1. Congelar al boss para que no moleste mientras muere
         Rigidbody rb = this.GetComponent<Rigidbody>();
-        rb.constraints = RigidbodyConstraints.FreezeAll;
+        if (rb != null) rb.constraints = RigidbodyConstraints.FreezeAll;
+
         if (abrirPuertas != null)
         {
             abrirPuertas.AbrirCerrarPuertas();
         }
         if (finalBoss)
         {
-            FinDelJuego finDelJuego = FindObjectOfType<FinDelJuego>();
-            finDelJuego.EndGame();
+            FinDelJuego fin = FindObjectOfType<FinDelJuego>();
+            if (fin != null)
+            {
+                Debug.Log("Iniciando secuencia de fin de juego...");
+                fin.EndGame();
+            }
+            else
+            {
+                Debug.LogError("¡ERROR! No se ha encontrado el objeto FinDelJuego en la escena.");
+            }
         }
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        Instantiate(_heartGO, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        if (_heartGO != null)
+        {
+            Instantiate(_heartGO, transform.position, Quaternion.identity);
+        }
+        if (finalBoss)
+        {
+            // Lo movemos lejos o desactivamos sus mallas para que no estorbe 
+            // pero que el objeto siga vivo un momento
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     public override void Start()
