@@ -21873,7 +21873,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Lo lograste... Por fin somos libres... \nGracias por todo aventurer@\nPoco
-    a poco los habitantes volvieron a asentarse en estas tierras y el pueblo prosper\xF3\nTu
+    a poco los habitantes volvieron a asentarse en estas tierras y el pueblo prosper\xF3\nT\xFA
     seguiste tu aventura en busca de nuevos retos que afrontar"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4e441fdf1a778f04ca718599d203340c, type: 2}
@@ -43718,7 +43718,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
